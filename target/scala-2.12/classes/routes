@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Default path will just redirect to the computer list
+
+GET     /                                 controllers.Applications.index
+
+GET     /search                           controllers.Applications.search(key: String ?= "")
+
+GET     /login                            controllers.Applications.login
+POST    /login                            controllers.Applications.doLogin
+
+GET     /register                         controllers.Applications.register
+POST    /register                         controllers.Applications.doRegisterEmail
+
+GET     /introdution/:id                 controllers.Applications.introdution(id: Long)
+
+# Computers list (look at the default values for pagination parameters)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
