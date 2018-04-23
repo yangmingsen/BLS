@@ -15,18 +15,13 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object regsiter extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[RequestHeader,play.twirl.api.HtmlFormat.Appendable] {
+object regsiter extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
-  /**/
-  def apply/*1.2*/()(implicit request: RequestHeader):play.twirl.api.HtmlFormat.Appendable = {
-    _display_ {
-      {
+  /*
+@()(implicit request: RequestHeader)
 
-
-Seq[Any](format.raw/*1.37*/("""
-
-"""),_display_(/*3.2*/footer()/*3.10*/{_display_(Seq[Any](format.raw/*3.11*/("""
-"""),format.raw/*4.1*/("""<!DOCTYPE html>
+@footer(){
+<!DOCTYPE html>
     <html>
 
         <head lang="en">
@@ -42,6 +37,45 @@ Seq[Any](format.raw/*1.37*/("""
             <link href="/assets/css/dlstyle.css" rel="stylesheet" type="text/css">
             <script src="/assets/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
             <script src="/assets/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+
+            <script>
+                    function showHint(str)
+                    {
+                        var xmlhttp;
+
+                        if (str.length==0)
+                        {
+                            document.getElementById("txtHint").innerHTML="";
+                            return;
+                        }
+
+                        if( (str.indexOf("@@")<0) )
+                        {
+                            document.getElementById("txtHint").innerHTML="账户格式不正确必须添加'@@'";
+                            return ;
+                        }
+
+                        if (window.XMLHttpRequest)
+                        {
+                            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                            xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {
+                            // IE6, IE5 浏览器执行代码
+                            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+                        {
+                            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                            {
+                                document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                            }
+                        }
+                        xmlhttp.open("GET","chckEml?acct="+str,true);
+                        xmlhttp.send();
+                    }
+            </script>
 
         </head>
 
@@ -68,11 +102,12 @@ Seq[Any](format.raw/*1.37*/("""
 
                                 <div class="am-tab-panel am-active">
 
-                                    <form target="_self" action=""""),_display_(/*46.67*/routes/*46.73*/.Applications.doRegisterEmail()),format.raw/*46.104*/("""" method="POST">
+                                    <form target="_self" action="@routes.Applications.doRegisterEmail()" method="POST">
 
+                                        <p>提示信息: <span id="txtHint"></span></p>
                                         <div class="user-email">
                                             <label for="email"><i class="am-icon-envelope-o"></i></label>
-                                            <input type="email" name="email" id="email" placeholder="请输入邮箱账号">
+                                            <input type="email" name="email" id="email" onkeyup="showHint(this.value)" placeholder="请输入邮箱账号">
                                         </div>
 
                                         <div class="user-pass">
@@ -137,9 +172,9 @@ Seq[Any](format.raw/*1.37*/("""
                                 </div>
 
                                 <script>
-                                        $(function() """),format.raw/*115.54*/("""{"""),format.raw/*115.55*/("""
-                                            """),format.raw/*116.45*/("""$('#doc-my-tabs').tabs();
-                                        """),format.raw/*117.41*/("""}"""),format.raw/*117.42*/(""")
+                                        $(function() {
+                                            $('#doc-my-tabs').tabs();
+                                        })
                                 </script>
 
                             </div>
@@ -149,14 +184,22 @@ Seq[Any](format.raw/*1.37*/("""
                 </div>
             </div>
 
-""")))}))
+}
+
+    */
+  def apply():play.twirl.api.HtmlFormat.Appendable = {
+    _display_ {
+      {
+
+
+Seq[Any]()
       }
     }
   }
 
-  def render(request:RequestHeader): play.twirl.api.HtmlFormat.Appendable = apply()(request)
+  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
 
-  def f:(() => (RequestHeader) => play.twirl.api.HtmlFormat.Appendable) = () => (request) => apply()(request)
+  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
 
   def ref: this.type = this
 
@@ -165,11 +208,11 @@ Seq[Any](format.raw/*1.37*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Feb 01 11:53:38 CST 2018
-                  SOURCE: /home/yms/seed/app/views/regsiter.scala.html
-                  HASH: 2f10bbcf6800634f10e05768f7ea6a916c5ea46c
-                  MATRIX: 739->1|869->36|897->39|913->47|951->48|978->49|2790->1834|2805->1840|2858->1871|7092->6076|7122->6077|7196->6122|7291->6188|7321->6189
-                  LINES: 21->1|26->1|28->3|28->3|28->3|29->4|71->46|71->46|71->46|140->115|140->115|141->116|142->117|142->117
+                  DATE: Sun Apr 22 12:44:36 CST 2018
+                  SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/regsiter.scala.html
+                  HASH: 02aabfcb5e93adfe651e78ef5f5433994a1d532a
+                  MATRIX: 
+                  LINES: 
                   -- GENERATED --
               */
           

@@ -18,22 +18,22 @@ import play.api.data._
 object footer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Html,RequestHeader,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/()(content: Html)(implicit requestHeader: RequestHeader):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*2.2*/()(content: Html)(implicit requestHeader: RequestHeader):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.58*/("""
+Seq[Any](format.raw/*2.58*/("""
 
 
-"""),_display_(/*4.2*/content),format.raw/*4.9*/("""
+"""),_display_(/*5.2*/content),format.raw/*5.9*/("""
 
-"""),format.raw/*6.1*/("""<div class="footer ">
+"""),format.raw/*7.1*/("""<div class="footer ">
     <div class="footer-hd ">
         <p>
             <a href="# ">恒望科技</a>
             <b>|</b>
-            <a href=""""),_display_(/*11.23*/routes/*11.29*/.Applications.index()),format.raw/*11.50*/(""" """),format.raw/*11.51*/("""">商城首页</a>
+            <a href=""""),_display_(/*12.23*/routes/*12.29*/.Applications.index()),format.raw/*12.50*/(""" """),format.raw/*12.51*/("""">商城首页</a>
             <b>|</b>
             <a href="# ">支付宝</a>
             <b>|</b>
@@ -50,8 +50,8 @@ Seq[Any](format.raw/*1.58*/("""
         </p>
     </div>
 </div>
-</body>
-</html>"""))
+    </body>
+    </html>"""))
       }
     }
   }
@@ -67,11 +67,11 @@ Seq[Any](format.raw/*1.58*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Feb 02 11:32:31 CST 2018
-                  SOURCE: /home/yms/seed/app/views/footer.scala.html
-                  HASH: 919b79ddab4057844dfb36ff1de6bf1a4deffa30
-                  MATRIX: 742->1|893->57|922->61|948->68|976->70|1143->210|1158->216|1200->237|1229->238
-                  LINES: 21->1|26->1|29->4|29->4|31->6|36->11|36->11|36->11|36->11
+                  DATE: Sat Apr 07 15:17:01 CST 2018
+                  SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/footer.scala.html
+                  HASH: 4fd7a56e7ba6b076b2baf6f7ec58b4749e1618a6
+                  MATRIX: 742->2|893->58|922->62|948->69|976->71|1143->211|1158->217|1200->238|1229->239
+                  LINES: 21->2|26->2|29->5|29->5|31->7|36->12|36->12|36->12|36->12
                   -- GENERATED --
               */
           

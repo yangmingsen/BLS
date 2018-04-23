@@ -3,14 +3,14 @@
   <component name="Play2ExcludedModulesSettings">
     <option name="INFO">
       <map>
-        <entry key="anorm-example">
+        <entry key="BLS">
           <value>
             <ProjectSettingsEntry>
               <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.12/jars/play_2.12-2.6.11.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>
-        <entry key="play-scala-anorm-example">
+        <entry key="bls">
           <value>
             <ProjectSettingsEntry>
               <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.12/jars/play_2.12-2.6.11.jar" />

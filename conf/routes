@@ -1,22 +1,71 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
-
-# Default path will just redirect to the computer list
-
+#Application
 GET     /                                 controllers.Applications.index
 
 GET     /search                           controllers.Applications.search(key: String ?= "")
 
 GET     /login                            controllers.Applications.login
+
 POST    /login                            controllers.Applications.doLogin
 
-GET     /register                         controllers.Applications.register
-POST    /register                         controllers.Applications.doRegisterEmail
+#GET     /register                         controllers.Applications.register
 
-GET     /introdution/:id                 controllers.Applications.introdution(id: Long)
+#POST    /register                         controllers.Applications.doRegisterEmail
 
-# Computers list (look at the default values for pagination parameters)
+GET     /introdution/:id                  controllers.Applications.introdution(id: Long)
+
+GET     /Cart/add                         controllers.Applications.addCart(id: Long ?= -1,title: String ?= "")
+
+GET     /cart                             controllers.Applications.showCart
+
+GET     /giveUp                           controllers.Applications.logOut
+
+GET     /subReq                           controllers.Applications.addToAdminDealList
+
+GET     /subSuc                           controllers.Applications.subSuccessful
+
+GET     /delCart                          controllers.Applications.delCart(userid: String ?= "", bookid: Long ?= -1)
+
+#GET     /chckEml                          controllers.Applications.checkRegisterEmail(acct: String ?= "")
+
+
+#Person manager
+GET     /person                           controllers.Applications.personOrder
+
+GET     /person/order                     controllers.Applications.personOrder
+
+GET     /person/retbk                     controllers.Applications.personReturn
+
+GET     /person/delRef                    controllers.Applications.delRefuseReq(userid: String ?= "", bookid: Long ?= -1)
+
+GET     /person/conApy                    controllers.Applications.continueReq(userid: String ?= "", bookid: Long ?= -1)
+
+#Admin
+
+GET     /agrReq                           controllers.Admin.checkPass(userid: String ?= "", bookid: Long ?= -1)
+
+GET     /refReq                           controllers.Admin.refusePass(userid: String ?= "", bookid: Long ?= -1)
+
+GET     /retSuc                           controllers.Admin.returnBook(userid: String ?= "", bookid: Long ?= -1)
+
+GET     /admin                            controllers.Admin.index
+
+GET     /admin/head                       controllers.Admin.head
+
+GET     /admin/left                       controllers.Admin.left
+
+GET     /admin/main                       controllers.Admin.main
+
+GET     /admin/login                      controllers.Admin.login
+
+POST    /admin/login                      controllers.Admin.doLogin
+
+GET     /admin/arelt                      controllers.Admin.agreeList
+
+GET     /admin/eixt                       controllers.Admin.adminLogOut
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,3 +1,4 @@
+@*
 @()(implicit request: RequestHeader)
 
 @footer(){
@@ -17,6 +18,45 @@
             <link href="/assets/css/dlstyle.css" rel="stylesheet" type="text/css">
             <script src="/assets/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
             <script src="/assets/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+
+            <script>
+                    function showHint(str)
+                    {
+                        var xmlhttp;
+
+                        if (str.length==0)
+                        {
+                            document.getElementById("txtHint").innerHTML="";
+                            return;
+                        }
+
+                        if( (str.indexOf("@@")<0) )
+                        {
+                            document.getElementById("txtHint").innerHTML="账户格式不正确必须添加'@@'";
+                            return ;
+                        }
+
+                        if (window.XMLHttpRequest)
+                        {
+                            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                            xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {
+                            // IE6, IE5 浏览器执行代码
+                            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+                        {
+                            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                            {
+                                document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                            }
+                        }
+                        xmlhttp.open("GET","chckEml?acct="+str,true);
+                        xmlhttp.send();
+                    }
+            </script>
 
         </head>
 
@@ -45,9 +85,10 @@
 
                                     <form target="_self" action="@routes.Applications.doRegisterEmail()" method="POST">
 
+                                        <p>提示信息: <span id="txtHint"></span></p>
                                         <div class="user-email">
                                             <label for="email"><i class="am-icon-envelope-o"></i></label>
-                                            <input type="email" name="email" id="email" placeholder="请输入邮箱账号">
+                                            <input type="email" name="email" id="email" onkeyup="showHint(this.value)" placeholder="请输入邮箱账号">
                                         </div>
 
                                         <div class="user-pass">
@@ -125,3 +166,5 @@
             </div>
 
 }
+
+    *@

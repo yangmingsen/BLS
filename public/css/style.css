@@ -46,7 +46,7 @@ ul.am-tabs-nav.am-nav.am-nav-tabs {width:100%;background:#fff;}
 /*价格*/
 .tb-detail-price{text-align: center;}
 .tb-detail-price .price em{font-family: arial;}
-.iteminfo_mktprice .sys_item_mktprice{text-decoration:line-through;padding-top:7px ;padding-bottom: 0px;}
+.iteminfo_mktprice .sys_item_mktprice{padding-top:7px ;padding-bottom: 0px;}
 .iteminfo_price{ color:#c00;}
 .sys_item_price{ color:#c00; font-size:20px;}
  .tb-detail-price dd{display: inline-block;}
@@ -122,6 +122,24 @@ width: 62px;line-height:24px;font-size: 12px;display: block;}
 .match-comment{border-bottom: 1px solid #E6E6E6;}
 /*介绍*/
 .introduce{width:100%;margin: 0px auto;text-align: center;padding-bottom: 110px;max-width:1200px ;}
+.introduce .book-introduce{text-align: left;text-indent:2em;}
+.introduce .details .catalog{
+	overflow: hidden;
+}
+.introduce .details .list-height{
+	height: 105px;
+}
+.introduce .details ul li{
+	text-align: left;
+	
+}
+.introduce .details .get-more{
+	text-align: left;
+	cursor: pointer;
+}
+.introduce .details .get-more:hover{
+	color: #F03726;
+}
 .introduceMain{width:100%;background:#fff ;}
 .browse{display: none;}
 
@@ -286,7 +304,7 @@ div.zoomMask { position:absolute; background:url(../images/mask.png)repeat scrol
  /*价格*/	
 .tb-detail-hd h1 {font-size:18px;}
 
-.tb-detail-price{background: #F7F7F7;overflow: hidden;height:100px;padding-top:40px ;}
+.tb-detail-price{background: #F7F7F7;}
 .tb-detail-price li {display: block;margin:0px 10px;}
 .tb-detail-price li  dt {width: 70px;float:left;text-align: left;margin-top:2px;}
 .price.iteminfo_price dt{margin-top:5px ;}
@@ -303,7 +321,7 @@ div.zoomMask { position:absolute; background:url(../images/mask.png)repeat scrol
 .theme-options ul{overflow: hidden;float: none;}
 .theme-signin-left {max-width:100%;margin-bottom: 0;}
 .theme-signin-left .sku-line{margin: 5px;cursor: pointer;}
-.theme-signin-left .cart-title{margin-left: -46px;margin-top:10px;font-size:12px ;font-weight: 100;color:#888 ;float: left;}   	
+.theme-signin-left .cart-title{margin-left: -46px;margin-top:0px;font-size:20px ;font-weight: 100;color:#888 ;float: left;}
    	
 
 /*优惠活动*/

@@ -15,6 +15,7 @@
 
         <link rel="stylesheet" href="/assets/AmazeUI-2.4.2/assets/css/amazeui.css" />
         <link href="/assets/css/dlstyle.css" rel="stylesheet" type="text/css">
+        <script src="/assets/add/js/jquery-3.3.1.min.js"></script>
     </head>
 
     <body>
@@ -28,17 +29,61 @@
                 <div class="login-banner-bg"><span></span><img src="/assets/images/big.jpg" /></div>
                 <div class="login-box">
 
-                    <h3 class="title">登录商城</h3>
+                    <h3 class="title">登录CCWLibrary</h3>
 
                     <div class="clear"></div>
 
+                    <script type="text/javascript">
+                        function doLogin() {
+                            $.ajax({
+                                 type: "POST",
+                                dataType: "json",
+                                url: "/login",
+                                data: $('#form1').serialize(),
+                                success: function (data) {
+                                     var tmp = "";
+                                     for( var i in data) {
+                                         tmp +=data[i];
+                                     }
+                                     if( tmp == "0") {
+                                         window.location.href = "/";
+                                     } else if( tmp == "1" ) {
+                                         document.getElementById("txtHint").innerText = "密码错误!"
+                                     } else if( tmp == "2" ){
+                                         document.getElementById("txtHint").innerText = "该用户不存在!"
+                                     }
+                                    $("#txtHint").animate({
+                                        left: '+=20px'
+                                    },200)
+                                            .animate({
+                                                left: "-=20px"
+                                            },200)
 
-                    <form method="POST" target="_self" action="@routes.Applications.doLogin()" >
+                                },
+                                error : function () {
+                                    document.getElementById("txtHint").innerText = "请求错误!"
+                                     $("#txtHint").animate({
+                                         left: '+=20px'
+                                     },200)
+                                    .animate({
+                                        left: "-=20px"
+                                    },200)
+
+
+                                }
+                            });
+                        }
+                    </script>
+
+
+                    @*<p style="display: none;" id="txtHint">提示信息: 账号密码错误!!!<span  style="font-size: 15px; color: red;position: relative;"></span></p>*@
+                    <p>提示信息: <span id="txtHint" style="font-size: 15px; color: red;position: relative;" ></span></p>
+                    <form id="form1" target="_self"  >
                     <div class="login-form">
 
                             <div class="user-name">
                                 <label for="user"><i class="am-icon-user"></i></label>
-                                <input type="text" name="phone" id="user" placeholder="邮箱/手机/用户名">
+                                <input type="text" name="acct" id="user" placeholder="学号">
                             </div>
                             <div class="user-pass">
                                 <label for="password"><i class="am-icon-lock"></i></label>
@@ -46,14 +91,9 @@
                             </div>
 
                     </div>
-                    <div class="login-links">
 
-                        <a href="#" class="am-fr">忘记密码</a>
-                        <a href="register.html" class="zcnext am-fr am-btn-default">注册</a>
-                        <br />
-                    </div>
                     <div class="am-cf">
-                        <input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm">
+                        <input  type="button" value="登 录" onclick="doLogin()" class="am-btn am-btn-primary am-btn-sm">
                     </div>
                     </form>
 

@@ -1,0 +1,540 @@
+@(history: List[History2018], cart: List[Cart], check: List[DealBorrowList], pass: List[DealBorrowList], refuse: List[DealBorrowList])(implicit request: RequestHeader)
+
+@views.html.person.main("借阅信息") {
+    
+    <script type="text/javascript">
+        function goContinue(userid,bookid,cho) {
+            var xmlHttp;
+            if( window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            } else {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlHttp.onreadystatechange = function () {
+                if( xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    setTimeout(function () {
+                        document.getElementById("rehide"+bookid).style.display="none";
+                    },2000);
+                }
+            }
+
+            if( cho == 1 ) {
+                  xmlHttp.open("GET","/person/delRef?userid="+userid+"&bookid="+bookid,true);
+            } else if( cho == 2) {
+                xmlHttp.open("GET","person/conApy?userid="+userid+"&bookid="+bookid,true);
+            }
+            xmlHttp.send();
+
+        }
+    </script>
+    
+    <div class="main-wrap">
+
+        <div class="user-order">
+
+                <!--标题 -->
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">订单管理</strong> / <small>Order</small></div>
+            </div>
+            <hr/>
+
+            <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+
+                <ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs">
+                    <li class="am-active"><a href="#tab1">借阅历史</a></li>
+                    <li><a href="#tab2">购物车</a></li>
+                    <li><a href="#tab3">审核中</a></li>
+                    <li><a href="#tab4">已通过</a></li>
+                    <li><a href="#tab5">未同意</a></li>
+                </ul>
+
+                <div class="am-tabs-bd">
+                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                        <div class="order-top">
+                            <div class="th th-item">
+                                <td class="td-inner">商品</td>
+                            </div>
+                            <div class="th th-price">
+                                <td class="td-inner">单价</td>
+                            </div>
+                            <div class="th th-number">
+                                <td class="td-inner">数量</td>
+                            </div>
+                            <div class="th th-operation">
+                                <td class="td-inner">商品操作</td>
+                            </div>
+                            <div class="th th-amount">
+                                <td class="td-inner">借阅时间</td>
+                            </div>
+                            <div class="th th-status">
+                                <td class="td-inner">退还时间</td>
+                            </div>
+                            <div class="th th-change">
+                                <td class="td-inner">其他</td>
+                            </div>
+                        </div>
+
+                        <div class="order-main">
+                            <div class="order-list">
+
+                                    <!--交易成功-->
+                                @for( h <- history){
+                                    <div class="order-status5">
+
+                                        <div class="order-content">
+
+                                            <div class="order-left">
+
+                                                <ul class="item-list">
+                                                    <li class="td td-item">
+                                                        <div class="item-pic">
+                                                            <a href="#" class="J_MakePoint">
+                                                                <img src="/assets/ProjectImg/@h.bookid-1.jpg" class="itempic J_ItemImg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <div class="item-basic-info">
+                                                                <a href="#">
+                                                                    <p>@h.booktitle</p>
+                                                                    <p class="info-little">作者：jixiegongyechubans
+                                                                        <br/>出版社：####### </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                        $$$$$$$
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-number">
+                                                        <div class="item-number">
+                                                            <span>×</span>@h.amount
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-operation">
+                                                        <div class="item-operation">
+                                                        评价
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                        @h.lenddate
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                        @h.returndate
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                        分享
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab2">
+
+                        <div class="order-top">
+                            <div class="th th-item">
+                                <td class="td-inner">商品</td>
+                            </div>
+                            <div class="th th-price">
+                                <td class="td-inner">单价</td>
+                            </div>
+                            <div class="th th-number">
+                                <td class="td-inner">数量</td>
+                            </div>
+                            <div class="th th-operation">
+                                <td class="td-inner">商品操作</td>
+                            </div>
+                            <div class="th th-amount">
+                                <td class="td-inner">加入时间</td>
+                            </div>
+                            <div class="th th-status">
+                                <td class="td-inner">交易状态</td>
+                            </div>
+                            <div class="th th-change">
+                                <td class="td-inner">其他</td>
+                            </div>
+                        </div>
+
+                        <div class="order-main">
+                            <div class="order-list">
+
+                            @for( c <- cart){
+                                <div class="order-status1">
+
+                                    <div class="order-content">
+                                        <div class="order-left">
+
+                                            <ul class="item-list">
+                                                <li class="td td-item">
+                                                    <div class="item-pic">
+                                                        <a href="#" class="J_MakePoint">
+                                                            <img src="/assets/ProjectImg/@c.bookid-1.jpg" class="itempic J_ItemImg">
+                                                        </a>
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="item-basic-info">
+                                                            <a href="#">
+                                                                <p>@c.title</p>
+                                                                <p class="info-little">颜色：12#川南玛瑙
+                                                                    <br/>包装：裸装 </p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="td td-price">
+                                                    <div class="item-price">
+                                                        333.00
+                                                    </div>
+                                                </li>
+                                                <li class="td td-number">
+                                                    <div class="item-number">
+                                                        <span>×</span>@c.amount
+                                                    </div>
+                                                </li>
+                                                <li class="td td-operation">
+                                                    <div class="item-operation">
+                                                        <a href="#####">delete</a>
+                                                    </div>
+                                                </li>
+                                                <li class="td td-price">
+                                                    <div class="item-price">
+                                                    @c.addtime
+                                                    </div>
+                                                </li>
+                                                <li class="td td-price">
+                                                    <div class="item-price">
+                                                        待确认
+                                                    </div>
+                                                </li>
+                                                <li class="td td-price">
+                                                    <div class="item-price">
+                                                        333.00
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab3">
+                        <div class="order-top">
+                            <div class="th th-item">
+                                <td class="td-inner">商品</td>
+                            </div>
+                            <div class="th th-price">
+                                <td class="td-inner">单价</td>
+                            </div>
+                            <div class="th th-number">
+                                <td class="td-inner">数量</td>
+                            </div>
+                            <div class="th th-operation">
+                                <td class="td-inner">商品操作</td>
+                            </div>
+                            <div class="th th-amount">
+                                <td class="td-inner">合计</td>
+                            </div>
+                            <div class="th th-status">
+                                <td class="td-inner">状态</td>
+                            </div>
+                            <div class="th th-change">
+                                <td class="td-inner">其他</td>
+                            </div>
+                        </div>
+
+                        <div class="order-main">
+                            <div class="order-list">
+
+                                <div class="order-status2">
+                                    <div class="order-title">
+                                        <div class="dd-num">订单编号：<a href="javascript:;">1601430</a></div>
+                                        <span>成交时间：2015-12-20</span>
+                                            <!--    <em>店铺：小桔灯</em>-->
+                                    </div>
+                                    <div class="order-content">
+
+                                        @for(c <- check){
+                                            <div class="order-left">
+                                                <ul class="item-list">
+                                                    <li class="td td-item">
+                                                        <div class="item-pic">
+                                                            <a href="#" class="J_MakePoint">
+                                                                <img src="/assets/ProjectImg/@c.bookid-1.jpg" class="itempic J_ItemImg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <div class="item-basic-info">
+                                                                <a href="#">
+                                                                    <p>@c.booktitle</p>
+                                                                    <p class="info-little">颜色：12#川南玛瑙
+                                                                        <br/>包装：裸装 </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                        333.00
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-number">
+                                                        <div class="item-number">
+                                                            <span>×</span>@c.amount
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-operation">
+                                                        <div class="item-operation">
+                                                            <a href="refund.html">退款</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        }
+
+
+
+                                        <div class="order-right">
+                                            <li class="td td-amount">
+                                                <div class="item-amount">
+                                                    合计：@check.size
+                                                </div>
+                                            </li>
+                                            <div class="move-right">
+                                                <li class="td td-status">
+                                                    <div class="item-status">
+                                                        <p class="Mystatus">待审核</p>
+                                                        <p class="order-info"><a href="orderinfo.html">订单详情</a></p>
+                                                    </div>
+                                                </li>
+                                                <li class="td td-change">
+                                                    <div class="am-btn am-btn-danger anniu">
+                                                        联系管理员</div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab4">
+                        <div class="order-top">
+                            <div class="th th-item">
+                                <td class="td-inner">商品</td>
+                            </div>
+                            <div class="th th-price">
+                                <td class="td-inner">单价</td>
+                            </div>
+                            <div class="th th-number">
+                                <td class="td-inner">数量</td>
+                            </div>
+                            <div class="th th-operation">
+                                <td class="td-inner">商品操作</td>
+                            </div>
+                            <div class="th th-amount">
+                                <td class="td-inner">合计</td>
+                            </div>
+                            <div class="th th-status">
+                                <td class="td-inner">状态</td>
+                            </div>
+                            <div class="th th-change">
+                                <td class="td-inner">其他</td>
+                            </div>
+                        </div>
+
+                        <div class="order-main">
+                            <div class="order-list">
+                                <div class="order-status3">
+                                    <div class="order-title">
+                                        <div class="dd-num">订单编号：<a href="javascript:;">1601430</a></div>
+                                        <span>成交时间：2015-12-20</span>
+                                            <!--    <em>店铺：小桔灯</em>-->
+                                    </div>
+                                    <div class="order-content">
+
+                                    @for( p <- pass ){
+                                        <div class="order-left">
+                                            <ul class="item-list">
+                                                <li class="td td-item">
+                                                    <div class="item-pic">
+                                                        <a href="#" class="J_MakePoint">
+                                                            <img src="/assets/ProjectImg/@p.bookid-1.jpg" class="itempic J_ItemImg">
+                                                        </a>
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="item-basic-info">
+                                                            <a href="#">
+                                                                <p>@p.booktitle</p>
+                                                                <p class="info-little">颜色：12#川南玛瑙
+                                                                    <br/>包装：裸装 </p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="td td-price">
+                                                    <div class="item-price">
+                                                        333.00
+                                                    </div>
+                                                </li>
+                                                <li class="td td-number">
+                                                    <div class="item-number">
+                                                        <span>×</span>@p.amount
+                                                    </div>
+                                                </li>
+                                                <li class="td td-operation">
+                                                    <div class="item-operation">
+                                                        <a href="refund.html">退款/退货</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab5">
+                        <div class="order-top">
+                            <div class="th th-item">
+                                <td class="td-inner">商品</td>
+                            </div>
+                            <div class="th th-price">
+                                <td class="td-inner">&nbsp;&nbsp;</td>
+                            </div>
+                            <div class="th th-number">
+                                <td class="td-inner">数量</td>
+                            </div>
+                            <div class="th th-operation">
+                                <td class="td-inner">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </div>
+                            <div class="th th-amount">
+                                <td class="td-inner">&nbsp;&nbsp;</td>
+                            </div>
+                            <div class="th th-status">
+                                <td class="td-inner">操作</td>
+                            </div>
+                            <div class="th th-change">
+                                <td class="td-inner">操作</td>
+                            </div>
+                        </div>
+
+                        <div class="order-main">
+                            <div class="order-list">
+                                    <!--不同状态的订单	-->
+
+                                @for( r <- refuse) {
+                                    <div class="order-status4" id="rehide@r.bookid">
+                                        <div class="order-title">
+                                            <div class="dd-num">书籍编号：<a href="javascript:;">@r.bookid</a></div>
+                                            <span>申请时间：@r.borrowdate</span>
+
+                                        </div>
+                                        <div class="order-content">
+                                            <div class="order-left">
+                                                <ul class="item-list">
+                                                    <li class="td td-item">
+                                                        <div class="item-pic">
+                                                            <a href="#" class="J_MakePoint">
+                                                                <img src="/assets/ProjectImg/@r.bookid-1.jpg" class="itempic J_ItemImg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <div class="item-basic-info">
+                                                                <a href="#">
+                                                                    <p>@r.booktitle</p>
+                                                                    <p class="info-little">XXXXX
+                                                                        <br/>XXXX </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-price">
+                                                        <div class="item-price">
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-number">
+                                                        <div class="item-number">
+                                                            <span>×</span>1
+                                                        </div>
+                                                    </li>
+                                                    <li class="td td-operation">
+                                                        <div class="item-operation">
+                                                            <a href="refund.html">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="order-right">
+                                                <li class="td td-amount">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                </li>
+                                                <div class="move-right">
+                                                    <li class="td td-change">
+                                                        <a href="#####" onclick="goContinue('@r.userid',@r.bookid,1)">
+                                                            <div class="am-btn am-btn-danger anniu">
+                                                            确认</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="td td-change">
+                                                        <a href="####" onclick="goContinue('@r.userid',@r.bookid,2)">
+                                                            <div class="am-btn am-btn-danger anniu">
+                                                            继续</div>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+
+

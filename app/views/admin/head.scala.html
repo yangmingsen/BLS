@@ -1,0 +1,28 @@
+@()( implicit request: RequestHeader)
+<!DOCTYPE >
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>头部</title>
+        <link rel="stylesheet" type="text/css" href="/assets/Admin/css/public.css" />
+        <script type="text/javascript" src="/assets/Admin/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/Admin/js/public.js"></script>
+    </head>
+
+    <body>
+            <!-- 头部 -->
+        <div class="head">
+            <div class="headL">
+                <img class="headLogo" src="/assets/Admin/img/logLOGO.png"/>
+            </div>
+            @request.session.get("AdminAcct") match {
+                case Some(user) => {
+                    <div class="headR">
+                        <span style="color:#FFF">欢迎您亲爱的管理员：@user</span> <a href="@routes.Admin.adminLogOut()" target="_blank" rel="external">【退出】</a>
+                    </div>
+                }
+            }
+
+        </div>
+    </body>
+</html>

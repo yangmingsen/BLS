@@ -1,43 +1,41 @@
 @(curpage: List[BookInfos])(implicit request: RequestHeader)
 
 
-@main("搜索结果") {
-    <div class="clear"></div>
-    <b class="line"></b>
+@main("搜索") {
+
+    <link href="/assets/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+
+    <link href="/assets/basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+    <link href="/assets/css/seastyle.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/assets/basic/js/jquery-1.7.min.js"></script>
+
+        <!--<script type="text/javascript" src="/assets/js/script.js"></script>-->
+
+
     <div class="search">
         <div class="search-list">
             <div class="nav-table">
                 <div class="long-title"><span class="all-goods">全部分类</span></div>
                 <div class="nav-cont">
                     <ul>
-                        <li class="index"><a href="#">首页</a></li>
-                        <li class="qc"><a href="#">闪购</a></li>
-                        <li class="qc"><a href="#">限时抢</a></li>
-                        <li class="qc"><a href="#">团购</a></li>
-                        <li class="qc last"><a href="#">大包装</a></li>
+                        <li class="index">
+                            <a href="#">首页</a>
+                        </li>
                     </ul>
-                    <div class="nav-extra">
-                        <i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
-                        <i class="am-icon-angle-right" style="padding-left: 10px;"></i>
-                    </div>
                 </div>
             </div>
 
-
             <div class="am-g am-g-fixed">
+
                 <div class="am-u-sm-12 am-u-md-12">
                     <div class="theme-popover">
-                        <div class="searchAbout">
-                            <span class="font-pale">相关搜索：</span>
-                            <a title="坚果" href="#">坚果</a>
-                            <a title="瓜子" href="#">瓜子</a>
-                            <a title="鸡腿" href="#">豆干</a>
-
-                        </div>
                         <ul class="select">
                             <p class="title font-normal">
-                                <span class="fl">松子</span>
-                                <span class="total fl">搜索到<strong class="num">997</strong>件相关商品</span>
+                                <span class="fl">java</span>
+                                <span class="total fl">搜索到<strong class="num">22</strong>本相关书籍</span>
                             </p>
                             <div class="clear"></div>
                             <li class="select-result">
@@ -50,117 +48,267 @@
                             <div class="clear"></div>
                             <li class="select-list">
                                 <dl id="select1">
-                                    <dt class="am-badge am-round">品牌</dt>
-
+                                    <dt class="am-badge am-round">方向</dt>
                                     <div class="dd-conent">
                                         <dd class="select-all selected"><a href="#">全部</a></dd>
-                                        <dd><a href="#">百草味</a></dd>
-                                        <dd><a href="#">良品铺子</a></dd>
-                                        <dd><a href="#">新农哥</a></dd>
-                                        <dd><a href="#">楼兰蜜语</a></dd>
-                                        <dd><a href="#">口水娃</a></dd>
-                                        <dd><a href="#">考拉兄弟</a></dd>
+                                        <dd><a href="#" title="前端开发">前端开发</a></dd>
+                                        <dd><a href="#">后端开发</a></dd>
+                                        <dd><a href="#">移动开发</a></dd>
+                                        <dd><a href="#">数据库</a></dd>
+                                        <dd><a href="#">人工智能</a></dd>
+                                        <dd><a href="#">云计算&大数据</a></dd>
+                                        <dd><a href="#">运维&测试</a></dd>
+                                        <dd><a href="#">UI设计</a></dd>
                                     </div>
 
                                 </dl>
                             </li>
                             <li class="select-list">
                                 <dl id="select2">
-                                    <dt class="am-badge am-round">种类</dt>
+                                    <dt class="am-badge am-round">分类</dt>
                                     <div class="dd-conent">
-                                        <dd class="select-all selected"><a href="#">全部</a></dd>
-                                        <dd><a href="#">东北松子</a></dd>
-                                        <dd><a href="#">巴西松子</a></dd>
-                                        <dd><a href="#">夏威夷果</a></dd>
-                                        <dd><a href="#">松子</a></dd>
+                                        <dd class="select-all selected">
+                                            <a href="#">全部</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">HTML/CSS</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">JavaScript</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Html5</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">CSS3</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">jQuery</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Node.js</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Bootstrap</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Angular</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">React.js</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Vue.js</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Saaa/Less</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">WebApp</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">前端工具</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">PHP</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Java</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">SpringBoot</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Python</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">C</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">C++</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Go</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">C#</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Ruby</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Android</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">iOS</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Unity 3D</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Cocos2d-x</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">MySQL</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">MongoDB</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Oracle</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">SQL Server</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">机器学习</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">深度学习</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">大数据</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">云计算</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">测试</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">Linux</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">动效动画</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">APPUI设计</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">设计工具</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">设计基础</a>
+                                        </dd>
                                     </div>
                                 </dl>
                             </li>
                             <li class="select-list">
                                 <dl id="select3">
-                                    <dt class="am-badge am-round">选购热点</dt>
+                                    <dt class="am-badge am-round">类型</dt>
                                     <div class="dd-conent">
-                                        <dd class="select-all selected"><a href="#">全部</a></dd>
-                                        <dd><a href="#">手剥松子</a></dd>
-                                        <dd><a href="#">薄壳松子</a></dd>
-                                        <dd><a href="#">进口零食</a></dd>
-                                        <dd><a href="#">有机零食</a></dd>
+                                        <dd class="select-all selected">
+                                            <a href="#">全部</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">基础</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">案例</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">框架</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">工具</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">设计模式</a>
+                                        </dd>
                                     </div>
                                 </dl>
                             </li>
-
                         </ul>
                         <div class="clear"></div>
                     </div>
                     <div class="search-content">
                         <div class="sort">
-                            <li class="first"><a title="综合">综合排序</a></li>
-                            <li><a title="销量">销量排序</a></li>
-                            <li><a title="价格">价格优先</a></li>
-                            <li class="big"><a title="评价" href="#">评价为主</a></li>
+                            <li class="first">
+                                <a title="综合">综合排序</a>
+                            </li>
+                            <li>
+                                <a title="借阅量排序">借阅量排序</a>
+                            </li>
+                            <li>
+                                <a title="评价排序">评价排序</a>
+                            </li>
                         </div>
                         <div class="clear"></div>
 
                         <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
-                                @for(book <- curpage){
-                                 <li>
-                                    <div class="i-pic limit">
-                                       <a href="http://localhost:9000/introdution/@book.id"><img src="/assets/images/imgsearch1.jpg" /></a>
+                            @*<li>*@
+                                @*<div class="i-pic limit menu1">*@
+                                    @*<img src="/assets/img1/java并发编程实战.jpg" />*@
+                                    @*<p class="title fl">java并发编程实战</p>*@
+                                    @*<p class="price fl">*@
+                                        @*<b>¥</b>*@
+                                        @*<strong>56.90</strong>*@
+                                    @*</p>*@
+                                    @*<p class="number fl">*@
+                                        @*借阅量<span>1110</span>*@
+                                    @*</p>*@
+                                @*</div>*@
+                            @*</li>*@
+
+                            @for(book <- curpage){
+                                <li>
+                                    <div class="i-pic limit menu1">
+                                        <a href="/introdution/@book.id"><img src="/assets/ProjectImg/@book.id-1.jpg" /></a>
                                         <p class="title fl">@book.title</p>
                                         <p class="price fl">
                                             <b>¥</b>
                                             <strong>56.90</strong>
                                         </p>
                                         <p class="number fl">
-                                            销量<span>1110</span>
+                                            库存<span>@book.amount</span>
                                         </p>
                                     </div>
                                 </li>
-                                }
+                            }
                         </ul>
+
                     </div>
                     <div class="search-side">
 
                         <div class="side-title">
-                            经典搭配
+                            经典书籍
                         </div>
-
                         <li>
-                            <div class="i-pic check">
-                                <img src="/assets/images/cp.jpg" />
-                                <p class="check-title">萨拉米 1+1小鸡腿</p>
+                            <div class="i-pic check menu1">
+                                <img src="/assets/img1/java并发编程实战.jpg" />
+                                <p class="check-title">java并发编程实战</p>
                                 <p class="price fl">
                                     <b>¥</b>
                                     <strong>29.90</strong>
                                 </p>
                                 <p class="number fl">
-                                    销量<span>1110</span>
+                                    借阅量<span>1110</span>
                                 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="i-pic check">
-                                <img src="/assets/images/cp2.jpg" />
-                                <p class="check-title">ZEK 原味海苔</p>
+                            <div class="i-pic check menu1">
+                                <img src="/assets/img1/java并发编程实战.jpg" />
+                                <p class="check-title">java并发编程实战</p>
                                 <p class="price fl">
                                     <b>¥</b>
                                     <strong>8.90</strong>
                                 </p>
                                 <p class="number fl">
-                                    销量<span>1110</span>
+                                    借阅量<span>1110</span>
                                 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="i-pic check">
-                                <img src="/assets/images/cp.jpg" />
-                                <p class="check-title">萨拉米 1+1小鸡腿</p>
+                            <div class="i-pic check menu1">
+                                <img src="/assets/img1/java并发编程实战.jpg" />
+                                <p class="check-title">java并发编程实战</p>
                                 <p class="price fl">
                                     <b>¥</b>
                                     <strong>29.90</strong>
                                 </p>
                                 <p class="number fl">
-                                    销量<span>1110</span>
+                                    借阅量<span>1110</span>
                                 </p>
                             </div>
                         </li>
@@ -169,18 +317,161 @@
                     <div class="clear"></div>
                         <!--分页 -->
                     <ul class="am-pagination am-pagination-right">
-                        <li class="am-disabled"><a href="#">&laquo;</a></li>
-                        <li class="am-active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
+                        <li class="am-disabled">
+                            <a href="#">&laquo;</a>
+                        </li>
+                        <li class="am-active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">&raquo;</a>
+                        </li>
                     </ul>
 
                 </div>
+
             </div>
+
         </div>
     </div>
 
+    <script>
+            $(window).resize(function () {
+                var $img = $(".menu1 img");
+                var minnHeight = 20000;
+                for (var i = 0; i < $img.length; i++) {
+                    var nWidth = $img[i].naturalWidth
+                    var nHeight = $img[i].naturalHeight
+                    var nowHeight = $img[i].width / nWidth * nHeight;
+                    if (minnHeight > nowHeight) {
+                        minnHeight = nowHeight;
+                    }
+                }
+                for (var i = 0; i < $img.length; i++) {
+                    $img[i].height = minnHeight;
+                }
+            });
+            $().ready(function () {
+                var $img = $(".menu1 img");
+                var minnHeight = 20000;
+                for (var i = 0; i < $img.length; i++) {
+                    var nWidth = $img[i].naturalWidth
+                    var nHeight = $img[i].naturalHeight
+                    var nowHeight = $img[i].width / nWidth * nHeight;
+                    if (minnHeight > nowHeight) {
+                        minnHeight = nowHeight;
+                    }
+                }
+                for (var i = 0; i < $img.length; i++) {
+                    $img[i].height = minnHeight;
+                }
+                $("#select1 dd").click(function () {
+                    $(this).addClass("selected").siblings().removeClass("selected");
+                    console.log($(this).text());
+                    if ($(this).hasClass("select-all")) {
+                        $("#selectA").remove();
+                    } else {
+                        var copyThisA = $(this).clone();
+                        if ($("#selectA").length > 0) {
+                            $("#selectA a").html($(this).text());
+                        } else {
+                            $(".select-result dl").append(copyThisA.attr("id", "selectA"));
+
+                        }
+                    }
+                    var $select2 = $("#select2 dd");
+                    for (var i = 1; i < $select2.length; i++) {
+                        $select2[i].style.display = "none";
+                    }
+                    if ($(this).text() == "全部") {
+
+                        for (var i = 1; i < $select2.length; i++) {
+                            $select2[i].style.display = "inline-block";
+                        }
+                    }
+                    else if ($(this).text() == "前端开发") {
+
+                        for (var i = 1; i <= 13; i++) {
+                            $select2[i].style.display = "inline-block";
+                        }
+                    }
+                    else if ($(this).text() == "后端开发") {
+                        for (var i = 14; i <= 22; i++) {
+                            $select2[i].style.display = "inline-block";
+                        }
+                    }
+                    else if ($(this).text() == "移动开发") {
+                        for (var i = 23; i <= 26; i++) {
+                            $select2[i].style.display = "inline-block";
+                        }
+                    }
+                    else if ($(this).text() == "数据库") {
+                        for (var i = 27; i <= 30; i++) {
+                            $select2[i].style.display = "block";
+                        }
+                    }
+                    else if ($(this).text() == "人工智能") {
+                        for (var i = 31; i <= 32; i++) {
+                            $select2[i].style.display = "block";
+                        }
+                    }
+                    else if ($(this).text() == "云计算&大数据") {
+                        for (var i = 33; i <= 34; i++) {
+                            $select2[i].style.display = "block";
+                        }
+                    }
+                    else if ($(this).text() == "运维&测试") {
+                        for (var i = 35; i <= 36; i++) {
+                            $select2[i].style.display = "block";
+                        }
+                    }
+                    else if ($(this).text() == "UI设计") {
+                        for (var i = 37; i <= 40; i++) {
+                            $select2[i].style.display = "block";
+                        }
+                    }
+                })
+            })
+
+            $("#select2 dd").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+                if ($(this).hasClass("select-all")) {
+                    $("#selectB").remove();
+                } else {
+                    var copyThisB = $(this).clone();
+                    if ($("#selectB").length > 0) {
+                        $("#selectB a").html($(this).text());
+                    } else {
+                        $(".select-result dl").append(copyThisB.attr("id", "selectB"));
+                    }
+                }
+
+            });
+
+            $("#select3 dd").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+                if ($(this).hasClass("select-all")) {
+                    $("#selectC").remove();
+                } else {
+                    var copyThisC = $(this).clone();
+                    if ($("#selectC").length > 0) {
+                        $("#selectC a").html($(this).text());
+                    } else {
+                        $(".select-result dl").append(copyThisC.attr("id", "selectC"));
+                    }
+                }
+            });
+    </script>
 }

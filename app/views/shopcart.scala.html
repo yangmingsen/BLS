@@ -1,0 +1,215 @@
+@(cartlist: List[Cart])(implicit requestHeader: RequestHeader)
+
+@main("借阅列表") {
+    <link href="/assets/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/optstyle.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+
+    <script>
+
+            function loadXMLDoc( userid,  bookid )
+            {
+                var xmlhttp;
+
+                if (window.XMLHttpRequest)
+                {
+                    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    // IE6, IE5 浏览器执行代码
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("AjaxGo"+bookid).innerHTML=xmlhttp.responseText;
+                        document.getElementById("hideid"+bookid).style.display="none";
+
+                    }
+                }
+                xmlhttp.open("GET","/delCart?userid="+userid+"&bookid="+bookid,true);
+                xmlhttp.send();
+            }
+            
+            function goCheck() {
+                var xmlxttp;
+                if( window.XMLHttpRequest) {
+                    xmlxttp = new XMLHttpRequest();
+                } else {
+                    xmlxttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                xmlxttp.onreadystatechange = function () {
+                    if( xmlxttp.readyState==4 && xmlxttp.status == 200 ) {
+                        var sta = xmlxttp.responseText;
+                        if( sta == "0") {
+                            window.location.href = "@routes.Applications.subSuccessful()"
+                        } else if( sta == "-1") {
+                            alert("你借阅的书籍超过2本,请还书后再试！");
+                        } else if( sta == "-2") {
+                            alert("你当前未加入任何借阅书籍!");
+                        } else {
+                            alert("书籍编号编号:"+sta+" 你正在借阅中...,请删除或者退换后再操作");
+                        }
+                    }
+                }
+
+                xmlxttp.open("GET","/subReq",true);
+                xmlxttp.send();
+
+            }
+            
+    </script>
+
+        <!--购物车 -->
+    <div class="concent">
+        <div id="cartTable">
+            <div class="cart-table-th">
+                <div class="wp">
+                    <div class="th th-chk">
+                        <div id="J_SelectAll1" class="select-all J_SelectAll">
+
+                        </div>
+                    </div>
+                    <div class="th th-item">
+                        <div class="td-inner">商品信息</div>
+                    </div>
+                    <div class="th th-price">
+                        <div class="td-inner">推荐星数</div>
+                    </div>
+                    <div class="th th-amount">
+                        <div class="td-inner">数量</div>
+                    </div>
+                    <div class="th th-sum">
+                        <div class="td-inner">添加时间</div>
+                    </div>
+                    <div class="th th-op">
+                        <div class="td-inner">操作</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <tr class="item-list">
+                <div class="bundle  bundle-last ">
+                    <div class="bundle-hd">
+                        <div class="bd-promos">
+                            <div class="bd-has-promo"><span class="bd-has-promo-content"></span>&nbsp;&nbsp;</div>
+                            <div class="act-promo">
+                                <a href="#" target="_blank"><span class="gt"></span></a>
+                            </div>
+                            <span class="list-change theme-login"></span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bundle-main">
+
+                        @for(x <- cartlist) {
+
+                            <ul class="item-content clearfix" id="hideid@x.bookid">
+                                @*<li class="td td-chk">*@
+                                    @*<div class="cart-checkbox ">*@
+                                        @*<input class="check" id="J_CheckBox_170037950254" name="items[]" value="170037950254" type="checkbox">*@
+                                        @*<label for="J_CheckBox_170037950254"></label>*@
+                                    @*</div>*@
+                                @*</li>*@
+                                <li class="td td-item">
+                                    <div class="item-pic">
+                                        <a href="#" target="_blank" data-title="@x.title" class="J_MakePoint" data-point="tbcart.8.12">
+                                            <img src="/assets/ProjectImg/@x.bookid-1.jpg" class="itempic J_ItemImg"></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-basic-info">
+                                            <a href="#" target="_blank" title="@x.title" class="item-title J_MakePoint" data-point="tbcart.8.11">@x.title</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-info">
+                                    <div class="item-props item-props-can">
+                                        <span class="sku-line">作者: XXXX</span>
+                                    </div>
+                                </li>
+                                <li class="td td-price">
+                                    <div class="item-price price-promo-promo">
+                                        <div class="price-content">
+
+                                            <div class="price-line">
+                                                <em class="J_Price price-now" tabindex="0">******</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-amount">
+                                    <div class="amount-wrapper ">
+                                        <div class="item-amount ">
+                                            <div class="sl">
+
+                                                <span class="text_box" > @x.amount </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-sum">
+                                    <div class="td-inner">
+                                        <em tabindex="0" class="J_ItemSum number">@x.addtime</em>
+                                    </div>
+                                </li>
+                                <li class="td td-op">
+                                    <div class="td-inner">
+                                        <a href="javascript:;"  id="AjaxGo@x.bookid" onclick="loadXMLDoc('@x.userid',@x.bookid)" data-point-url="#" class="delete">
+                                        删除</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+
+                        }
+
+                    </div>
+                </div>
+            </tr>
+
+        </div>
+        <div class="clear"></div>
+
+        <div class="float-bar-wrapper">
+            @*<div id="J_SelectAll2" class="select-all J_SelectAll">*@
+                @*<div class="cart-checkbox">*@
+                    @*<input class="check-all check" id="J_SelectAllCbx2" name="select-all" value="true" type="checkbox">*@
+                    @*<label for="J_SelectAllCbx2"></label>*@
+                @*</div>*@
+                @*<span>全选</span>*@
+            @*</div>*@
+            @*<div class="operations">*@
+                @*<a href="#" hidefocus="true" class="deleteAll">删除</a>*@
+                @*<a href="#" hidefocus="true" class="J_BatchFav">移入收藏夹</a>*@
+            @*</div>*@
+            <div class="float-bar-right">
+                @*<div class="amount-sum">*@
+                    @*<span class="txt">已选商品</span>*@
+                    @*<em id="J_SelectedItemsCount">0</em><span class="txt">件</span>*@
+                    @*<div class="arrow-box">*@
+                        @*<span class="selected-items-arrow"></span>*@
+                        @*<span class="arrow"></span>*@
+                    @*</div>*@
+                @*</div>*@
+                <div class="price-sum">
+                    <span class="txt">合计:</span>
+                    <strong class="price"><em id="J_Total">@cartlist.size 本</em></strong>
+                </div>
+                <div class="btn-area">
+                    <a href="####" id="J_Go" onclick="goCheck()" class="submit-btn submit-btn-disabled" >
+                        <span>借&nbsp;阅</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
