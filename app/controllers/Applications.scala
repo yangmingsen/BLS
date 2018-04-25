@@ -35,6 +35,12 @@ class Applications @Inject() ( books: BookInfosRepository,
 //    (JsPath \ "spasd").write[String]
 //  )(unlift(Stu.unapply))
 
+  implicit val borrowStatesWrites: Writes[BorrowStates] = (
+    (JsPath \ "states").write[Int] and
+    (JsPath \ "bookid").write[Option[Long]] and
+    (JsPath \ "bookname").write[Option[String]]
+    )(unlift(BorrowStates.unapply))
+
 
 
   def index() = Action { implicit request =>
@@ -149,7 +155,7 @@ class Applications @Inject() ( books: BookInfosRepository,
   def addToAdminDealList() = Action { implicit request: Request[AnyContent] =>
    request.session.get("userAcct").map { user =>
      var res = client.addDealBorrowList(user)
-      Ok(res.toString)
+      Ok(Json.toJson(res))
     }.getOrElse {
       Ok(views.html.login())
     }
@@ -223,6 +229,13 @@ class Applications @Inject() ( books: BookInfosRepository,
       }.getOrElse {
         Ok(views.html.login())
       }
+  }
+
+  def personReturnBookReq(userid: String, bookid: Long) = checkClientLogin.async { implicit request: Request[AnyContent] =>
+    val date  = utils.TimeHelper.getTimeNow()
+    client.returnBookReq(userid,bookid,date).map{ _ =>
+      Ok("申请成功!")
+    }
   }
 
 

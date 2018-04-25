@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Sun Apr 22 12:40:39 CST 2018
+// @DATE:Wed Apr 25 22:25:37 CST 2018
 
 import play.api.mvc.Call
 
@@ -11,74 +11,74 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers {
 
-  // @LINE:47
+  // @LINE:50
   class ReverseAdmin(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:49
+    // @LINE:52
     def refusePass(userid:String = "", bookid:Long = -1): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "refReq" + play.core.routing.queryString(List(if(userid == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("userid", userid)), if(bookid == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("bookid", bookid)))))
     }
   
-    // @LINE:59
+    // @LINE:54
+    def agreClientReturnBook(userid:String = "", bookid:Long = -1): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "admin/retSuc" + play.core.routing.queryString(List(if(userid == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("userid", userid)), if(bookid == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("bookid", bookid)))))
+    }
+  
+    // @LINE:62
     def main(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/main")
     }
   
-    // @LINE:57
+    // @LINE:60
     def left(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/left")
     }
   
-    // @LINE:63
+    // @LINE:66
     def doLogin(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "admin/login")
     }
   
-    // @LINE:55
+    // @LINE:58
     def head(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/head")
     }
   
-    // @LINE:47
+    // @LINE:50
     def checkPass(userid:String = "", bookid:Long = -1): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "agrReq" + play.core.routing.queryString(List(if(userid == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("userid", userid)), if(bookid == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("bookid", bookid)))))
     }
   
-    // @LINE:51
-    def returnBook(userid:String = "", bookid:Long = -1): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "retSuc" + play.core.routing.queryString(List(if(userid == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("userid", userid)), if(bookid == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("bookid", bookid)))))
-    }
-  
-    // @LINE:65
+    // @LINE:68
     def agreeList(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/arelt")
     }
   
-    // @LINE:67
+    // @LINE:70
     def adminLogOut(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/eixt")
     }
   
-    // @LINE:53
+    // @LINE:56
     def index(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:61
+    // @LINE:64
     def login(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "admin/login")
@@ -86,14 +86,14 @@ package controllers {
   
   }
 
-  // @LINE:71
+  // @LINE:74
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:71
+    // @LINE:74
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
@@ -112,6 +112,12 @@ package controllers {
     def addCart(id:Long = -1, title:String = ""): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "Cart/add" + play.core.routing.queryString(List(if(id == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)), if(title == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("title", title)))))
+    }
+  
+    // @LINE:45
+    def personReturnBookReq(userid:String = "", bookid:Long = -1): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "person/retBoReq" + play.core.routing.queryString(List(if(userid == "") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("userid", userid)), if(bookid == -1) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("bookid", bookid)))))
     }
   
     // @LINE:17

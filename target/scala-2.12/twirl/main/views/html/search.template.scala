@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.61*/("""
                 <div class="nav-cont">
                     <ul>
                         <li class="index">
-                            <a href="#">首页</a>
+                            <a href="/">首页</a>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +71,7 @@ Seq[Any](format.raw/*1.61*/("""
                                 </dl>
                             </li>
                             <div class="clear"></div>
+
                             <li class="select-list">
                                 <dl id="select1">
                                     <dt class="am-badge am-round">方向</dt>
@@ -95,125 +96,107 @@ Seq[Any](format.raw/*1.61*/("""
                                         <dd class="select-all selected">
                                             <a href="#">全部</a>
                                         </dd>
+                                        <dd><a href="/search?key=HTML/CSS">HTML/CSS</a></dd>
+                                        <dd><a href="/search?key=JavaScript">JavaScript</a></dd>
+                                        <dd><a href="/search?key=Html5">Html5</a></dd>
+                                        <dd><a href="/search?key=CSS3">CSS3</a></dd>
+                                        <dd><a href="/search?key=jQuery">jQuery</a></dd>
+                                        <dd><a href="/search?key=Node.js">Node.js</a></dd>
+                                        <dd><a href="/search?key=Bootstrap">Bootstrap</a></dd>
+                                        <dd><a href="/search?key=Angular">Angular</a></dd>
+                                        <dd><a href="/search?key=React.js">React.js</a></dd>
                                         <dd>
-                                            <a href="#">HTML/CSS</a>
+                                            <a href="/search?key=Vue.js">Vue.js</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">JavaScript</a>
+                                            <a href="/search?key=Saaa/Less">Saaa/Less</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Html5</a>
+                                            <a href="/search?key=WebApp">WebApp</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">CSS3</a>
+                                            <a href="/search?key=前端工具">前端工具</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">jQuery</a>
+                                            <a href="/search?key=PHP">PHP</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Node.js</a>
+                                            <a href="/search?key=Java">Java</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Bootstrap</a>
+                                            <a href="/search?key=SpringBoot">SpringBoot</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Angular</a>
+                                            <a href="/search?key=Python">Python</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">React.js</a>
+                                            <a href="/search?key=C">C</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Vue.js</a>
+                                            <a href="/search?key=C++">C++</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Saaa/Less</a>
+                                            <a href="/search?key=Go">Go</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">WebApp</a>
+                                            <a href="/search?key=C#">C#</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">前端工具</a>
+                                            <a href="/search?key=Ruby">Ruby</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">PHP</a>
+                                            <a href="/search?key=Android">Android</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Java</a>
+                                            <a href="/search?key=iOS">iOS</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">SpringBoot</a>
+                                            <a href="/search?key=Unity 3D">Unity 3D</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Python</a>
+                                            <a href="/search?key=机器学习">Cocos2d-x</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">C</a>
+                                            <a href="/search?key=机器学习">MySQL</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">C++</a>
+                                            <a href="/search?key=机器学习">MongoDB</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Go</a>
+                                            <a href="/search?key=机器学习">Oracle</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">C#</a>
+                                            <a href="/search?key=机器学习">SQL Server</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Ruby</a>
+                                            <a href="/search?key=机器学习">机器学习</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Android</a>
+                                            <a href="/search?key=机器学习">深度学习</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">iOS</a>
+                                            <a href="/search?key=机器学习">大数据</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Unity 3D</a>
+                                            <a href="/search?key=机器学习">云计算</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Cocos2d-x</a>
+                                            <a href="/search?key=机器学习">测试</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">MySQL</a>
+                                            <a href="/search?key=机器学习">Linux</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">MongoDB</a>
+                                            <a href="/search?key=机器学习">动效动画</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">Oracle</a>
+                                            <a href="/search?key=机器学习">APPUI设计</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">SQL Server</a>
+                                            <a href="/search?key=机器学习">设计工具</a>
                                         </dd>
                                         <dd>
-                                            <a href="#">机器学习</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">深度学习</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">大数据</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">云计算</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">测试</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">Linux</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">动效动画</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">APPUI设计</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">设计工具</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="#">设计基础</a>
+                                            <a href="/search?key=机器学习">设计基础</a>
                                         </dd>
                                     </div>
                                 </dl>
@@ -243,6 +226,7 @@ Seq[Any](format.raw/*1.61*/("""
                                     </div>
                                 </dl>
                             </li>
+
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -261,36 +245,18 @@ Seq[Any](format.raw/*1.61*/("""
                         <div class="clear"></div>
 
                         <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
-                            """),format.raw/*239.37*/("""
-                                """),format.raw/*240.68*/("""
-                                    """),format.raw/*241.82*/("""
-                                    """),format.raw/*242.75*/("""
-                                    """),format.raw/*243.61*/("""
-                                        """),format.raw/*244.53*/("""
-                                        """),format.raw/*245.67*/("""
-                                    """),format.raw/*246.45*/("""
-                                    """),format.raw/*247.62*/("""
-                                        """),format.raw/*248.65*/("""
-                                    """),format.raw/*249.45*/("""
-                                """),format.raw/*250.43*/("""
-                            """),format.raw/*251.38*/("""
-
-                            """),_display_(/*253.30*/for(book <- curpage) yield /*253.50*/{_display_(Seq[Any](format.raw/*253.51*/("""
-                                """),format.raw/*254.33*/("""<li>
+                            """),_display_(/*223.30*/for(book <- curpage) yield /*223.50*/{_display_(Seq[Any](format.raw/*223.51*/("""
+                                """),format.raw/*224.33*/("""<li>
                                     <div class="i-pic limit menu1">
-                                        <a href="/introdution/"""),_display_(/*256.64*/book/*256.68*/.id),format.raw/*256.71*/(""""><img src="/assets/ProjectImg/"""),_display_(/*256.103*/book/*256.107*/.id),format.raw/*256.110*/("""-1.jpg" /></a>
-                                        <p class="title fl">"""),_display_(/*257.62*/book/*257.66*/.title),format.raw/*257.72*/("""</p>
-                                        <p class="price fl">
-                                            <b>¥</b>
-                                            <strong>56.90</strong>
-                                        </p>
+                                        <a href="/introdution/"""),_display_(/*226.64*/book/*226.68*/.id),format.raw/*226.71*/(""""><img src="/assets/ProjectImg/"""),_display_(/*226.103*/book/*226.107*/.id),format.raw/*226.110*/("""-1.jpg" /></a>
+                                        <p class="title fl">"""),_display_(/*227.62*/book/*227.66*/.title),format.raw/*227.72*/("""</p>
                                         <p class="number fl">
-                                            库存<span>"""),_display_(/*263.54*/book/*263.58*/.amount),format.raw/*263.65*/("""</span>
+                                            剩余<span>"""),_display_(/*229.54*/book/*229.58*/.amount),format.raw/*229.65*/("""</span>
                                         </p>
                                     </div>
                                 </li>
-                            """)))}),format.raw/*267.30*/("""
-                        """),format.raw/*268.25*/("""</ul>
+                            """)))}),format.raw/*233.30*/("""
+                        """),format.raw/*234.25*/("""</ul>
 
                     </div>
                     <div class="search-side">
@@ -373,131 +339,131 @@ Seq[Any](format.raw/*1.61*/("""
     </div>
 
     <script>
-            $(window).resize(function () """),format.raw/*351.42*/("""{"""),format.raw/*351.43*/("""
-                """),format.raw/*352.17*/("""var $img = $(".menu1 img");
+            $(window).resize(function () """),format.raw/*317.42*/("""{"""),format.raw/*317.43*/("""
+                """),format.raw/*318.17*/("""var $img = $(".menu1 img");
                 var minnHeight = 20000;
-                for (var i = 0; i < $img.length; i++) """),format.raw/*354.55*/("""{"""),format.raw/*354.56*/("""
-                    """),format.raw/*355.21*/("""var nWidth = $img[i].naturalWidth
+                for (var i = 0; i < $img.length; i++) """),format.raw/*320.55*/("""{"""),format.raw/*320.56*/("""
+                    """),format.raw/*321.21*/("""var nWidth = $img[i].naturalWidth
                     var nHeight = $img[i].naturalHeight
                     var nowHeight = $img[i].width / nWidth * nHeight;
-                    if (minnHeight > nowHeight) """),format.raw/*358.49*/("""{"""),format.raw/*358.50*/("""
-                        """),format.raw/*359.25*/("""minnHeight = nowHeight;
-                    """),format.raw/*360.21*/("""}"""),format.raw/*360.22*/("""
-                """),format.raw/*361.17*/("""}"""),format.raw/*361.18*/("""
-                """),format.raw/*362.17*/("""for (var i = 0; i < $img.length; i++) """),format.raw/*362.55*/("""{"""),format.raw/*362.56*/("""
-                    """),format.raw/*363.21*/("""$img[i].height = minnHeight;
-                """),format.raw/*364.17*/("""}"""),format.raw/*364.18*/("""
-            """),format.raw/*365.13*/("""}"""),format.raw/*365.14*/(""");
-            $().ready(function () """),format.raw/*366.35*/("""{"""),format.raw/*366.36*/("""
-                """),format.raw/*367.17*/("""var $img = $(".menu1 img");
+                    if (minnHeight > nowHeight) """),format.raw/*324.49*/("""{"""),format.raw/*324.50*/("""
+                        """),format.raw/*325.25*/("""minnHeight = nowHeight;
+                    """),format.raw/*326.21*/("""}"""),format.raw/*326.22*/("""
+                """),format.raw/*327.17*/("""}"""),format.raw/*327.18*/("""
+                """),format.raw/*328.17*/("""for (var i = 0; i < $img.length; i++) """),format.raw/*328.55*/("""{"""),format.raw/*328.56*/("""
+                    """),format.raw/*329.21*/("""$img[i].height = minnHeight;
+                """),format.raw/*330.17*/("""}"""),format.raw/*330.18*/("""
+            """),format.raw/*331.13*/("""}"""),format.raw/*331.14*/(""");
+            $().ready(function () """),format.raw/*332.35*/("""{"""),format.raw/*332.36*/("""
+                """),format.raw/*333.17*/("""var $img = $(".menu1 img");
                 var minnHeight = 20000;
-                for (var i = 0; i < $img.length; i++) """),format.raw/*369.55*/("""{"""),format.raw/*369.56*/("""
-                    """),format.raw/*370.21*/("""var nWidth = $img[i].naturalWidth
+                for (var i = 0; i < $img.length; i++) """),format.raw/*335.55*/("""{"""),format.raw/*335.56*/("""
+                    """),format.raw/*336.21*/("""var nWidth = $img[i].naturalWidth
                     var nHeight = $img[i].naturalHeight
                     var nowHeight = $img[i].width / nWidth * nHeight;
-                    if (minnHeight > nowHeight) """),format.raw/*373.49*/("""{"""),format.raw/*373.50*/("""
-                        """),format.raw/*374.25*/("""minnHeight = nowHeight;
-                    """),format.raw/*375.21*/("""}"""),format.raw/*375.22*/("""
-                """),format.raw/*376.17*/("""}"""),format.raw/*376.18*/("""
-                """),format.raw/*377.17*/("""for (var i = 0; i < $img.length; i++) """),format.raw/*377.55*/("""{"""),format.raw/*377.56*/("""
-                    """),format.raw/*378.21*/("""$img[i].height = minnHeight;
-                """),format.raw/*379.17*/("""}"""),format.raw/*379.18*/("""
-                """),format.raw/*380.17*/("""$("#select1 dd").click(function () """),format.raw/*380.52*/("""{"""),format.raw/*380.53*/("""
-                    """),format.raw/*381.21*/("""$(this).addClass("selected").siblings().removeClass("selected");
+                    if (minnHeight > nowHeight) """),format.raw/*339.49*/("""{"""),format.raw/*339.50*/("""
+                        """),format.raw/*340.25*/("""minnHeight = nowHeight;
+                    """),format.raw/*341.21*/("""}"""),format.raw/*341.22*/("""
+                """),format.raw/*342.17*/("""}"""),format.raw/*342.18*/("""
+                """),format.raw/*343.17*/("""for (var i = 0; i < $img.length; i++) """),format.raw/*343.55*/("""{"""),format.raw/*343.56*/("""
+                    """),format.raw/*344.21*/("""$img[i].height = minnHeight;
+                """),format.raw/*345.17*/("""}"""),format.raw/*345.18*/("""
+                """),format.raw/*346.17*/("""$("#select1 dd").click(function () """),format.raw/*346.52*/("""{"""),format.raw/*346.53*/("""
+                    """),format.raw/*347.21*/("""$(this).addClass("selected").siblings().removeClass("selected");
                     console.log($(this).text());
-                    if ($(this).hasClass("select-all")) """),format.raw/*383.57*/("""{"""),format.raw/*383.58*/("""
-                        """),format.raw/*384.25*/("""$("#selectA").remove();
-                    """),format.raw/*385.21*/("""}"""),format.raw/*385.22*/(""" """),format.raw/*385.23*/("""else """),format.raw/*385.28*/("""{"""),format.raw/*385.29*/("""
-                        """),format.raw/*386.25*/("""var copyThisA = $(this).clone();
-                        if ($("#selectA").length > 0) """),format.raw/*387.55*/("""{"""),format.raw/*387.56*/("""
-                            """),format.raw/*388.29*/("""$("#selectA a").html($(this).text());
-                        """),format.raw/*389.25*/("""}"""),format.raw/*389.26*/(""" """),format.raw/*389.27*/("""else """),format.raw/*389.32*/("""{"""),format.raw/*389.33*/("""
-                            """),format.raw/*390.29*/("""$(".select-result dl").append(copyThisA.attr("id", "selectA"));
+                    if ($(this).hasClass("select-all")) """),format.raw/*349.57*/("""{"""),format.raw/*349.58*/("""
+                        """),format.raw/*350.25*/("""$("#selectA").remove();
+                    """),format.raw/*351.21*/("""}"""),format.raw/*351.22*/(""" """),format.raw/*351.23*/("""else """),format.raw/*351.28*/("""{"""),format.raw/*351.29*/("""
+                        """),format.raw/*352.25*/("""var copyThisA = $(this).clone();
+                        if ($("#selectA").length > 0) """),format.raw/*353.55*/("""{"""),format.raw/*353.56*/("""
+                            """),format.raw/*354.29*/("""$("#selectA a").html($(this).text());
+                        """),format.raw/*355.25*/("""}"""),format.raw/*355.26*/(""" """),format.raw/*355.27*/("""else """),format.raw/*355.32*/("""{"""),format.raw/*355.33*/("""
+                            """),format.raw/*356.29*/("""$(".select-result dl").append(copyThisA.attr("id", "selectA"));
 
-                        """),format.raw/*392.25*/("""}"""),format.raw/*392.26*/("""
-                    """),format.raw/*393.21*/("""}"""),format.raw/*393.22*/("""
-                    """),format.raw/*394.21*/("""var $select2 = $("#select2 dd");
-                    for (var i = 1; i < $select2.length; i++) """),format.raw/*395.63*/("""{"""),format.raw/*395.64*/("""
-                        """),format.raw/*396.25*/("""$select2[i].style.display = "none";
-                    """),format.raw/*397.21*/("""}"""),format.raw/*397.22*/("""
-                    """),format.raw/*398.21*/("""if ($(this).text() == "全部") """),format.raw/*398.49*/("""{"""),format.raw/*398.50*/("""
+                        """),format.raw/*358.25*/("""}"""),format.raw/*358.26*/("""
+                    """),format.raw/*359.21*/("""}"""),format.raw/*359.22*/("""
+                    """),format.raw/*360.21*/("""var $select2 = $("#select2 dd");
+                    for (var i = 1; i < $select2.length; i++) """),format.raw/*361.63*/("""{"""),format.raw/*361.64*/("""
+                        """),format.raw/*362.25*/("""$select2[i].style.display = "none";
+                    """),format.raw/*363.21*/("""}"""),format.raw/*363.22*/("""
+                    """),format.raw/*364.21*/("""if ($(this).text() == "全部") """),format.raw/*364.49*/("""{"""),format.raw/*364.50*/("""
 
-                        """),format.raw/*400.25*/("""for (var i = 1; i < $select2.length; i++) """),format.raw/*400.67*/("""{"""),format.raw/*400.68*/("""
-                            """),format.raw/*401.29*/("""$select2[i].style.display = "inline-block";
-                        """),format.raw/*402.25*/("""}"""),format.raw/*402.26*/("""
-                    """),format.raw/*403.21*/("""}"""),format.raw/*403.22*/("""
-                    """),format.raw/*404.21*/("""else if ($(this).text() == "前端开发") """),format.raw/*404.56*/("""{"""),format.raw/*404.57*/("""
+                        """),format.raw/*366.25*/("""for (var i = 1; i < $select2.length; i++) """),format.raw/*366.67*/("""{"""),format.raw/*366.68*/("""
+                            """),format.raw/*367.29*/("""$select2[i].style.display = "inline-block";
+                        """),format.raw/*368.25*/("""}"""),format.raw/*368.26*/("""
+                    """),format.raw/*369.21*/("""}"""),format.raw/*369.22*/("""
+                    """),format.raw/*370.21*/("""else if ($(this).text() == "前端开发") """),format.raw/*370.56*/("""{"""),format.raw/*370.57*/("""
 
-                        """),format.raw/*406.25*/("""for (var i = 1; i <= 13; i++) """),format.raw/*406.55*/("""{"""),format.raw/*406.56*/("""
-                            """),format.raw/*407.29*/("""$select2[i].style.display = "inline-block";
-                        """),format.raw/*408.25*/("""}"""),format.raw/*408.26*/("""
-                    """),format.raw/*409.21*/("""}"""),format.raw/*409.22*/("""
-                    """),format.raw/*410.21*/("""else if ($(this).text() == "后端开发") """),format.raw/*410.56*/("""{"""),format.raw/*410.57*/("""
-                        """),format.raw/*411.25*/("""for (var i = 14; i <= 22; i++) """),format.raw/*411.56*/("""{"""),format.raw/*411.57*/("""
-                            """),format.raw/*412.29*/("""$select2[i].style.display = "inline-block";
-                        """),format.raw/*413.25*/("""}"""),format.raw/*413.26*/("""
-                    """),format.raw/*414.21*/("""}"""),format.raw/*414.22*/("""
-                    """),format.raw/*415.21*/("""else if ($(this).text() == "移动开发") """),format.raw/*415.56*/("""{"""),format.raw/*415.57*/("""
-                        """),format.raw/*416.25*/("""for (var i = 23; i <= 26; i++) """),format.raw/*416.56*/("""{"""),format.raw/*416.57*/("""
-                            """),format.raw/*417.29*/("""$select2[i].style.display = "inline-block";
-                        """),format.raw/*418.25*/("""}"""),format.raw/*418.26*/("""
-                    """),format.raw/*419.21*/("""}"""),format.raw/*419.22*/("""
-                    """),format.raw/*420.21*/("""else if ($(this).text() == "数据库") """),format.raw/*420.55*/("""{"""),format.raw/*420.56*/("""
-                        """),format.raw/*421.25*/("""for (var i = 27; i <= 30; i++) """),format.raw/*421.56*/("""{"""),format.raw/*421.57*/("""
-                            """),format.raw/*422.29*/("""$select2[i].style.display = "block";
-                        """),format.raw/*423.25*/("""}"""),format.raw/*423.26*/("""
+                        """),format.raw/*372.25*/("""for (var i = 1; i <= 13; i++) """),format.raw/*372.55*/("""{"""),format.raw/*372.56*/("""
+                            """),format.raw/*373.29*/("""$select2[i].style.display = "inline-block";
+                        """),format.raw/*374.25*/("""}"""),format.raw/*374.26*/("""
+                    """),format.raw/*375.21*/("""}"""),format.raw/*375.22*/("""
+                    """),format.raw/*376.21*/("""else if ($(this).text() == "后端开发") """),format.raw/*376.56*/("""{"""),format.raw/*376.57*/("""
+                        """),format.raw/*377.25*/("""for (var i = 14; i <= 22; i++) """),format.raw/*377.56*/("""{"""),format.raw/*377.57*/("""
+                            """),format.raw/*378.29*/("""$select2[i].style.display = "inline-block";
+                        """),format.raw/*379.25*/("""}"""),format.raw/*379.26*/("""
+                    """),format.raw/*380.21*/("""}"""),format.raw/*380.22*/("""
+                    """),format.raw/*381.21*/("""else if ($(this).text() == "移动开发") """),format.raw/*381.56*/("""{"""),format.raw/*381.57*/("""
+                        """),format.raw/*382.25*/("""for (var i = 23; i <= 26; i++) """),format.raw/*382.56*/("""{"""),format.raw/*382.57*/("""
+                            """),format.raw/*383.29*/("""$select2[i].style.display = "inline-block";
+                        """),format.raw/*384.25*/("""}"""),format.raw/*384.26*/("""
+                    """),format.raw/*385.21*/("""}"""),format.raw/*385.22*/("""
+                    """),format.raw/*386.21*/("""else if ($(this).text() == "数据库") """),format.raw/*386.55*/("""{"""),format.raw/*386.56*/("""
+                        """),format.raw/*387.25*/("""for (var i = 27; i <= 30; i++) """),format.raw/*387.56*/("""{"""),format.raw/*387.57*/("""
+                            """),format.raw/*388.29*/("""$select2[i].style.display = "block";
+                        """),format.raw/*389.25*/("""}"""),format.raw/*389.26*/("""
+                    """),format.raw/*390.21*/("""}"""),format.raw/*390.22*/("""
+                    """),format.raw/*391.21*/("""else if ($(this).text() == "人工智能") """),format.raw/*391.56*/("""{"""),format.raw/*391.57*/("""
+                        """),format.raw/*392.25*/("""for (var i = 31; i <= 32; i++) """),format.raw/*392.56*/("""{"""),format.raw/*392.57*/("""
+                            """),format.raw/*393.29*/("""$select2[i].style.display = "block";
+                        """),format.raw/*394.25*/("""}"""),format.raw/*394.26*/("""
+                    """),format.raw/*395.21*/("""}"""),format.raw/*395.22*/("""
+                    """),format.raw/*396.21*/("""else if ($(this).text() == "云计算&大数据") """),format.raw/*396.59*/("""{"""),format.raw/*396.60*/("""
+                        """),format.raw/*397.25*/("""for (var i = 33; i <= 34; i++) """),format.raw/*397.56*/("""{"""),format.raw/*397.57*/("""
+                            """),format.raw/*398.29*/("""$select2[i].style.display = "block";
+                        """),format.raw/*399.25*/("""}"""),format.raw/*399.26*/("""
+                    """),format.raw/*400.21*/("""}"""),format.raw/*400.22*/("""
+                    """),format.raw/*401.21*/("""else if ($(this).text() == "运维&测试") """),format.raw/*401.57*/("""{"""),format.raw/*401.58*/("""
+                        """),format.raw/*402.25*/("""for (var i = 35; i <= 36; i++) """),format.raw/*402.56*/("""{"""),format.raw/*402.57*/("""
+                            """),format.raw/*403.29*/("""$select2[i].style.display = "block";
+                        """),format.raw/*404.25*/("""}"""),format.raw/*404.26*/("""
+                    """),format.raw/*405.21*/("""}"""),format.raw/*405.22*/("""
+                    """),format.raw/*406.21*/("""else if ($(this).text() == "UI设计") """),format.raw/*406.56*/("""{"""),format.raw/*406.57*/("""
+                        """),format.raw/*407.25*/("""for (var i = 37; i <= 40; i++) """),format.raw/*407.56*/("""{"""),format.raw/*407.57*/("""
+                            """),format.raw/*408.29*/("""$select2[i].style.display = "block";
+                        """),format.raw/*409.25*/("""}"""),format.raw/*409.26*/("""
+                    """),format.raw/*410.21*/("""}"""),format.raw/*410.22*/("""
+                """),format.raw/*411.17*/("""}"""),format.raw/*411.18*/(""")
+            """),format.raw/*412.13*/("""}"""),format.raw/*412.14*/(""")
+
+            $("#select2 dd").click(function () """),format.raw/*414.48*/("""{"""),format.raw/*414.49*/("""
+                """),format.raw/*415.17*/("""$(this).addClass("selected").siblings().removeClass("selected");
+                if ($(this).hasClass("select-all")) """),format.raw/*416.53*/("""{"""),format.raw/*416.54*/("""
+                    """),format.raw/*417.21*/("""$("#selectB").remove();
+                """),format.raw/*418.17*/("""}"""),format.raw/*418.18*/(""" """),format.raw/*418.19*/("""else """),format.raw/*418.24*/("""{"""),format.raw/*418.25*/("""
+                    """),format.raw/*419.21*/("""var copyThisB = $(this).clone();
+                    if ($("#selectB").length > 0) """),format.raw/*420.51*/("""{"""),format.raw/*420.52*/("""
+                        """),format.raw/*421.25*/("""$("#selectB a").html($(this).text());
+                    """),format.raw/*422.21*/("""}"""),format.raw/*422.22*/(""" """),format.raw/*422.23*/("""else """),format.raw/*422.28*/("""{"""),format.raw/*422.29*/("""
+                        """),format.raw/*423.25*/("""$(".select-result dl").append(copyThisB.attr("id", "selectB"));
                     """),format.raw/*424.21*/("""}"""),format.raw/*424.22*/("""
-                    """),format.raw/*425.21*/("""else if ($(this).text() == "人工智能") """),format.raw/*425.56*/("""{"""),format.raw/*425.57*/("""
-                        """),format.raw/*426.25*/("""for (var i = 31; i <= 32; i++) """),format.raw/*426.56*/("""{"""),format.raw/*426.57*/("""
-                            """),format.raw/*427.29*/("""$select2[i].style.display = "block";
-                        """),format.raw/*428.25*/("""}"""),format.raw/*428.26*/("""
-                    """),format.raw/*429.21*/("""}"""),format.raw/*429.22*/("""
-                    """),format.raw/*430.21*/("""else if ($(this).text() == "云计算&大数据") """),format.raw/*430.59*/("""{"""),format.raw/*430.60*/("""
-                        """),format.raw/*431.25*/("""for (var i = 33; i <= 34; i++) """),format.raw/*431.56*/("""{"""),format.raw/*431.57*/("""
-                            """),format.raw/*432.29*/("""$select2[i].style.display = "block";
-                        """),format.raw/*433.25*/("""}"""),format.raw/*433.26*/("""
-                    """),format.raw/*434.21*/("""}"""),format.raw/*434.22*/("""
-                    """),format.raw/*435.21*/("""else if ($(this).text() == "运维&测试") """),format.raw/*435.57*/("""{"""),format.raw/*435.58*/("""
-                        """),format.raw/*436.25*/("""for (var i = 35; i <= 36; i++) """),format.raw/*436.56*/("""{"""),format.raw/*436.57*/("""
-                            """),format.raw/*437.29*/("""$select2[i].style.display = "block";
-                        """),format.raw/*438.25*/("""}"""),format.raw/*438.26*/("""
+                """),format.raw/*425.17*/("""}"""),format.raw/*425.18*/("""
+
+            """),format.raw/*427.13*/("""}"""),format.raw/*427.14*/(""");
+
+            $("#select3 dd").click(function () """),format.raw/*429.48*/("""{"""),format.raw/*429.49*/("""
+                """),format.raw/*430.17*/("""$(this).addClass("selected").siblings().removeClass("selected");
+                if ($(this).hasClass("select-all")) """),format.raw/*431.53*/("""{"""),format.raw/*431.54*/("""
+                    """),format.raw/*432.21*/("""$("#selectC").remove();
+                """),format.raw/*433.17*/("""}"""),format.raw/*433.18*/(""" """),format.raw/*433.19*/("""else """),format.raw/*433.24*/("""{"""),format.raw/*433.25*/("""
+                    """),format.raw/*434.21*/("""var copyThisC = $(this).clone();
+                    if ($("#selectC").length > 0) """),format.raw/*435.51*/("""{"""),format.raw/*435.52*/("""
+                        """),format.raw/*436.25*/("""$("#selectC a").html($(this).text());
+                    """),format.raw/*437.21*/("""}"""),format.raw/*437.22*/(""" """),format.raw/*437.23*/("""else """),format.raw/*437.28*/("""{"""),format.raw/*437.29*/("""
+                        """),format.raw/*438.25*/("""$(".select-result dl").append(copyThisC.attr("id", "selectC"));
                     """),format.raw/*439.21*/("""}"""),format.raw/*439.22*/("""
-                    """),format.raw/*440.21*/("""else if ($(this).text() == "UI设计") """),format.raw/*440.56*/("""{"""),format.raw/*440.57*/("""
-                        """),format.raw/*441.25*/("""for (var i = 37; i <= 40; i++) """),format.raw/*441.56*/("""{"""),format.raw/*441.57*/("""
-                            """),format.raw/*442.29*/("""$select2[i].style.display = "block";
-                        """),format.raw/*443.25*/("""}"""),format.raw/*443.26*/("""
-                    """),format.raw/*444.21*/("""}"""),format.raw/*444.22*/("""
-                """),format.raw/*445.17*/("""}"""),format.raw/*445.18*/(""")
-            """),format.raw/*446.13*/("""}"""),format.raw/*446.14*/(""")
-
-            $("#select2 dd").click(function () """),format.raw/*448.48*/("""{"""),format.raw/*448.49*/("""
-                """),format.raw/*449.17*/("""$(this).addClass("selected").siblings().removeClass("selected");
-                if ($(this).hasClass("select-all")) """),format.raw/*450.53*/("""{"""),format.raw/*450.54*/("""
-                    """),format.raw/*451.21*/("""$("#selectB").remove();
-                """),format.raw/*452.17*/("""}"""),format.raw/*452.18*/(""" """),format.raw/*452.19*/("""else """),format.raw/*452.24*/("""{"""),format.raw/*452.25*/("""
-                    """),format.raw/*453.21*/("""var copyThisB = $(this).clone();
-                    if ($("#selectB").length > 0) """),format.raw/*454.51*/("""{"""),format.raw/*454.52*/("""
-                        """),format.raw/*455.25*/("""$("#selectB a").html($(this).text());
-                    """),format.raw/*456.21*/("""}"""),format.raw/*456.22*/(""" """),format.raw/*456.23*/("""else """),format.raw/*456.28*/("""{"""),format.raw/*456.29*/("""
-                        """),format.raw/*457.25*/("""$(".select-result dl").append(copyThisB.attr("id", "selectB"));
-                    """),format.raw/*458.21*/("""}"""),format.raw/*458.22*/("""
-                """),format.raw/*459.17*/("""}"""),format.raw/*459.18*/("""
-
-            """),format.raw/*461.13*/("""}"""),format.raw/*461.14*/(""");
-
-            $("#select3 dd").click(function () """),format.raw/*463.48*/("""{"""),format.raw/*463.49*/("""
-                """),format.raw/*464.17*/("""$(this).addClass("selected").siblings().removeClass("selected");
-                if ($(this).hasClass("select-all")) """),format.raw/*465.53*/("""{"""),format.raw/*465.54*/("""
-                    """),format.raw/*466.21*/("""$("#selectC").remove();
-                """),format.raw/*467.17*/("""}"""),format.raw/*467.18*/(""" """),format.raw/*467.19*/("""else """),format.raw/*467.24*/("""{"""),format.raw/*467.25*/("""
-                    """),format.raw/*468.21*/("""var copyThisC = $(this).clone();
-                    if ($("#selectC").length > 0) """),format.raw/*469.51*/("""{"""),format.raw/*469.52*/("""
-                        """),format.raw/*470.25*/("""$("#selectC a").html($(this).text());
-                    """),format.raw/*471.21*/("""}"""),format.raw/*471.22*/(""" """),format.raw/*471.23*/("""else """),format.raw/*471.28*/("""{"""),format.raw/*471.29*/("""
-                        """),format.raw/*472.25*/("""$(".select-result dl").append(copyThisC.attr("id", "selectC"));
-                    """),format.raw/*473.21*/("""}"""),format.raw/*473.22*/("""
-                """),format.raw/*474.17*/("""}"""),format.raw/*474.18*/("""
-            """),format.raw/*475.13*/("""}"""),format.raw/*475.14*/(""");
+                """),format.raw/*440.17*/("""}"""),format.raw/*440.18*/("""
+            """),format.raw/*441.13*/("""}"""),format.raw/*441.14*/(""");
     </script>
 """)))}))
       }
@@ -515,11 +481,11 @@ Seq[Any](format.raw/*1.61*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Apr 21 12:27:13 CST 2018
+                  DATE: Tue Apr 24 09:07:41 CST 2018
                   SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/search.scala.html
-                  HASH: 60da945456f6bbe95ee370fe94ca5d0b06c7ee45
-                  MATRIX: 753->1|907->60|936->64|954->74|993->76|1025->82|12842->11878|12904->11946|12970->12028|13036->12103|13102->12164|13172->12217|13242->12284|13308->12329|13374->12391|13444->12456|13510->12501|13572->12544|13630->12582|13689->12613|13726->12633|13766->12634|13828->12667|13992->12803|14006->12807|14031->12810|14092->12842|14107->12846|14133->12849|14237->12925|14251->12929|14279->12935|14653->13281|14667->13285|14696->13292|14891->13455|14945->13480|18200->16706|18230->16707|18276->16724|18427->16846|18457->16847|18507->16868|18744->17076|18774->17077|18828->17102|18901->17146|18931->17147|18977->17164|19007->17165|19053->17182|19120->17220|19150->17221|19200->17242|19274->17287|19304->17288|19346->17301|19376->17302|19442->17339|19472->17340|19518->17357|19669->17479|19699->17480|19749->17501|19986->17709|20016->17710|20070->17735|20143->17779|20173->17780|20219->17797|20249->17798|20295->17815|20362->17853|20392->17854|20442->17875|20516->17920|20546->17921|20592->17938|20656->17973|20686->17974|20736->17995|20935->18165|20965->18166|21019->18191|21092->18235|21122->18236|21152->18237|21186->18242|21216->18243|21270->18268|21386->18355|21416->18356|21474->18385|21565->18447|21595->18448|21625->18449|21659->18454|21689->18455|21747->18484|21865->18573|21895->18574|21945->18595|21975->18596|22025->18617|22149->18712|22179->18713|22233->18738|22318->18794|22348->18795|22398->18816|22455->18844|22485->18845|22540->18871|22611->18913|22641->18914|22699->18943|22796->19011|22826->19012|22876->19033|22906->19034|22956->19055|23020->19090|23050->19091|23105->19117|23164->19147|23194->19148|23252->19177|23349->19245|23379->19246|23429->19267|23459->19268|23509->19289|23573->19324|23603->19325|23657->19350|23717->19381|23747->19382|23805->19411|23902->19479|23932->19480|23982->19501|24012->19502|24062->19523|24126->19558|24156->19559|24210->19584|24270->19615|24300->19616|24358->19645|24455->19713|24485->19714|24535->19735|24565->19736|24615->19757|24678->19791|24708->19792|24762->19817|24822->19848|24852->19849|24910->19878|25000->19939|25030->19940|25080->19961|25110->19962|25160->19983|25224->20018|25254->20019|25308->20044|25368->20075|25398->20076|25456->20105|25546->20166|25576->20167|25626->20188|25656->20189|25706->20210|25773->20248|25803->20249|25857->20274|25917->20305|25947->20306|26005->20335|26095->20396|26125->20397|26175->20418|26205->20419|26255->20440|26320->20476|26350->20477|26404->20502|26464->20533|26494->20534|26552->20563|26642->20624|26672->20625|26722->20646|26752->20647|26802->20668|26866->20703|26896->20704|26950->20729|27010->20760|27040->20761|27098->20790|27188->20851|27218->20852|27268->20873|27298->20874|27344->20891|27374->20892|27417->20906|27447->20907|27526->20957|27556->20958|27602->20975|27748->21092|27778->21093|27828->21114|27897->21154|27927->21155|27957->21156|27991->21161|28021->21162|28071->21183|28183->21266|28213->21267|28267->21292|28354->21350|28384->21351|28414->21352|28448->21357|28478->21358|28532->21383|28645->21467|28675->21468|28721->21485|28751->21486|28794->21500|28824->21501|28904->21552|28934->21553|28980->21570|29126->21687|29156->21688|29206->21709|29275->21749|29305->21750|29335->21751|29369->21756|29399->21757|29449->21778|29561->21861|29591->21862|29645->21887|29732->21945|29762->21946|29792->21947|29826->21952|29856->21953|29910->21978|30023->22062|30053->22063|30099->22080|30129->22081|30171->22094|30201->22095
-                  LINES: 21->1|26->1|29->4|29->4|29->4|31->6|264->239|265->240|266->241|267->242|268->243|269->244|270->245|271->246|272->247|273->248|274->249|275->250|276->251|278->253|278->253|278->253|279->254|281->256|281->256|281->256|281->256|281->256|281->256|282->257|282->257|282->257|288->263|288->263|288->263|292->267|293->268|376->351|376->351|377->352|379->354|379->354|380->355|383->358|383->358|384->359|385->360|385->360|386->361|386->361|387->362|387->362|387->362|388->363|389->364|389->364|390->365|390->365|391->366|391->366|392->367|394->369|394->369|395->370|398->373|398->373|399->374|400->375|400->375|401->376|401->376|402->377|402->377|402->377|403->378|404->379|404->379|405->380|405->380|405->380|406->381|408->383|408->383|409->384|410->385|410->385|410->385|410->385|410->385|411->386|412->387|412->387|413->388|414->389|414->389|414->389|414->389|414->389|415->390|417->392|417->392|418->393|418->393|419->394|420->395|420->395|421->396|422->397|422->397|423->398|423->398|423->398|425->400|425->400|425->400|426->401|427->402|427->402|428->403|428->403|429->404|429->404|429->404|431->406|431->406|431->406|432->407|433->408|433->408|434->409|434->409|435->410|435->410|435->410|436->411|436->411|436->411|437->412|438->413|438->413|439->414|439->414|440->415|440->415|440->415|441->416|441->416|441->416|442->417|443->418|443->418|444->419|444->419|445->420|445->420|445->420|446->421|446->421|446->421|447->422|448->423|448->423|449->424|449->424|450->425|450->425|450->425|451->426|451->426|451->426|452->427|453->428|453->428|454->429|454->429|455->430|455->430|455->430|456->431|456->431|456->431|457->432|458->433|458->433|459->434|459->434|460->435|460->435|460->435|461->436|461->436|461->436|462->437|463->438|463->438|464->439|464->439|465->440|465->440|465->440|466->441|466->441|466->441|467->442|468->443|468->443|469->444|469->444|470->445|470->445|471->446|471->446|473->448|473->448|474->449|475->450|475->450|476->451|477->452|477->452|477->452|477->452|477->452|478->453|479->454|479->454|480->455|481->456|481->456|481->456|481->456|481->456|482->457|483->458|483->458|484->459|484->459|486->461|486->461|488->463|488->463|489->464|490->465|490->465|491->466|492->467|492->467|492->467|492->467|492->467|493->468|494->469|494->469|495->470|496->471|496->471|496->471|496->471|496->471|497->472|498->473|498->473|499->474|499->474|500->475|500->475
+                  HASH: f84642089c9f0e3d330ce169c06da09616ee8962
+                  MATRIX: 753->1|907->60|936->64|954->74|993->76|1025->82|12712->11741|12749->11761|12789->11762|12851->11795|13015->11931|13029->11935|13054->11938|13115->11970|13130->11974|13156->11977|13260->12053|13274->12057|13302->12063|13450->12183|13464->12187|13493->12194|13688->12357|13742->12382|16997->15608|17027->15609|17073->15626|17224->15748|17254->15749|17304->15770|17541->15978|17571->15979|17625->16004|17698->16048|17728->16049|17774->16066|17804->16067|17850->16084|17917->16122|17947->16123|17997->16144|18071->16189|18101->16190|18143->16203|18173->16204|18239->16241|18269->16242|18315->16259|18466->16381|18496->16382|18546->16403|18783->16611|18813->16612|18867->16637|18940->16681|18970->16682|19016->16699|19046->16700|19092->16717|19159->16755|19189->16756|19239->16777|19313->16822|19343->16823|19389->16840|19453->16875|19483->16876|19533->16897|19732->17067|19762->17068|19816->17093|19889->17137|19919->17138|19949->17139|19983->17144|20013->17145|20067->17170|20183->17257|20213->17258|20271->17287|20362->17349|20392->17350|20422->17351|20456->17356|20486->17357|20544->17386|20662->17475|20692->17476|20742->17497|20772->17498|20822->17519|20946->17614|20976->17615|21030->17640|21115->17696|21145->17697|21195->17718|21252->17746|21282->17747|21337->17773|21408->17815|21438->17816|21496->17845|21593->17913|21623->17914|21673->17935|21703->17936|21753->17957|21817->17992|21847->17993|21902->18019|21961->18049|21991->18050|22049->18079|22146->18147|22176->18148|22226->18169|22256->18170|22306->18191|22370->18226|22400->18227|22454->18252|22514->18283|22544->18284|22602->18313|22699->18381|22729->18382|22779->18403|22809->18404|22859->18425|22923->18460|22953->18461|23007->18486|23067->18517|23097->18518|23155->18547|23252->18615|23282->18616|23332->18637|23362->18638|23412->18659|23475->18693|23505->18694|23559->18719|23619->18750|23649->18751|23707->18780|23797->18841|23827->18842|23877->18863|23907->18864|23957->18885|24021->18920|24051->18921|24105->18946|24165->18977|24195->18978|24253->19007|24343->19068|24373->19069|24423->19090|24453->19091|24503->19112|24570->19150|24600->19151|24654->19176|24714->19207|24744->19208|24802->19237|24892->19298|24922->19299|24972->19320|25002->19321|25052->19342|25117->19378|25147->19379|25201->19404|25261->19435|25291->19436|25349->19465|25439->19526|25469->19527|25519->19548|25549->19549|25599->19570|25663->19605|25693->19606|25747->19631|25807->19662|25837->19663|25895->19692|25985->19753|26015->19754|26065->19775|26095->19776|26141->19793|26171->19794|26214->19808|26244->19809|26323->19859|26353->19860|26399->19877|26545->19994|26575->19995|26625->20016|26694->20056|26724->20057|26754->20058|26788->20063|26818->20064|26868->20085|26980->20168|27010->20169|27064->20194|27151->20252|27181->20253|27211->20254|27245->20259|27275->20260|27329->20285|27442->20369|27472->20370|27518->20387|27548->20388|27591->20402|27621->20403|27701->20454|27731->20455|27777->20472|27923->20589|27953->20590|28003->20611|28072->20651|28102->20652|28132->20653|28166->20658|28196->20659|28246->20680|28358->20763|28388->20764|28442->20789|28529->20847|28559->20848|28589->20849|28623->20854|28653->20855|28707->20880|28820->20964|28850->20965|28896->20982|28926->20983|28968->20996|28998->20997
+                  LINES: 21->1|26->1|29->4|29->4|29->4|31->6|248->223|248->223|248->223|249->224|251->226|251->226|251->226|251->226|251->226|251->226|252->227|252->227|252->227|254->229|254->229|254->229|258->233|259->234|342->317|342->317|343->318|345->320|345->320|346->321|349->324|349->324|350->325|351->326|351->326|352->327|352->327|353->328|353->328|353->328|354->329|355->330|355->330|356->331|356->331|357->332|357->332|358->333|360->335|360->335|361->336|364->339|364->339|365->340|366->341|366->341|367->342|367->342|368->343|368->343|368->343|369->344|370->345|370->345|371->346|371->346|371->346|372->347|374->349|374->349|375->350|376->351|376->351|376->351|376->351|376->351|377->352|378->353|378->353|379->354|380->355|380->355|380->355|380->355|380->355|381->356|383->358|383->358|384->359|384->359|385->360|386->361|386->361|387->362|388->363|388->363|389->364|389->364|389->364|391->366|391->366|391->366|392->367|393->368|393->368|394->369|394->369|395->370|395->370|395->370|397->372|397->372|397->372|398->373|399->374|399->374|400->375|400->375|401->376|401->376|401->376|402->377|402->377|402->377|403->378|404->379|404->379|405->380|405->380|406->381|406->381|406->381|407->382|407->382|407->382|408->383|409->384|409->384|410->385|410->385|411->386|411->386|411->386|412->387|412->387|412->387|413->388|414->389|414->389|415->390|415->390|416->391|416->391|416->391|417->392|417->392|417->392|418->393|419->394|419->394|420->395|420->395|421->396|421->396|421->396|422->397|422->397|422->397|423->398|424->399|424->399|425->400|425->400|426->401|426->401|426->401|427->402|427->402|427->402|428->403|429->404|429->404|430->405|430->405|431->406|431->406|431->406|432->407|432->407|432->407|433->408|434->409|434->409|435->410|435->410|436->411|436->411|437->412|437->412|439->414|439->414|440->415|441->416|441->416|442->417|443->418|443->418|443->418|443->418|443->418|444->419|445->420|445->420|446->421|447->422|447->422|447->422|447->422|447->422|448->423|449->424|449->424|450->425|450->425|452->427|452->427|454->429|454->429|455->430|456->431|456->431|457->432|458->433|458->433|458->433|458->433|458->433|459->434|460->435|460->435|461->436|462->437|462->437|462->437|462->437|462->437|463->438|464->439|464->439|465->440|465->440|466->441|466->441
                   -- GENERATED --
               */
           

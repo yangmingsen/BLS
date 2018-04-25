@@ -73,9 +73,9 @@
                                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                                 {
                                     if(choose == 1)
-                                        document.getElementById("check"+bookid).innerHTML=xmlhttp.responseText;
+                                        document.getElementById("check"+userid+bookid).innerHTML=xmlhttp.responseText;
                                     else
-                                        document.getElementById("refuse"+bookid).innerHTML=xmlhttp.responseText;
+                                        document.getElementById("refuse"+userid+bookid).innerHTML=xmlhttp.responseText;
 
                                 }
                             }
@@ -119,8 +119,8 @@
                                         <td class="f_cA">待审核</td>
                                         <td>管理1</td>
                                         <td>@x._1.borrowdate</td>
-                                            <td><a href="####" onclick="loadXMLDoc('@x._1.userid',@x._1.bookid,1)" id="check@x._1.bookid" >同意</a></td>
-                                        <td class="last"><a href="###" id="refuse@x._1.bookid" onclick="loadXMLDoc('@x._1.userid',@x._1.bookid,2)">驳回</a></td>
+                                            <td><a href="####" onclick="loadXMLDoc('@x._1.userid',@x._1.bookid,1)" id="check@x._1.userid@x._1.bookid" >同意</a></td>
+                                        <td class="last"><a href="###" id="refuse@x._1.userid@x._1.bookid" onclick="loadXMLDoc('@x._1.userid',@x._1.bookid,2)">驳回</a></td>
                                         </tr>
                                 }
 

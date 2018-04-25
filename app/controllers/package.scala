@@ -3,6 +3,10 @@ import utils.RequestHelper
 
 import scala.concurrent.{Future,ExecutionContext}
 
+/*
+ *
+ * created by yangmingsen on 2018/04
+ */
 package object controllers {
 
     def checkAdminLogin[A](implicit parser: BodyParser[A], ec: ExecutionContext): ActionBuilderImpl[A]= new ActionBuilderImpl(parser) with Rendering with AcceptExtractors {

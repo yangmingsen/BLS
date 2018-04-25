@@ -23,8 +23,13 @@ case class Cart(userid: String,//
                 amount: Int,
                 addtime: Date)
 
+
+case class BorrowStates(states: Int,
+                        bookid: Option[Long],
+                        bookname: Option[String])
+
 @Singleton
-class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit ec: DatabaseExecutionContext){
+class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository, book: BookInfosRepository) (implicit ec: DatabaseExecutionContext){
   private val db = dbapi.database("default")
 
 
@@ -49,8 +54,8 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit
     get[String]("Stu.spasd") map {
       case sstu~sname~ssex~sclass~sphone~sqq~spasd => Stu(sstu,sname,ssex,sclass,sphone,sqq,spasd)
     }
-
   }
+
 
 
 
@@ -126,23 +131,31 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit
     * @param userid the user ID
     * @return Unit
     */
-  def addDealBorrowList(userid: String): Int = {
+  def addDealBorrowList(userid: String): BorrowStates = {
     db.withConnection { implicit connection =>
 
      val cartlist = getCart(userid)
       if( cartlist.size == 0 ) {
-        return -2
+        return BorrowStates(-2,None,None)//表示现在借阅列表为空
+      }
+
+      for( c <- cartlist ) {
+        book.findBookBorrowOK(c.bookid) match {
+          case Some(ha) => {/*book.bookNumReduce(c.bookid)*/}
+          case None => {return BorrowStates(-3,Some(c.bookid),Some(c.title))}//数量不足
+        }
+
       }
 
       var dealList = admin.getUserId(userid)
       if( (dealList.size + cartlist.size) > 2) {
-        return -1
+        return BorrowStates(-1,None,None) //表示借阅和正在处理的书籍超过2本
       }
 
       for(h <- cartlist ) {
         for( d <- dealList) {
           if( h.bookid == d.bookid) {
-            return h.bookid.toInt
+            return BorrowStates(-4,Some(h.bookid),Some(h.title))//表示有相同书籍
           }
         }
       }
@@ -171,12 +184,19 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit
         'userid -> userid
       ).executeUpdate()
 
-      return 0
+
+      BorrowStates(0,None,None)
 
     }
   }
 
-
+  /**
+    * 删除
+    * @param userid
+    * @param bookid
+    * @param states
+    * @return
+    */
   def delDealListOfState(userid: String, bookid: Long, states: Int) = Future{
     db.withConnection { implicit connection =>
       SQL("DELETE FROM DealBorrowList WHERE userid={userid} AND states={states} AND bookid={bookid}").on(
@@ -187,6 +207,12 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit
     }
   }(ec)
 
+  /**
+    * 继续申请
+    * @param userid
+    * @param bookid
+    * @return
+    */
   def continueBorrowReq(userid: String, bookid: Long) = Future {
     db.withConnection { implicit connection =>
       SQL("UPDATE DealBorrowList SET states=1 WHERE userid={userid} AND bookid={bookid}").on(
@@ -196,12 +222,33 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository) (implicit
     }
   }(ec)
 
-
+  /**
+    * 得到一个用户信息
+    * @param sstu
+    * @return
+    */
   def getStu(sstu: String ) = Future {
     db.withConnection { implicit conn =>
       SQL("SELECT * FROM Stu WHERE sstu={sstu}").on(
         'sstu -> sstu
       ).as(stuSimple.singleOpt)
+    }
+  }(ec)
+
+  /**
+    * 用户还书申请
+    * @param userid
+    * @param bookid
+    * @param date
+    * @return
+    */
+  def returnBookReq(userid: String, bookid: Long, date: String ) = Future {
+    db.withConnection { implicit conn =>
+      SQL("UPDATE DealBorrowList SET states=3 , retdate={agredate} WHERE userid={userid} AND bookid={bookid}").on(
+        'userid -> userid,
+        'bookid -> bookid,
+        'agte -> date
+      ).executeUpdate()
     }
   }(ec)
 

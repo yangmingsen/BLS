@@ -42,13 +42,16 @@ GET     /person/delRef                    controllers.Applications.delRefuseReq(
 
 GET     /person/conApy                    controllers.Applications.continueReq(userid: String ?= "", bookid: Long ?= -1)
 
+GET     /person/retBoReq                  controllers.Applications.personReturnBookReq(userid: String ?= "", bookid: Long ?= -1)
+
+
 #Admin
 
 GET     /agrReq                           controllers.Admin.checkPass(userid: String ?= "", bookid: Long ?= -1)
 
 GET     /refReq                           controllers.Admin.refusePass(userid: String ?= "", bookid: Long ?= -1)
 
-GET     /retSuc                           controllers.Admin.returnBook(userid: String ?= "", bookid: Long ?= -1)
+GET     /admin/retSuc                     controllers.Admin.agreClientReturnBook(userid: String ?= "", bookid: Long ?= -1)
 
 GET     /admin                            controllers.Admin.index
 

@@ -2,6 +2,10 @@ package utils
 
 import play.api.mvc.RequestHeader
 
+/*
+*
+* created by yangmingsen on 2018/04
+ */
 object RequestHelper {
 
   def isALogin(implicit request: RequestHeader): Boolean = {

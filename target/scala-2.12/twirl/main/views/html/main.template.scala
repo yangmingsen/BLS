@@ -43,62 +43,61 @@ Seq[Any](format.raw/*1.65*/("""
 
                     """),_display_(/*19.22*/request/*19.29*/.session.get("userName")/*19.53*/ match/*19.59*/ {/*20.25*/case Some(user) =>/*20.43*/ {_display_(Seq[Any](format.raw/*20.45*/("""
                             """),format.raw/*21.29*/("""<div class="menu-hd">
-                                <a href="###" target="_top" class="h">亲爱的..."""),_display_(/*22.78*/user),format.raw/*22.82*/("""</a>
+                                <a href="###" target="_top" class="h">学生:"""),_display_(/*22.75*/user),format.raw/*22.79*/("""</a>
                             </div>
                         """)))}/*25.25*/case None =>/*25.37*/ {_display_(Seq[Any](format.raw/*25.39*/("""
                             """),format.raw/*26.29*/("""<div class="menu-hd">
                                 <a href=""""),_display_(/*27.43*/routes/*27.49*/.Applications.login()),format.raw/*27.70*/("""" target="_top" class="h">你好！请登录</a>
-                                <a href="######" target="_top">免费注册</a>
                             </div>
-                         """)))}}),format.raw/*31.22*/("""
+                         """)))}}),format.raw/*30.22*/("""
 
 
-                """),format.raw/*34.17*/("""</div>
+                """),format.raw/*33.17*/("""</div>
             </ul>
             <ul class="message-r">
                 <div class="topMessage home">
-                    <div class="menu-hd"><a href=""""),_display_(/*38.52*/routes/*38.58*/.Applications.index()),format.raw/*38.79*/("""" target="_top" class="h">首页</a></div>
+                    <div class="menu-hd"><a href=""""),_display_(/*37.52*/routes/*37.58*/.Applications.index()),format.raw/*37.79*/("""" target="_top" class="h">首页</a></div>
                 </div>
                 <div class="topMessage my-shangcheng">
                     <div class="menu-hd MyShangcheng"><a href="/person" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
                 </div>
                 <div class="topMessage mini-cart">
-                    <div class="menu-hd"><a id="mc-menu-hd" href=""""),_display_(/*44.68*/routes/*44.74*/.Applications.showCart()),format.raw/*44.98*/("""" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>喜欢</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+                    <div class="menu-hd"><a id="mc-menu-hd" href=""""),_display_(/*43.68*/routes/*43.74*/.Applications.showCart()),format.raw/*43.98*/("""" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>喜欢</span><strong id="J_MiniCartNum" class="h"></strong></a></div>
                 </div>
                 <div class="topMessage favorite">
-                    <div class="menu-hd"><a href=""""),_display_(/*47.52*/routes/*47.58*/.Applications.logOut()),format.raw/*47.80*/("""" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>退出</span></a></div>
+                    <div class="menu-hd"><a href=""""),_display_(/*46.52*/routes/*46.58*/.Applications.logOut()),format.raw/*46.80*/("""" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>退出</span></a></div>
+                </div>
+                <div class="topMessage favorite">
+                    <div class="menu-hd"><a href="https://github.com/yangmingsen/BLS" target="_blank"><i class="am-icon-heart am-icon-fw"></i><span>源码</span></a></div>
+                </div>
             </ul>
         </div>
 
             <!--悬浮搜索框-->
 
         <div class="nav white">
-            <div class="logo"><img src="/assets/images/logo.png" /></div>
+            <div class="logo"><img src="/assets/add/img/cllogo.png" /></div>
             <div class="logoBig">
-                <li><img src="/assets/images/logobig.png" /></li>
+                <li><img src="/assets/add/img/cllogo.png" /></li>
             </div>
 
             <div class="search-bar pr">
                 <a name="index_none_header_sysc" href="#"></a>
 
-                        """),_display_(/*62.26*/helper/*62.32*/.form(action=routes.Applications.search())/*62.74*/{_display_(Seq[Any](format.raw/*62.75*/("""
-                            """),format.raw/*63.29*/("""<input id="searchInput" name="key" type="text"  placeholder="搜索" autocomplete="off">
+                        """),_display_(/*65.26*/helper/*65.32*/.form(action=routes.Applications.search())/*65.74*/{_display_(Seq[Any](format.raw/*65.75*/("""
+                            """),format.raw/*66.29*/("""<input id="searchInput" name="key" type="text"  placeholder="搜索" autocomplete="off">
                             <input id="ai-topsearch" class="submit am-btn"  value="搜索" index="1" type="submit">
-                        """)))}),format.raw/*65.26*/("""
+                        """)))}),format.raw/*68.26*/("""
 
-            """),format.raw/*67.13*/("""</div>
+            """),format.raw/*70.13*/("""</div>
         </div>
         <div class="clear"></div>
-        """),format.raw/*70.33*/("""
+        """),format.raw/*73.33*/("""
 
-        """),_display_(/*72.10*/content),format.raw/*72.17*/("""
-        
-        """),format.raw/*74.9*/("""<script>
-                    window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
-            </script>
-        <script type="text/javascript " src="../basic/js/quick_links.js "></script>
+        """),_display_(/*75.10*/content),format.raw/*75.17*/("""
 
-    </body>
+
+    """),format.raw/*78.5*/("""</body>
 </html>
 
 """))
@@ -117,11 +116,11 @@ Seq[Any](format.raw/*1.65*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 23 10:11:52 CST 2018
+                  DATE: Wed Apr 25 18:56:59 CST 2018
                   SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/main.scala.html
-                  HASH: f39cfe995278f654f9dbaab69c8a3f5d3553cebb
-                  MATRIX: 747->1|905->64|933->66|1244->351|1269->356|1497->557|1513->564|1546->588|1561->594|1572->621|1599->639|1639->641|1696->670|1822->769|1847->773|1931->863|1952->875|1992->877|2049->906|2140->970|2155->976|2197->997|2399->1189|2446->1208|2630->1365|2645->1371|2687->1392|3112->1790|3127->1796|3172->1820|3461->2082|3476->2088|3519->2110|4043->2607|4058->2613|4109->2655|4148->2656|4205->2685|4458->2907|4500->2921|4592->3009|4630->3020|4658->3027|4703->3045
-                  LINES: 21->1|26->1|28->3|33->8|33->8|44->19|44->19|44->19|44->19|44->20|44->20|44->20|45->21|46->22|46->22|48->25|48->25|48->25|49->26|50->27|50->27|50->27|53->31|56->34|60->38|60->38|60->38|66->44|66->44|66->44|69->47|69->47|69->47|84->62|84->62|84->62|84->62|85->63|87->65|89->67|92->70|94->72|94->72|96->74
+                  HASH: 30acc5371d5974b4a66f34c88396ff59c804a0ca
+                  MATRIX: 747->1|905->64|933->66|1244->351|1269->356|1497->557|1513->564|1546->588|1561->594|1572->621|1599->639|1639->641|1696->670|1819->766|1844->770|1928->860|1949->872|1989->874|2046->903|2137->967|2152->973|2194->994|2324->1114|2371->1133|2555->1290|2570->1296|2612->1317|3037->1715|3052->1721|3097->1745|3385->2006|3400->2012|3443->2034|4234->2798|4249->2804|4300->2846|4339->2847|4396->2876|4649->3098|4691->3112|4783->3200|4821->3211|4849->3218|4883->3225
+                  LINES: 21->1|26->1|28->3|33->8|33->8|44->19|44->19|44->19|44->19|44->20|44->20|44->20|45->21|46->22|46->22|48->25|48->25|48->25|49->26|50->27|50->27|50->27|52->30|55->33|59->37|59->37|59->37|65->43|65->43|65->43|68->46|68->46|68->46|87->65|87->65|87->65|87->65|88->66|90->68|92->70|95->73|97->75|97->75|100->78
                   -- GENERATED --
               */
           

@@ -6,7 +6,8 @@
     <link href="/assets/css/cartstyle.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/optstyle.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+    @*<script type="text/javascript" src="/assets/js/jquery.js"></script>*@
+    <script type="text/javascript" src="/assets/add/js/jquery-3.3.1.min.js"></script>
 
     <script>
 
@@ -38,30 +39,55 @@
             }
             
             function goCheck() {
-                var xmlxttp;
-                if( window.XMLHttpRequest) {
-                    xmlxttp = new XMLHttpRequest();
-                } else {
-                    xmlxttp = new ActiveXObject("Microsoft.XMLHTTP");
-                }
+                @*var xmlxttp;*@
+                @*if( window.XMLHttpRequest) {*@
+                    @*xmlxttp = new XMLHttpRequest();*@
+                @*} else {*@
+                    @*xmlxttp = new ActiveXObject("Microsoft.XMLHTTP");*@
+                @*}*@
 
-                xmlxttp.onreadystatechange = function () {
-                    if( xmlxttp.readyState==4 && xmlxttp.status == 200 ) {
-                        var sta = xmlxttp.responseText;
-                        if( sta == "0") {
-                            window.location.href = "@routes.Applications.subSuccessful()"
-                        } else if( sta == "-1") {
+                @*xmlxttp.onreadystatechange = function () {*@
+                    @*if( xmlxttp.readyState==4 && xmlxttp.status == 200 ) {*@
+                        @*var sta = xmlxttp.responseText;*@
+                        @*if( sta == "0") {*@
+                            @*window.location.href = "@routes.Applications.subSuccessful()"*@
+                        @*} else if( sta == "-1") {*@
+                            @*alert("你借阅的书籍超过2本,请还书后再试！");*@
+                        @*} else if( sta == "-2") {*@
+                            @*alert("你当前未加入任何借阅书籍!");*@
+                        @*} else if(sta == -3){*@
+                            @*alert("该书数量不足!");*@
+                        @*} else {*@
+                            @*alert("书籍编号编号:"+sta+" 你正在借阅中...,请删除或者退换后再操作");*@
+                        @*}*@
+                    @*}*@
+                @*}*@
+
+                @*xmlxttp.open("GET","/subReq",true);*@
+                @*xmlxttp.send();*@
+
+                $.ajax({
+                   type: "GET",
+                    url:"/subReq",
+                    async: false,
+                    success: function (data) {
+                        if( data.states == -1) {
                             alert("你借阅的书籍超过2本,请还书后再试！");
-                        } else if( sta == "-2") {
+                        } else if( data.states == -2) {
                             alert("你当前未加入任何借阅书籍!");
-                        } else {
-                            alert("书籍编号编号:"+sta+" 你正在借阅中...,请删除或者退换后再操作");
+                        } else if( data.states == -3) {
+                            alert("该书: "+data.bookname+" 数量不足,请待别人还书后再试!")
+                        } else if( data.states == -4) {
+                            alert("你已借阅该书: "+data.bookname+" .");
+                        } else if( data.states == 0 ) {
+                            window.location.href = "@routes.Applications.subSuccessful()";
                         }
-                    }
-                }
 
-                xmlxttp.open("GET","/subReq",true);
-                xmlxttp.send();
+                    },
+                    error: function () {
+                        alert("请求错误!!!")
+                    }
+                });
 
             }
             
@@ -78,7 +104,7 @@
                         </div>
                     </div>
                     <div class="th th-item">
-                        <div class="td-inner">商品信息</div>
+                        <div class="td-inner">书籍信息</div>
                     </div>
                     <div class="th th-price">
                         <div class="td-inner">推荐星数</div>

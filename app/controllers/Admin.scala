@@ -39,9 +39,12 @@ class Admin @Inject() ( books: BookInfosRepository,
     * @param bookid
     * @return
     */
-  def checkPass(userid: String, bookid: Long) = Action.async { implicit request: Request[AnyContent] =>
-    admin.agreeClientRequest(userid,bookid)
-    Future.successful(Ok("已同意"))
+  def checkPass(userid: String, bookid: Long) = checkAdminLogin.async { implicit request: Request[AnyContent] =>
+
+      val date = utils.TimeHelper.getTimeNow()
+      admin.agreeClientRequest(userid,bookid,date)
+      books.bookNumReduce(bookid)
+      Future.successful(Ok("已同意"))
   }
 
   /**
@@ -50,20 +53,21 @@ class Admin @Inject() ( books: BookInfosRepository,
     * @param bookid
     * @return
     */
-  def refusePass( userid: String , bookid: Long ) = Action.async { implicit request: Request[AnyContent] =>
+  def refusePass( userid: String , bookid: Long ) = checkAdminLogin.async { implicit request: Request[AnyContent] =>
     admin.refuseClientRequest(userid,bookid)
     Future.successful(Ok("已拒绝"))
   }
 
-  /**归还书籍成功
+  /**同意用户还书
     *
     * @param userid
     * @param bookid
     * @return
     */
-  def returnBook(userid: String, bookid: Long) = Action.async { implicit request: Request[AnyContent] =>
-    admin.addToHistory(userid,bookid)
-    Future.successful(Ok("Return Book Successful"))
+  def agreClientReturnBook(userid: String, bookid: Long) = checkAdminLogin.async { implicit request: Request[AnyContent] =>
+    val date = utils.TimeHelper.getTimeNow()
+      admin.addToHistory(userid,bookid,date)
+     Future.successful(Ok("Return Book Successful"))
   }
 
   def index() = checkAdminLogin.async { implicit request: Request[AnyContent] =>
@@ -116,8 +120,10 @@ class Admin @Inject() ( books: BookInfosRepository,
     )
   }
 
-
-
+  /**
+    * 返回所有已同意的Client列表
+    * @return
+    */
   def agreeList() = checkAdminLogin.async{ implicit request: Request[AnyContent] =>
       for{
         arg <- admin.getDealListAll(2)

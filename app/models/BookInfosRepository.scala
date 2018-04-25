@@ -12,7 +12,10 @@ import scala.concurrent.Future
 import javax.inject.Singleton
 
 
-
+/*
+ *
+ * create by yangmingsen on 2018/04
+ */
 case class BookInfos(id: Long,
                      title: String,
                      author: Option[String],
@@ -30,7 +33,7 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
 
   private val db = dbapi.database("default")
 
-  private val simple = {
+  private val booksimple = {
     get[Long]("bookinfos1.id") ~
       get[String]("bookinfos1.title") ~
       get[Option[String]]("bookinfos1.author") ~
@@ -57,14 +60,30 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
       SQL(
         s"""
           SELECT * FROM bookinfos1 WHERE title LIKE ${"'%" + k + "%'"}
-        """).as(simple.*)
+        """).as(booksimple.*)
     }
   }(ec)
 
   def findById(id: Long) = Future {
     db.withConnection{ implicit connection =>
-      SQL("select * from bookinfos1 where id = {id}").on('id -> id).as(simple.singleOpt)
+      SQL("select * from bookinfos1 where id = {id}").on('id -> id).as(booksimple.singleOpt)
+    }
+  }(ec)
+
+  def findBookBorrowOK(id: Long) = {
+    db.withConnection { implicit conn =>
+      SQL("SELECT * FROM bookinfos1 WHERE id={bookid} AND amount>0").on(
+        'bookid -> id
+      ).as(booksimple.singleOpt)
     }
   }
+
+  def bookNumReduce(id: Long) = Future {
+    db.withConnection { implicit conn =>
+        SQL("UPDATE bookinfos1 set amount=amount-1 WHERE id={bookid}").on(
+          'bookid -> id
+        ).executeUpdate()
+    }
+  }(ec)
 
 }

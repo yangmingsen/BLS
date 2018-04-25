@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Sun Apr 22 12:40:39 CST 2018
+// @DATE:Wed Apr 25 22:25:37 CST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:47
+  // @LINE:50
   class ReverseAdmin(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:49
+    // @LINE:52
     def refusePass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.refusePass",
       """
@@ -29,7 +29,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:59
+    // @LINE:54
+    def agreClientReturnBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Admin.agreClientReturnBook",
+      """
+        function(userid0,bookid1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/retSuc" + _qS([(userid0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("userid", userid0)), (bookid1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("bookid", bookid1))])})
+        }
+      """
+    )
+  
+    // @LINE:62
     def main: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.main",
       """
@@ -39,7 +49,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:57
+    // @LINE:60
     def left: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.left",
       """
@@ -49,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:63
+    // @LINE:66
     def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.doLogin",
       """
@@ -59,7 +69,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:55
+    // @LINE:58
     def head: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.head",
       """
@@ -69,7 +79,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:50
     def checkPass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.checkPass",
       """
@@ -79,17 +89,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
-    def returnBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Admin.returnBook",
-      """
-        function(userid0,bookid1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "retSuc" + _qS([(userid0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("userid", userid0)), (bookid1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("bookid", bookid1))])})
-        }
-      """
-    )
-  
-    // @LINE:65
+    // @LINE:68
     def agreeList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.agreeList",
       """
@@ -99,7 +99,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:67
+    // @LINE:70
     def adminLogOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.adminLogOut",
       """
@@ -109,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:56
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.index",
       """
@@ -119,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:61
+    // @LINE:64
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.login",
       """
@@ -131,7 +131,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:71
+  // @LINE:74
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -139,7 +139,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:71
+    // @LINE:74
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -165,6 +165,16 @@ package controllers.javascript {
       """
         function(id0,title1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Cart/add" + _qS([(id0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id", id0)), (title1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("title", title1))])})
+        }
+      """
+    )
+  
+    // @LINE:45
+    def personReturnBookReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personReturnBookReq",
+      """
+        function(userid0,bookid1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/retBoReq" + _qS([(userid0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("userid", userid0)), (bookid1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("bookid", bookid1))])})
         }
       """
     )
