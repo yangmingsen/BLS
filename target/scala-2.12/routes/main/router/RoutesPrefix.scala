@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Wed Apr 25 22:25:37 CST 2018
+// @DATE:Thu Apr 26 22:03:37 CST 2018
 
 
 package router {

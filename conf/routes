@@ -32,11 +32,19 @@ GET     /delCart                          controllers.Applications.delCart(useri
 
 
 #Person manager
-GET     /person                           controllers.Applications.personOrder
+GET     /person                           controllers.Applications.personIndex
 
-GET     /person/order                     controllers.Applications.personOrder
+GET     /person/hisy                     controllers.Applications.personBorrowHistory
 
-GET     /person/retbk                     controllers.Applications.personReturn
+GET     /person/borlis                    controllers.Applications.personBorrowList
+
+GET     /person/chec                      controllers.Applications.personChecking
+
+GET     /person/psed                      controllers.Applications.personPassed
+
+GET     /person/disage                    controllers.Applications.personDisagree
+
+#GET     /person/retbk                     controllers.Applications.personReturn
 
 GET     /person/delRef                    controllers.Applications.delRefuseReq(userid: String ?= "", bookid: Long ?= -1)
 
@@ -68,6 +76,12 @@ POST    /admin/login                      controllers.Admin.doLogin
 GET     /admin/arelt                      controllers.Admin.agreeList
 
 GET     /admin/eixt                       controllers.Admin.adminLogOut
+
+GET     /admin/refCliReq                  controllers.Admin.getRefuseByAdminList
+
+GET     /admin/cliRetReq                  controllers.Admin.getClientRetBookReq
+
+GET     /admin/hisAll                     controllers.Admin.getClientHistory
 
 
 # Map static resources from the /public folder to the /assets URL path

@@ -24,20 +24,22 @@ case class DealBorrowList(bookid: Long,//书的id
                           userid: String,//用户id
                           username: String,//用户名字
                           amount: Int,//数量
-                          states: Int, //1.借阅申请 2.已同意申请 22.拒绝申请 3.还书申请
-                          borrowdate: Date,
-                          agredate: Option[Date],
-                          retdate: Option[Date],
-                          agreretdate: Option[Date]) //借阅时间
+                          states: Int, //1-借阅申请 2-同意申请 22-拒绝申请 3-还书申请
+                          borrowdate: Date,//借书申请时间
+                          agredate: Option[Date],//同意借书申请时间
+                          retdate: Option[Date],//还书申请时间
+                          agreretdate: Option[Date]) //同意还书申请时间
 
 case class History2018(bookid: Long, //书的id
                        booktitle: String,//书的名字
                        amount: Int,//数量
                        userid: String,//用户id
-                       lenddate: Date,//借阅时间
+                       username: String,
+                       lenddate: Date,//
                        agredate: Date,
                        retdate: Date,
-                       agreretdate: Date) //还书时间
+                       agreretdate: Date) //
+
 
 @Singleton
 class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionContext) {
@@ -73,12 +75,13 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
     get[String]("history2018.booktitle") ~
     get[Int]("history2018.amount") ~
     get[String]("history2018.userid") ~
+    get[String]("history2018.username") ~
     get[Date]("history2018.lenddate") ~
     get[Date]("history2018.agredate") ~
     get[Date]("history2018.retdate") ~
     get[Date]("history2018.agreretdate") map {
-      case bookid~booktitle~amount~userid~lenddate~agredate~retdate~agreretdate =>
-        History2018(bookid,booktitle,amount,userid,lenddate,agredate,retdate,agreretdate)
+      case bookid~booktitle~amount~userid~username~lenddate~agredate~retdate~agreretdate =>
+        History2018(bookid,booktitle,amount,userid,username,lenddate,agredate,retdate,agreretdate)
     }
   }
 
@@ -95,9 +98,9 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
 
     db.withConnection { implicit connection =>
       SQL("UPDATE DealBorrowList SET states=2 , agredate={agredate} WHERE userid={userid} AND bookid={bookid}").on(
+        'agredate -> agredate,
         'userid -> userid,
-        'bookid -> bookid,
-        'agte -> agredate
+        'bookid -> bookid
       ).executeUpdate()
     }
   }(ec)
@@ -134,18 +137,19 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
 
       One match {
         case Some(d) => {
-          SQL("INSERT INTO history2018 (bookid,booktitle,amount,userid,lenddate,agredate,retdate,agreretdate)VALUES({bookid},{booktitle},{amount},{userid},{data1},{date2},{date3},{date4})").on(
+          SQL("INSERT INTO history2018 (bookid,booktitle,amount,userid,username,lenddate,agredate,retdate,agreretdate)VALUES({bookid},{booktitle},{amount},{userid},{name},{date1},{date2},{date3},{date4})").on(
             'bookid -> d.bookid,
             'booktitle -> d.booktitle,
             'amount -> d.amount,
             'userid -> d.userid,
+            'name -> d.username,
             'date1 -> d.borrowdate,
             'date2 -> d.agredate,
             'date3 -> d.retdate,
             'date4 -> date
           ).executeUpdate()
         }
-        case None =>{}
+        case None =>{println("userid = "+userid+ "  bookid= "+bookid)}
       }
 
       //删除在DealBorrowList的记录
@@ -159,16 +163,33 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
         'bookid -> bookid
       ).executeUpdate()
 
+
     }
+
   }(ec)
 
-  def getHistoryFromDb(userid: String) = {
+  /**
+    * 根据用户id获取历史记录
+    * @param userid
+    * @return
+    */
+  def getHistoryFromDb(userid: String) = Future {
     db.withConnection{ implicit  connection =>
       SQL("SELECT * FROM history2018 WHERE userid={userid}").on(
         'userid -> userid
       ).as(historySimple.*)
     }
-  }
+  }(ec)
+
+  /**
+    * 获取所有历史记录
+    * @return
+    */
+  def getHistoryAll() = Future {
+    db.withConnection { implicit conn =>
+      SQL("SELECT * FROM history2018").as(historySimple.*)
+    }
+  }(ec)
 
   def getUserId(userid: String) = {
     db.withConnection { implicit connection =>
@@ -178,15 +199,20 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
     }
   }
 
-  def getDealList( userid: String, states: Int) = {
+  def getDealList( userid: String, states: Int) = Future{
     db.withConnection { implicit connection =>
       SQL("SELECT * FROM DealBorrowList WHERE userid={userid} AND states={states}").on(
         'userid -> userid,
         'states -> states
       ).as(dealSimple.*)
     }
-  }
+  }(ec)
 
+  /**
+    * 获取所有{states}状态的记录
+    * @param states
+    * @return
+    */
   def getDealListAll(states: Int = 1) = Future {
     db.withConnection{ implicit connection =>
       SQL("SELECT * FROM DealBorrowList WHERE states={states}").on(
@@ -202,6 +228,9 @@ class AdminRepository @Inject()(dbapi: DBApi) (implicit ec: DatabaseExecutionCon
       ).as(adminSimple.singleOpt)
     }
   }(ec)
+
+
+
 
 
 }

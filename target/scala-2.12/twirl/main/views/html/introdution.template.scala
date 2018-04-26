@@ -46,23 +46,13 @@ Seq[Any](format.raw/*1.52*/("""
     <script type="text/javascript" src="/assets/js/list.js"></script>
 
 
+    <div class="clear"></div>
+    <b class="line"></b>
         <!--全部分类下的那根线-->
     <div class="listMain">
 
             <!--分类-->
         <div class="nav-table">
-            <div class="long-title"><span class="all-goods">全部分类</span></div>
-            <div class="nav-cont">
-                <ul>
-                    <li class="index">
-                        <a href="#">首页</a>
-                    </li>
-                </ul>
-                    <!--<div class="nav-extra">
-						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
-						    	<i class="am-icon-angle-right" style="padding-left: 10px;"></i>
-						    </div>-->
-            </div>
         </div>
         <ol class="am-breadcrumb am-breadcrumb-slash">
             <li>
@@ -75,15 +65,15 @@ Seq[Any](format.raw/*1.52*/("""
         </ol>
 
         <script type="text/javascript">
-                $(function() """),format.raw/*53.30*/("""{"""),format.raw/*53.31*/("""}"""),format.raw/*53.32*/(""");
-                $(window).load(function() """),format.raw/*54.43*/("""{"""),format.raw/*54.44*/("""
-                    """),format.raw/*55.21*/("""$('.flexslider').flexslider("""),format.raw/*55.49*/("""{"""),format.raw/*55.50*/("""
-                        """),format.raw/*56.25*/("""animation: "slide",
-                        start: function(slider) """),format.raw/*57.49*/("""{"""),format.raw/*57.50*/("""
-                            """),format.raw/*58.29*/("""$('body').removeClass('loading');
-                        """),format.raw/*59.25*/("""}"""),format.raw/*59.26*/("""
-                    """),format.raw/*60.21*/("""}"""),format.raw/*60.22*/(""");
-                """),format.raw/*61.17*/("""}"""),format.raw/*61.18*/(""");
+                $(function() """),format.raw/*43.30*/("""{"""),format.raw/*43.31*/("""}"""),format.raw/*43.32*/(""");
+                $(window).load(function() """),format.raw/*44.43*/("""{"""),format.raw/*44.44*/("""
+                    """),format.raw/*45.21*/("""$('.flexslider').flexslider("""),format.raw/*45.49*/("""{"""),format.raw/*45.50*/("""
+                        """),format.raw/*46.25*/("""animation: "slide",
+                        start: function(slider) """),format.raw/*47.49*/("""{"""),format.raw/*47.50*/("""
+                            """),format.raw/*48.29*/("""$('body').removeClass('loading');
+                        """),format.raw/*49.25*/("""}"""),format.raw/*49.26*/("""
+                    """),format.raw/*50.21*/("""}"""),format.raw/*50.22*/(""");
+                """),format.raw/*51.17*/("""}"""),format.raw/*51.18*/(""");
         </script>
         <div class="scoll">
             <section class="slider">
@@ -110,18 +100,18 @@ Seq[Any](format.raw/*1.52*/("""
 
                 <div class="box">
                     <script type="text/javascript">
-                            $(document).ready(function() """),format.raw/*88.58*/("""{"""),format.raw/*88.59*/("""
-                                """),format.raw/*89.33*/("""$(".jqzoom").imagezoom();
-                                $("#thumblist li a").click(function() """),format.raw/*90.71*/("""{"""),format.raw/*90.72*/("""
-                                    """),format.raw/*91.37*/("""$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+                            $(document).ready(function() """),format.raw/*78.58*/("""{"""),format.raw/*78.59*/("""
+                                """),format.raw/*79.33*/("""$(".jqzoom").imagezoom();
+                                $("#thumblist li a").click(function() """),format.raw/*80.71*/("""{"""),format.raw/*80.72*/("""
+                                    """),format.raw/*81.37*/("""$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
                                     $(".jqzoom").attr('src', $(this).find("img").attr("mid"));
                                     $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
-                                """),format.raw/*94.33*/("""}"""),format.raw/*94.34*/(""");
-                            """),format.raw/*95.29*/("""}"""),format.raw/*95.30*/(""");
+                                """),format.raw/*84.33*/("""}"""),format.raw/*84.34*/(""");
+                            """),format.raw/*85.29*/("""}"""),format.raw/*85.30*/(""");
                     </script>
 
                     <div class="tb-booth tb-pic tb-s310">
-                        <a href="/assets/ProjectImg/"""),_display_(/*99.54*/book/*99.58*/.id),format.raw/*99.61*/("""-1.jpg"><img src="/assets/ProjectImg/"""),_display_(/*99.99*/book/*99.103*/.id),format.raw/*99.106*/("""-1.jpg" alt="细节展示放大镜特效" rel="/assets/ProjectImg/"""),_display_(/*99.155*/book/*99.159*/.id),format.raw/*99.162*/("""-1.jpg" class="jqzoom" /></a>
+                        <a href="/assets/ProjectImg/"""),_display_(/*89.54*/book/*89.58*/.id),format.raw/*89.61*/("""-1.jpg"><img src="/assets/ProjectImg/"""),_display_(/*89.99*/book/*89.103*/.id),format.raw/*89.106*/("""-1.jpg" alt="细节展示放大镜特效" rel="/assets/ProjectImg/"""),_display_(/*89.155*/book/*89.159*/.id),format.raw/*89.162*/("""-1.jpg" class="jqzoom" /></a>
                     </div>
                 </div>
 
@@ -133,8 +123,8 @@ Seq[Any](format.raw/*1.52*/("""
                     <!--名称-->
                 <div class="tb-detail-hd">
                     <h1 class="book-name">
-                        """),_display_(/*111.26*/book/*111.30*/.title),format.raw/*111.36*/("""
-                    """),format.raw/*112.21*/("""</h1>
+                        """),_display_(/*101.26*/book/*101.30*/.title),format.raw/*101.36*/("""
+                    """),format.raw/*102.21*/("""</h1>
                 </div>
                 <div class="tb-detail-list">
                         <!--价格-->
@@ -142,19 +132,19 @@ Seq[Any](format.raw/*1.52*/("""
 
                         <li class="price iteminfo_mktprice">
                             <dt>作者</dt>
-                            """),_display_(/*120.30*/{
+                            """),_display_(/*110.30*/{
                                 book.author match {
                                     case Some(au) => {
                                             <dd><b class="sys_item_mktprice">{au}</b></dd>
                                     }
                                     case _ => {<dd><b class="sys_item_mktprice">还没有作者</b></dd>}
                                 }
-                            }),format.raw/*127.30*/("""
+                            }),format.raw/*117.30*/("""
 
-                        """),format.raw/*129.25*/("""</li>
+                        """),format.raw/*119.25*/("""</li>
                         <li class="price iteminfo_mktprice">
                             <dt>出版社</dt>
-                            <dd><b class="sys_item_mktprice">"""),_display_(/*132.63*/book/*132.67*/.bookconcern),format.raw/*132.79*/("""</b></dd>
+                            <dd><b class="sys_item_mktprice">"""),_display_(/*122.63*/book/*122.67*/.bookconcern),format.raw/*122.79*/("""</b></dd>
                         </li>
                         <li class="price iteminfo_mktprice">
                             <dt>出版年</dt>
@@ -170,14 +160,14 @@ Seq[Any](format.raw/*1.52*/("""
                         </li>
                         <li class="price iteminfo_mktprice">
                             <dt>编号</dt>
-                            """),_display_(/*148.30*/{
+                            """),_display_(/*138.30*/{
                                 book.isbn match {
                                     case Some(is) =>  <dd><b class="sys_item_mktprice">{is}</b></dd>
                                     case _ => {<dd><b class="sys_item_mktprice">还没有</b></dd>}
                                 }
-                            }),format.raw/*153.30*/("""
+                            }),format.raw/*143.30*/("""
 
-                        """),format.raw/*155.25*/("""</li>
+                        """),format.raw/*145.25*/("""</li>
                         <div class="clear"></div>
                     </div>
                     <div class="clear"></div>
@@ -216,7 +206,7 @@ Seq[Any](format.raw/*1.52*/("""
                                             <span class="cart-title number">数量: </span>
                                             <dd>
                                                 <span style="width:30px; font-size: 20px;"> 1 </span>
-                                                <span id="Stock" class="tb-hidden">  该书剩余<span class="stock">"""),_display_(/*194.111*/book/*194.115*/.amount),format.raw/*194.122*/("""</span>本</span>
+                                                <span id="Stock" class="tb-hidden">  该书剩余<span class="stock">"""),_display_(/*184.111*/book/*184.115*/.amount),format.raw/*184.122*/("""</span>本</span>
                                             </dd>
 
                                         </div>
@@ -229,7 +219,7 @@ Seq[Any](format.raw/*1.52*/("""
                                     </div>
                                     <div class="theme-signin-right">
                                         <div class="img-info">
-                                            <img src="/assets/ProjectImg/"""),_display_(/*207.75*/book/*207.79*/.id),format.raw/*207.82*/("""-1.jpg" />
+                                            <img src="/assets/ProjectImg/"""),_display_(/*197.75*/book/*197.79*/.id),format.raw/*197.82*/("""-1.jpg" />
                                         </div>
                                         <div class="text-info">
                                             <span class="J_Price price-now">¥39.00</span>
@@ -250,7 +240,7 @@ Seq[Any](format.raw/*1.52*/("""
 
                     <li>
                         <div class="clearfix tb-btn tb-btn-basket theme-login" style="margin-left: 200px;">
-                            <a id="LikBasket" title="加入购物车" href="/Cart/add?id="""),_display_(/*228.81*/book/*228.85*/.id),format.raw/*228.88*/("""&title="""),_display_(/*228.96*/book/*228.100*/.title),format.raw/*228.106*/(""""><i></i>加入借阅列表</a>
+                            <a id="LikBasket" title="加入购物车" href="/Cart/add?id="""),_display_(/*218.81*/book/*218.85*/.id),format.raw/*218.88*/("""&title="""),_display_(/*218.96*/book/*218.100*/.title),format.raw/*218.106*/(""""><i></i>加入借阅列表</a>
                         </div>
                     </li>
 
@@ -417,15 +407,15 @@ Seq[Any](format.raw/*1.52*/("""
                                 <div class="clear"></div>
                                 <p class="get-more">......(更多)</p>
                                 <script>
-                                        $(".get-more").click(function()"""),format.raw/*395.72*/("""{"""),format.raw/*395.73*/("""
-                                            """),format.raw/*396.45*/("""$(".catalog").toggleClass("list-height");
-                                            if($(".get-more").html() == "......(更多)")"""),format.raw/*397.86*/("""{"""),format.raw/*397.87*/("""
-                                                """),format.raw/*398.49*/("""$(".get-more").html("......(掩藏)");
-                                            """),format.raw/*399.45*/("""}"""),format.raw/*399.46*/("""
-                                            """),format.raw/*400.45*/("""else"""),format.raw/*400.49*/("""{"""),format.raw/*400.50*/("""
-                                                """),format.raw/*401.49*/("""$(".get-more").html("......(更多)");
-                                            """),format.raw/*402.45*/("""}"""),format.raw/*402.46*/("""
-                                        """),format.raw/*403.41*/("""}"""),format.raw/*403.42*/(""")
+                                        $(".get-more").click(function()"""),format.raw/*385.72*/("""{"""),format.raw/*385.73*/("""
+                                            """),format.raw/*386.45*/("""$(".catalog").toggleClass("list-height");
+                                            if($(".get-more").html() == "......(更多)")"""),format.raw/*387.86*/("""{"""),format.raw/*387.87*/("""
+                                                """),format.raw/*388.49*/("""$(".get-more").html("......(掩藏)");
+                                            """),format.raw/*389.45*/("""}"""),format.raw/*389.46*/("""
+                                            """),format.raw/*390.45*/("""else"""),format.raw/*390.49*/("""{"""),format.raw/*390.50*/("""
+                                                """),format.raw/*391.49*/("""$(".get-more").html("......(更多)");
+                                            """),format.raw/*392.45*/("""}"""),format.raw/*392.46*/("""
+                                        """),format.raw/*393.41*/("""}"""),format.raw/*393.42*/(""")
                                 </script>
                             </div>
                             <div class="clear"></div>
@@ -434,9 +424,9 @@ Seq[Any](format.raw/*1.52*/("""
 
                         <div class="am-tab-panel am-fade">
 
-                            """),format.raw/*906.37*/("""
+                            """),format.raw/*896.37*/("""
 
-                        """),format.raw/*908.25*/("""</div>
+                        """),format.raw/*898.25*/("""</div>
 
                         <div class="am-tab-panel am-fade">
                             <div class="like">
@@ -636,11 +626,11 @@ Seq[Any](format.raw/*1.52*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 25 16:57:47 CST 2018
+                  DATE: Thu Apr 26 13:43:03 CST 2018
                   SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/introdution.scala.html
-                  HASH: 34d6cab75354c6a8132b95bf3741306b0cdbee1c
-                  MATRIX: 752->1|897->51|927->56|947->68|985->69|1017->75|2923->1953|2952->1954|2981->1955|3054->2000|3083->2001|3132->2022|3188->2050|3217->2051|3270->2076|3366->2144|3395->2145|3452->2174|3538->2232|3567->2233|3616->2254|3645->2255|3692->2274|3721->2275|4569->3095|4598->3096|4659->3129|4783->3225|4812->3226|4877->3263|5212->3570|5241->3571|5300->3602|5329->3603|5501->3748|5514->3752|5538->3755|5603->3793|5617->3797|5642->3800|5719->3849|5733->3853|5758->3856|6142->4212|6156->4216|6184->4222|6234->4243|6551->4532|6970->4929|7025->4955|7223->5125|7237->5129|7271->5141|8087->5929|8419->6239|8474->6265|10803->8565|10818->8569|10848->8576|11603->9303|11617->9307|11642->9310|12575->10215|12589->10219|12614->10222|12650->10230|12665->10234|12694->10240|19971->17488|20001->17489|20075->17534|20231->17661|20261->17662|20339->17711|20447->17790|20477->17791|20551->17836|20584->17840|20614->17841|20692->17890|20800->17969|20830->17970|20900->18011|20930->18012|21213->47961|21268->47987
-                  LINES: 21->1|26->1|30->5|30->5|30->5|32->7|78->53|78->53|78->53|79->54|79->54|80->55|80->55|80->55|81->56|82->57|82->57|83->58|84->59|84->59|85->60|85->60|86->61|86->61|113->88|113->88|114->89|115->90|115->90|116->91|119->94|119->94|120->95|120->95|124->99|124->99|124->99|124->99|124->99|124->99|124->99|124->99|124->99|136->111|136->111|136->111|137->112|145->120|152->127|154->129|157->132|157->132|157->132|173->148|178->153|180->155|219->194|219->194|219->194|232->207|232->207|232->207|253->228|253->228|253->228|253->228|253->228|253->228|420->395|420->395|421->396|422->397|422->397|423->398|424->399|424->399|425->400|425->400|425->400|426->401|427->402|427->402|428->403|428->403|437->906|439->908
+                  HASH: 93584d431ac2d39a1dac3c8fd772cb3bd1ab336d
+                  MATRIX: 752->1|897->51|927->56|947->68|985->69|1017->75|2474->1504|2503->1505|2532->1506|2605->1551|2634->1552|2683->1573|2739->1601|2768->1602|2821->1627|2917->1695|2946->1696|3003->1725|3089->1783|3118->1784|3167->1805|3196->1806|3243->1825|3272->1826|4120->2646|4149->2647|4210->2680|4334->2776|4363->2777|4428->2814|4763->3121|4792->3122|4851->3153|4880->3154|5052->3299|5065->3303|5089->3306|5154->3344|5168->3348|5193->3351|5270->3400|5284->3404|5309->3407|5693->3763|5707->3767|5735->3773|5785->3794|6102->4083|6521->4480|6576->4506|6774->4676|6788->4680|6822->4692|7638->5480|7970->5790|8025->5816|10354->8116|10369->8120|10399->8127|11154->8854|11168->8858|11193->8861|12126->9766|12140->9770|12165->9773|12201->9781|12216->9785|12245->9791|19522->17039|19552->17040|19626->17085|19782->17212|19812->17213|19890->17262|19998->17341|20028->17342|20102->17387|20135->17391|20165->17392|20243->17441|20351->17520|20381->17521|20451->17562|20481->17563|20764->47512|20819->47538
+                  LINES: 21->1|26->1|30->5|30->5|30->5|32->7|68->43|68->43|68->43|69->44|69->44|70->45|70->45|70->45|71->46|72->47|72->47|73->48|74->49|74->49|75->50|75->50|76->51|76->51|103->78|103->78|104->79|105->80|105->80|106->81|109->84|109->84|110->85|110->85|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|126->101|126->101|126->101|127->102|135->110|142->117|144->119|147->122|147->122|147->122|163->138|168->143|170->145|209->184|209->184|209->184|222->197|222->197|222->197|243->218|243->218|243->218|243->218|243->218|243->218|410->385|410->385|411->386|412->387|412->387|413->388|414->389|414->389|415->390|415->390|415->390|416->391|417->392|417->392|418->393|418->393|427->896|429->898
                   -- GENERATED --
               */
           

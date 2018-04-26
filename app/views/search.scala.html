@@ -15,17 +15,11 @@
         <!--<script type="text/javascript" src="/assets/js/script.js"></script>-->
 
 
+    <div class="clear"></div>
+    <b class="line"></b>
     <div class="search">
         <div class="search-list">
             <div class="nav-table">
-                <div class="long-title"><span class="all-goods">全部分类</span></div>
-                <div class="nav-cont">
-                    <ul>
-                        <li class="index">
-                            <a href="/">首页</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
 
             <div class="am-g am-g-fixed">
@@ -34,8 +28,8 @@
                     <div class="theme-popover">
                         <ul class="select">
                             <p class="title font-normal">
-                                <span class="fl">java</span>
-                                <span class="total fl">搜索到<strong class="num">22</strong>本相关书籍</span>
+
+                                <span class="total fl">全部分类</span>
                             </p>
                             <div class="clear"></div>
                             <li class="select-result">
@@ -201,7 +195,6 @@
                                     </div>
                                 </dl>
                             </li>
-
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -220,17 +213,17 @@
                         <div class="clear"></div>
 
                         <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
-                            @for(book <- curpage){
-                                <li>
-                                    <div class="i-pic limit menu1">
-                                        <a href="/introdution/@book.id"><img src="/assets/ProjectImg/@book.id-1.jpg" /></a>
-                                        <p class="title fl">@book.title</p>
-                                        <p class="number fl">
-                                            剩余<span>@book.amount</span>
-                                        </p>
-                                    </div>
-                                </li>
-                            }
+                        @for(book <- curpage){
+                            <li>
+                                <div class="i-pic limit menu1">
+                                    <a href="/introdution/@book.id"><img src="/assets/ProjectImg/@book.id-1.jpg" /></a>
+                                    <p class="title fl">@book.title</p>
+                                    <p class="number fl">
+                                     	       剩余<span>@book.amount</span>
+                                     	   </p>
+                                </div>
+                            </li>
+                        }
                         </ul>
 
                     </div>
@@ -309,48 +302,55 @@
                 </div>
 
             </div>
-
+            <div class="footer">
+                <div class="footer-bd">
+                    <p>
+                            <!--<em>吉首大学创新创业实验室</em>-->
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-            $(window).resize(function () {
+            $(window).resize(function() {
                 var $img = $(".menu1 img");
                 var minnHeight = 20000;
-                for (var i = 0; i < $img.length; i++) {
+                for(var i = 0; i < $img.length; i++) {
                     var nWidth = $img[i].naturalWidth
                     var nHeight = $img[i].naturalHeight
                     var nowHeight = $img[i].width / nWidth * nHeight;
-                    if (minnHeight > nowHeight) {
+                    if(minnHeight > nowHeight) {
                         minnHeight = nowHeight;
                     }
                 }
-                for (var i = 0; i < $img.length; i++) {
+                for(var i = 0; i < $img.length; i++) {
                     $img[i].height = minnHeight;
                 }
             });
-            $().ready(function () {
+            $().ready(function() {
                 var $img = $(".menu1 img");
-                var minnHeight = 20000;
-                for (var i = 0; i < $img.length; i++) {
+                var minnHeight = 218;
+                for(var i = 0; i < $img.length; i++) {
                     var nWidth = $img[i].naturalWidth
                     var nHeight = $img[i].naturalHeight
                     var nowHeight = $img[i].width / nWidth * nHeight;
-                    if (minnHeight > nowHeight) {
+                    if(minnHeight > nowHeight) {
                         minnHeight = nowHeight;
                     }
                 }
-                for (var i = 0; i < $img.length; i++) {
+                for(var i = 0; i < $img.length; i++) {
                     $img[i].height = minnHeight;
                 }
-                $("#select1 dd").click(function () {
+
+                $("#select1 dd").click(function() {
                     $(this).addClass("selected").siblings().removeClass("selected");
                     console.log($(this).text());
-                    if ($(this).hasClass("select-all")) {
+                    if($(this).hasClass("select-all")) {
                         $("#selectA").remove();
                     } else {
                         var copyThisA = $(this).clone();
-                        if ($("#selectA").length > 0) {
+                        if($("#selectA").length > 0) {
                             $("#selectA a").html($(this).text());
                         } else {
                             $(".select-result dl").append(copyThisA.attr("id", "selectA"));
@@ -358,66 +358,66 @@
                         }
                     }
                     var $select2 = $("#select2 dd");
-                    for (var i = 1; i < $select2.length; i++) {
+                    for (var i = 1; i < $select2.length; i++){
                         $select2[i].style.display = "none";
                     }
-                    if ($(this).text() == "全部") {
+                    if($(this).text() == "全部"){
 
-                        for (var i = 1; i < $select2.length; i++) {
+                        for (var i = 1; i < $select2.length; i++){
                             $select2[i].style.display = "inline-block";
                         }
                     }
-                    else if ($(this).text() == "前端开发") {
+                    else if($(this).text() == "前端开发"){
 
-                        for (var i = 1; i <= 13; i++) {
+                        for (var i = 1; i <= 13; i++){
                             $select2[i].style.display = "inline-block";
                         }
                     }
-                    else if ($(this).text() == "后端开发") {
-                        for (var i = 14; i <= 22; i++) {
+                    else if($(this).text() == "后端开发"){
+                        for (var i = 14; i <= 22; i++){
                             $select2[i].style.display = "inline-block";
                         }
                     }
-                    else if ($(this).text() == "移动开发") {
-                        for (var i = 23; i <= 26; i++) {
+                    else if($(this).text() == "移动开发"){
+                        for (var i = 23; i <= 26; i++){
                             $select2[i].style.display = "inline-block";
                         }
                     }
-                    else if ($(this).text() == "数据库") {
-                        for (var i = 27; i <= 30; i++) {
+                    else if($(this).text() == "数据库"){
+                        for (var i = 27; i <= 30; i++){
                             $select2[i].style.display = "block";
                         }
                     }
-                    else if ($(this).text() == "人工智能") {
-                        for (var i = 31; i <= 32; i++) {
+                    else if($(this).text() == "人工智能"){
+                        for (var i = 31; i <= 32; i++){
                             $select2[i].style.display = "block";
                         }
                     }
-                    else if ($(this).text() == "云计算&大数据") {
-                        for (var i = 33; i <= 34; i++) {
+                    else if($(this).text() == "云计算&大数据"){
+                        for (var i = 33; i <= 34; i++){
                             $select2[i].style.display = "block";
                         }
                     }
-                    else if ($(this).text() == "运维&测试") {
-                        for (var i = 35; i <= 36; i++) {
+                    else if($(this).text() == "运维&测试"){
+                        for (var i = 35; i <= 36; i++){
                             $select2[i].style.display = "block";
                         }
                     }
-                    else if ($(this).text() == "UI设计") {
-                        for (var i = 37; i <= 40; i++) {
+                    else if($(this).text() == "UI设计"){
+                        for (var i = 37; i <= 40; i++){
                             $select2[i].style.display = "block";
                         }
                     }
                 })
             })
 
-            $("#select2 dd").click(function () {
+            $("#select2 dd").click(function() {
                 $(this).addClass("selected").siblings().removeClass("selected");
-                if ($(this).hasClass("select-all")) {
+                if($(this).hasClass("select-all")) {
                     $("#selectB").remove();
                 } else {
                     var copyThisB = $(this).clone();
-                    if ($("#selectB").length > 0) {
+                    if($("#selectB").length > 0) {
                         $("#selectB a").html($(this).text());
                     } else {
                         $(".select-result dl").append(copyThisB.attr("id", "selectB"));
@@ -426,13 +426,13 @@
 
             });
 
-            $("#select3 dd").click(function () {
+            $("#select3 dd").click(function() {
                 $(this).addClass("selected").siblings().removeClass("selected");
-                if ($(this).hasClass("select-all")) {
+                if($(this).hasClass("select-all")) {
                     $("#selectC").remove();
                 } else {
                     var copyThisC = $(this).clone();
-                    if ($("#selectC").length > 0) {
+                    if($("#selectC").length > 0) {
                         $("#selectC a").html($(this).text());
                     } else {
                         $(".select-result dl").append(copyThisC.attr("id", "selectC"));

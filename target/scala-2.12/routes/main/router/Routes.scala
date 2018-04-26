@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Wed Apr 25 22:25:37 CST 2018
+// @DATE:Thu Apr 26 22:03:37 CST 2018
 
 package router
 
@@ -16,9 +16,9 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:5
   Applications_0: controllers.Applications,
-  // @LINE:50
+  // @LINE:58
   Admin_2: controllers.Admin,
-  // @LINE:74
+  // @LINE:88
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -27,9 +27,9 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:5
     Applications_0: controllers.Applications,
-    // @LINE:50
+    // @LINE:58
     Admin_2: controllers.Admin,
-    // @LINE:74
+    // @LINE:88
     Assets_1: controllers.Assets
   ) = this(errorHandler, Applications_0, Admin_2, Assets_1, "/")
 
@@ -54,9 +54,12 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """subReq""", """controllers.Applications.addToAdminDealList"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """subSuc""", """controllers.Applications.subSuccessful"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delCart""", """controllers.Applications.delCart(userid:String ?= "", bookid:Long ?= -1)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person""", """controllers.Applications.personOrder"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/order""", """controllers.Applications.personOrder"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/retbk""", """controllers.Applications.personReturn"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person""", """controllers.Applications.personIndex"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/hisy""", """controllers.Applications.personBorrowHistory"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/borlis""", """controllers.Applications.personBorrowList"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/chec""", """controllers.Applications.personChecking"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/psed""", """controllers.Applications.personPassed"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/disage""", """controllers.Applications.personDisagree"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/delRef""", """controllers.Applications.delRefuseReq(userid:String ?= "", bookid:Long ?= -1)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/conApy""", """controllers.Applications.continueReq(userid:String ?= "", bookid:Long ?= -1)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person/retBoReq""", """controllers.Applications.personReturnBookReq(userid:String ?= "", bookid:Long ?= -1)"""),
@@ -71,6 +74,9 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/login""", """controllers.Admin.doLogin"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/arelt""", """controllers.Admin.agreeList"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/eixt""", """controllers.Admin.adminLogOut"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/refCliReq""", """controllers.Admin.getRefuseByAdminList"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/cliRetReq""", """controllers.Admin.getClientRetBookReq"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin/hisAll""", """controllers.Admin.getClientHistory"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -281,15 +287,15 @@ Application""",
   )
 
   // @LINE:35
-  private[this] lazy val controllers_Applications_personOrder11_route = Route("GET",
+  private[this] lazy val controllers_Applications_personIndex11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person")))
   )
-  private[this] lazy val controllers_Applications_personOrder11_invoker = createInvoker(
-    Applications_0.personOrder,
+  private[this] lazy val controllers_Applications_personIndex11_invoker = createInvoker(
+    Applications_0.personIndex,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Applications",
-      "personOrder",
+      "personIndex",
       Nil,
       "GET",
       this.prefix + """person""",
@@ -299,46 +305,100 @@ Application""",
   )
 
   // @LINE:37
-  private[this] lazy val controllers_Applications_personOrder12_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/order")))
+  private[this] lazy val controllers_Applications_personBorrowHistory12_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/hisy")))
   )
-  private[this] lazy val controllers_Applications_personOrder12_invoker = createInvoker(
-    Applications_0.personOrder,
+  private[this] lazy val controllers_Applications_personBorrowHistory12_invoker = createInvoker(
+    Applications_0.personBorrowHistory,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Applications",
-      "personOrder",
+      "personBorrowHistory",
       Nil,
       "GET",
-      this.prefix + """person/order""",
+      this.prefix + """person/hisy""",
       """""",
       Seq()
     )
   )
 
   // @LINE:39
-  private[this] lazy val controllers_Applications_personReturn13_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/retbk")))
+  private[this] lazy val controllers_Applications_personBorrowList13_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/borlis")))
   )
-  private[this] lazy val controllers_Applications_personReturn13_invoker = createInvoker(
-    Applications_0.personReturn,
+  private[this] lazy val controllers_Applications_personBorrowList13_invoker = createInvoker(
+    Applications_0.personBorrowList,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Applications",
-      "personReturn",
+      "personBorrowList",
       Nil,
       "GET",
-      this.prefix + """person/retbk""",
+      this.prefix + """person/borlis""",
       """""",
       Seq()
     )
   )
 
   // @LINE:41
-  private[this] lazy val controllers_Applications_delRefuseReq14_route = Route("GET",
+  private[this] lazy val controllers_Applications_personChecking14_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/chec")))
+  )
+  private[this] lazy val controllers_Applications_personChecking14_invoker = createInvoker(
+    Applications_0.personChecking,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Applications",
+      "personChecking",
+      Nil,
+      "GET",
+      this.prefix + """person/chec""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:43
+  private[this] lazy val controllers_Applications_personPassed15_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/psed")))
+  )
+  private[this] lazy val controllers_Applications_personPassed15_invoker = createInvoker(
+    Applications_0.personPassed,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Applications",
+      "personPassed",
+      Nil,
+      "GET",
+      this.prefix + """person/psed""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:45
+  private[this] lazy val controllers_Applications_personDisagree16_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/disage")))
+  )
+  private[this] lazy val controllers_Applications_personDisagree16_invoker = createInvoker(
+    Applications_0.personDisagree,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Applications",
+      "personDisagree",
+      Nil,
+      "GET",
+      this.prefix + """person/disage""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:49
+  private[this] lazy val controllers_Applications_delRefuseReq17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/delRef")))
   )
-  private[this] lazy val controllers_Applications_delRefuseReq14_invoker = createInvoker(
+  private[this] lazy val controllers_Applications_delRefuseReq17_invoker = createInvoker(
     Applications_0.delRefuseReq(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -352,11 +412,11 @@ Application""",
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_Applications_continueReq15_route = Route("GET",
+  // @LINE:51
+  private[this] lazy val controllers_Applications_continueReq18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/conApy")))
   )
-  private[this] lazy val controllers_Applications_continueReq15_invoker = createInvoker(
+  private[this] lazy val controllers_Applications_continueReq18_invoker = createInvoker(
     Applications_0.continueReq(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -370,11 +430,11 @@ Application""",
     )
   )
 
-  // @LINE:45
-  private[this] lazy val controllers_Applications_personReturnBookReq16_route = Route("GET",
+  // @LINE:53
+  private[this] lazy val controllers_Applications_personReturnBookReq19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("person/retBoReq")))
   )
-  private[this] lazy val controllers_Applications_personReturnBookReq16_invoker = createInvoker(
+  private[this] lazy val controllers_Applications_personReturnBookReq19_invoker = createInvoker(
     Applications_0.personReturnBookReq(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -388,11 +448,11 @@ Application""",
     )
   )
 
-  // @LINE:50
-  private[this] lazy val controllers_Admin_checkPass17_route = Route("GET",
+  // @LINE:58
+  private[this] lazy val controllers_Admin_checkPass20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("agrReq")))
   )
-  private[this] lazy val controllers_Admin_checkPass17_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_checkPass20_invoker = createInvoker(
     Admin_2.checkPass(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -406,11 +466,11 @@ Application""",
     )
   )
 
-  // @LINE:52
-  private[this] lazy val controllers_Admin_refusePass18_route = Route("GET",
+  // @LINE:60
+  private[this] lazy val controllers_Admin_refusePass21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("refReq")))
   )
-  private[this] lazy val controllers_Admin_refusePass18_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_refusePass21_invoker = createInvoker(
     Admin_2.refusePass(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -424,11 +484,11 @@ Application""",
     )
   )
 
-  // @LINE:54
-  private[this] lazy val controllers_Admin_agreClientReturnBook19_route = Route("GET",
+  // @LINE:62
+  private[this] lazy val controllers_Admin_agreClientReturnBook22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/retSuc")))
   )
-  private[this] lazy val controllers_Admin_agreClientReturnBook19_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_agreClientReturnBook22_invoker = createInvoker(
     Admin_2.agreClientReturnBook(fakeValue[String], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -442,11 +502,11 @@ Application""",
     )
   )
 
-  // @LINE:56
-  private[this] lazy val controllers_Admin_index20_route = Route("GET",
+  // @LINE:64
+  private[this] lazy val controllers_Admin_index23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin")))
   )
-  private[this] lazy val controllers_Admin_index20_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_index23_invoker = createInvoker(
     Admin_2.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -460,11 +520,11 @@ Application""",
     )
   )
 
-  // @LINE:58
-  private[this] lazy val controllers_Admin_head21_route = Route("GET",
+  // @LINE:66
+  private[this] lazy val controllers_Admin_head24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/head")))
   )
-  private[this] lazy val controllers_Admin_head21_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_head24_invoker = createInvoker(
     Admin_2.head,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -478,11 +538,11 @@ Application""",
     )
   )
 
-  // @LINE:60
-  private[this] lazy val controllers_Admin_left22_route = Route("GET",
+  // @LINE:68
+  private[this] lazy val controllers_Admin_left25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/left")))
   )
-  private[this] lazy val controllers_Admin_left22_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_left25_invoker = createInvoker(
     Admin_2.left,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -496,11 +556,11 @@ Application""",
     )
   )
 
-  // @LINE:62
-  private[this] lazy val controllers_Admin_main23_route = Route("GET",
+  // @LINE:70
+  private[this] lazy val controllers_Admin_main26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/main")))
   )
-  private[this] lazy val controllers_Admin_main23_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_main26_invoker = createInvoker(
     Admin_2.main,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -514,11 +574,11 @@ Application""",
     )
   )
 
-  // @LINE:64
-  private[this] lazy val controllers_Admin_login24_route = Route("GET",
+  // @LINE:72
+  private[this] lazy val controllers_Admin_login27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/login")))
   )
-  private[this] lazy val controllers_Admin_login24_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_login27_invoker = createInvoker(
     Admin_2.login,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -532,11 +592,11 @@ Application""",
     )
   )
 
-  // @LINE:66
-  private[this] lazy val controllers_Admin_doLogin25_route = Route("POST",
+  // @LINE:74
+  private[this] lazy val controllers_Admin_doLogin28_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/login")))
   )
-  private[this] lazy val controllers_Admin_doLogin25_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_doLogin28_invoker = createInvoker(
     Admin_2.doLogin,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -550,11 +610,11 @@ Application""",
     )
   )
 
-  // @LINE:68
-  private[this] lazy val controllers_Admin_agreeList26_route = Route("GET",
+  // @LINE:76
+  private[this] lazy val controllers_Admin_agreeList29_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/arelt")))
   )
-  private[this] lazy val controllers_Admin_agreeList26_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_agreeList29_invoker = createInvoker(
     Admin_2.agreeList,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -568,11 +628,11 @@ Application""",
     )
   )
 
-  // @LINE:70
-  private[this] lazy val controllers_Admin_adminLogOut27_route = Route("GET",
+  // @LINE:78
+  private[this] lazy val controllers_Admin_adminLogOut30_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/eixt")))
   )
-  private[this] lazy val controllers_Admin_adminLogOut27_invoker = createInvoker(
+  private[this] lazy val controllers_Admin_adminLogOut30_invoker = createInvoker(
     Admin_2.adminLogOut,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -586,11 +646,65 @@ Application""",
     )
   )
 
-  // @LINE:74
-  private[this] lazy val controllers_Assets_at28_route = Route("GET",
+  // @LINE:80
+  private[this] lazy val controllers_Admin_getRefuseByAdminList31_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/refCliReq")))
+  )
+  private[this] lazy val controllers_Admin_getRefuseByAdminList31_invoker = createInvoker(
+    Admin_2.getRefuseByAdminList,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Admin",
+      "getRefuseByAdminList",
+      Nil,
+      "GET",
+      this.prefix + """admin/refCliReq""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:82
+  private[this] lazy val controllers_Admin_getClientRetBookReq32_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/cliRetReq")))
+  )
+  private[this] lazy val controllers_Admin_getClientRetBookReq32_invoker = createInvoker(
+    Admin_2.getClientRetBookReq,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Admin",
+      "getClientRetBookReq",
+      Nil,
+      "GET",
+      this.prefix + """admin/cliRetReq""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:84
+  private[this] lazy val controllers_Admin_getClientHistory33_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("admin/hisAll")))
+  )
+  private[this] lazy val controllers_Admin_getClientHistory33_invoker = createInvoker(
+    Admin_2.getClientHistory,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Admin",
+      "getClientHistory",
+      Nil,
+      "GET",
+      this.prefix + """admin/hisAll""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:88
+  private[this] lazy val controllers_Assets_at34_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at28_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at34_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -674,111 +788,147 @@ Application""",
       }
   
     // @LINE:35
-    case controllers_Applications_personOrder11_route(params@_) =>
+    case controllers_Applications_personIndex11_route(params@_) =>
       call { 
-        controllers_Applications_personOrder11_invoker.call(Applications_0.personOrder)
+        controllers_Applications_personIndex11_invoker.call(Applications_0.personIndex)
       }
   
     // @LINE:37
-    case controllers_Applications_personOrder12_route(params@_) =>
+    case controllers_Applications_personBorrowHistory12_route(params@_) =>
       call { 
-        controllers_Applications_personOrder12_invoker.call(Applications_0.personOrder)
+        controllers_Applications_personBorrowHistory12_invoker.call(Applications_0.personBorrowHistory)
       }
   
     // @LINE:39
-    case controllers_Applications_personReturn13_route(params@_) =>
+    case controllers_Applications_personBorrowList13_route(params@_) =>
       call { 
-        controllers_Applications_personReturn13_invoker.call(Applications_0.personReturn)
+        controllers_Applications_personBorrowList13_invoker.call(Applications_0.personBorrowList)
       }
   
     // @LINE:41
-    case controllers_Applications_delRefuseReq14_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Applications_delRefuseReq14_invoker.call(Applications_0.delRefuseReq(userid, bookid))
+    case controllers_Applications_personChecking14_route(params@_) =>
+      call { 
+        controllers_Applications_personChecking14_invoker.call(Applications_0.personChecking)
       }
   
     // @LINE:43
-    case controllers_Applications_continueReq15_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Applications_continueReq15_invoker.call(Applications_0.continueReq(userid, bookid))
+    case controllers_Applications_personPassed15_route(params@_) =>
+      call { 
+        controllers_Applications_personPassed15_invoker.call(Applications_0.personPassed)
       }
   
     // @LINE:45
-    case controllers_Applications_personReturnBookReq16_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Applications_personReturnBookReq16_invoker.call(Applications_0.personReturnBookReq(userid, bookid))
-      }
-  
-    // @LINE:50
-    case controllers_Admin_checkPass17_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Admin_checkPass17_invoker.call(Admin_2.checkPass(userid, bookid))
-      }
-  
-    // @LINE:52
-    case controllers_Admin_refusePass18_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Admin_refusePass18_invoker.call(Admin_2.refusePass(userid, bookid))
-      }
-  
-    // @LINE:54
-    case controllers_Admin_agreClientReturnBook19_route(params@_) =>
-      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
-        controllers_Admin_agreClientReturnBook19_invoker.call(Admin_2.agreClientReturnBook(userid, bookid))
-      }
-  
-    // @LINE:56
-    case controllers_Admin_index20_route(params@_) =>
+    case controllers_Applications_personDisagree16_route(params@_) =>
       call { 
-        controllers_Admin_index20_invoker.call(Admin_2.index)
+        controllers_Applications_personDisagree16_invoker.call(Applications_0.personDisagree)
+      }
+  
+    // @LINE:49
+    case controllers_Applications_delRefuseReq17_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Applications_delRefuseReq17_invoker.call(Applications_0.delRefuseReq(userid, bookid))
+      }
+  
+    // @LINE:51
+    case controllers_Applications_continueReq18_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Applications_continueReq18_invoker.call(Applications_0.continueReq(userid, bookid))
+      }
+  
+    // @LINE:53
+    case controllers_Applications_personReturnBookReq19_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Applications_personReturnBookReq19_invoker.call(Applications_0.personReturnBookReq(userid, bookid))
       }
   
     // @LINE:58
-    case controllers_Admin_head21_route(params@_) =>
-      call { 
-        controllers_Admin_head21_invoker.call(Admin_2.head)
+    case controllers_Admin_checkPass20_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Admin_checkPass20_invoker.call(Admin_2.checkPass(userid, bookid))
       }
   
     // @LINE:60
-    case controllers_Admin_left22_route(params@_) =>
-      call { 
-        controllers_Admin_left22_invoker.call(Admin_2.left)
+    case controllers_Admin_refusePass21_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Admin_refusePass21_invoker.call(Admin_2.refusePass(userid, bookid))
       }
   
     // @LINE:62
-    case controllers_Admin_main23_route(params@_) =>
-      call { 
-        controllers_Admin_main23_invoker.call(Admin_2.main)
+    case controllers_Admin_agreClientReturnBook22_route(params@_) =>
+      call(params.fromQuery[String]("userid", Some("")), params.fromQuery[Long]("bookid", Some(-1))) { (userid, bookid) =>
+        controllers_Admin_agreClientReturnBook22_invoker.call(Admin_2.agreClientReturnBook(userid, bookid))
       }
   
     // @LINE:64
-    case controllers_Admin_login24_route(params@_) =>
+    case controllers_Admin_index23_route(params@_) =>
       call { 
-        controllers_Admin_login24_invoker.call(Admin_2.login)
+        controllers_Admin_index23_invoker.call(Admin_2.index)
       }
   
     // @LINE:66
-    case controllers_Admin_doLogin25_route(params@_) =>
+    case controllers_Admin_head24_route(params@_) =>
       call { 
-        controllers_Admin_doLogin25_invoker.call(Admin_2.doLogin)
+        controllers_Admin_head24_invoker.call(Admin_2.head)
       }
   
     // @LINE:68
-    case controllers_Admin_agreeList26_route(params@_) =>
+    case controllers_Admin_left25_route(params@_) =>
       call { 
-        controllers_Admin_agreeList26_invoker.call(Admin_2.agreeList)
+        controllers_Admin_left25_invoker.call(Admin_2.left)
       }
   
     // @LINE:70
-    case controllers_Admin_adminLogOut27_route(params@_) =>
+    case controllers_Admin_main26_route(params@_) =>
       call { 
-        controllers_Admin_adminLogOut27_invoker.call(Admin_2.adminLogOut)
+        controllers_Admin_main26_invoker.call(Admin_2.main)
+      }
+  
+    // @LINE:72
+    case controllers_Admin_login27_route(params@_) =>
+      call { 
+        controllers_Admin_login27_invoker.call(Admin_2.login)
       }
   
     // @LINE:74
-    case controllers_Assets_at28_route(params@_) =>
+    case controllers_Admin_doLogin28_route(params@_) =>
+      call { 
+        controllers_Admin_doLogin28_invoker.call(Admin_2.doLogin)
+      }
+  
+    // @LINE:76
+    case controllers_Admin_agreeList29_route(params@_) =>
+      call { 
+        controllers_Admin_agreeList29_invoker.call(Admin_2.agreeList)
+      }
+  
+    // @LINE:78
+    case controllers_Admin_adminLogOut30_route(params@_) =>
+      call { 
+        controllers_Admin_adminLogOut30_invoker.call(Admin_2.adminLogOut)
+      }
+  
+    // @LINE:80
+    case controllers_Admin_getRefuseByAdminList31_route(params@_) =>
+      call { 
+        controllers_Admin_getRefuseByAdminList31_invoker.call(Admin_2.getRefuseByAdminList)
+      }
+  
+    // @LINE:82
+    case controllers_Admin_getClientRetBookReq32_route(params@_) =>
+      call { 
+        controllers_Admin_getClientRetBookReq32_invoker.call(Admin_2.getClientRetBookReq)
+      }
+  
+    // @LINE:84
+    case controllers_Admin_getClientHistory33_route(params@_) =>
+      call { 
+        controllers_Admin_getClientHistory33_invoker.call(Admin_2.getClientHistory)
+      }
+  
+    // @LINE:88
+    case controllers_Assets_at34_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at28_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at34_invoker.call(Assets_1.at(path, file))
       }
   }
 }

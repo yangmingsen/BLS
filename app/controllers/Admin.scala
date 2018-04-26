@@ -34,7 +34,7 @@ class Admin @Inject() ( books: BookInfosRepository,
 //  )(unlift(AdminM.unapply))
 
   /**
-    * 同意申请人的借阅申请
+    * 同意申请人的借阅请求
     * @param userid
     * @param bookid
     * @return
@@ -67,7 +67,7 @@ class Admin @Inject() ( books: BookInfosRepository,
   def agreClientReturnBook(userid: String, bookid: Long) = checkAdminLogin.async { implicit request: Request[AnyContent] =>
     val date = utils.TimeHelper.getTimeNow()
       admin.addToHistory(userid,bookid,date)
-     Future.successful(Ok("Return Book Successful"))
+     Future.successful(Ok(Json.obj("states" -> "1")))
   }
 
   def index() = checkAdminLogin.async { implicit request: Request[AnyContent] =>
@@ -132,8 +132,51 @@ class Admin @Inject() ( books: BookInfosRepository,
       }
   }
 
+  /**
+    * admin退出
+    * @return
+    */
   def adminLogOut() = Action.async { implicit request: Request[AnyContent] =>
     Future.successful(Ok(views.html.admin.login()).withNewSession)
   }
+
+  /**
+    * 获取用户还书申请列表
+    * @return
+    */
+  def getClientRetBookReq() = checkAdminLogin.async { implicit request: Request[AnyContent] =>
+    for {
+      data <- admin.getDealListAll(3)
+    } yield {
+      Ok(views.html.admin.retbookreq(data))
+    }
+  }
+
+  /**
+    * 获取拒绝用户列表
+    * @return
+    */
+  def getRefuseByAdminList() = checkAdminLogin.async { implicit request: Request[AnyContent] =>
+    for {
+      data <- admin.getDealListAll(22)
+    } yield {
+      Ok(views.html.admin.refuse(data))
+    }
+  }
+
+  /**
+    * 获取所有用户历史记录
+    * @return
+    */
+  def getClientHistory() = checkAdminLogin.async { implicit request: Request[AnyContent] =>
+    for {
+      data <- admin.getHistoryAll()
+    } yield {
+      Ok(views.html.admin.history(data))
+    }
+
+  }
+
+
 
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Wed Apr 25 22:25:37 CST 2018
+// @DATE:Thu Apr 26 22:03:37 CST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:50
+  // @LINE:58
   class ReverseAdmin(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:52
+    // @LINE:82
+    def getClientRetBookReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Admin.getClientRetBookReq",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/cliRetReq"})
+        }
+      """
+    )
+  
+    // @LINE:60
     def refusePass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.refusePass",
       """
@@ -29,7 +39,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:54
+    // @LINE:62
     def agreClientReturnBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.agreClientReturnBook",
       """
@@ -39,7 +49,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:62
+    // @LINE:70
     def main: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.main",
       """
@@ -49,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:60
+    // @LINE:68
     def left: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.left",
       """
@@ -59,7 +69,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:66
+    // @LINE:74
     def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.doLogin",
       """
@@ -69,7 +79,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:58
+    // @LINE:84
+    def getClientHistory: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Admin.getClientHistory",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/hisAll"})
+        }
+      """
+    )
+  
+    // @LINE:66
     def head: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.head",
       """
@@ -79,7 +99,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:50
+    // @LINE:58
     def checkPass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.checkPass",
       """
@@ -89,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:68
+    // @LINE:76
     def agreeList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.agreeList",
       """
@@ -99,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:70
+    // @LINE:78
     def adminLogOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.adminLogOut",
       """
@@ -109,7 +129,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:56
+    // @LINE:64
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.index",
       """
@@ -119,7 +139,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:64
+    // @LINE:80
+    def getRefuseByAdminList: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Admin.getRefuseByAdminList",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/refCliReq"})
+        }
+      """
+    )
+  
+    // @LINE:72
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.login",
       """
@@ -131,7 +161,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:74
+  // @LINE:88
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -139,7 +169,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:74
+    // @LINE:88
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -159,6 +189,26 @@ package controllers.javascript {
     }
 
   
+    // @LINE:35
+    def personIndex: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personIndex",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person"})
+        }
+      """
+    )
+  
+    // @LINE:37
+    def personBorrowHistory: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personBorrowHistory",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/hisy"})
+        }
+      """
+    )
+  
     // @LINE:19
     def addCart: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.addCart",
@@ -169,7 +219,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
+    // @LINE:53
     def personReturnBookReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personReturnBookReq",
       """
@@ -220,11 +270,11 @@ package controllers.javascript {
     )
   
     // @LINE:39
-    def personReturn: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Applications.personReturn",
+    def personBorrowList: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personBorrowList",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/retbk"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/borlis"})
         }
       """
     )
@@ -239,6 +289,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:41
+    def personChecking: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personChecking",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/chec"})
+        }
+      """
+    )
+  
     // @LINE:11
     def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.doLogin",
@@ -249,7 +309,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:51
     def continueReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.continueReq",
       """
@@ -259,21 +319,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
-    def personOrder: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Applications.personOrder",
-      """
-        function() {
-        
-          if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person"})
-          }
-        
-        }
-      """
-    )
-  
-    // @LINE:41
+    // @LINE:49
     def delRefuseReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.delRefuseReq",
       """
@@ -293,12 +339,32 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:43
+    def personPassed: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personPassed",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/psed"})
+        }
+      """
+    )
+  
     // @LINE:23
     def logOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.logOut",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "giveUp"})
+        }
+      """
+    )
+  
+    // @LINE:45
+    def personDisagree: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.personDisagree",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/disage"})
         }
       """
     )

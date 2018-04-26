@@ -1,29 +1,295 @@
-2018-04-25 21:28:12,259 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2018-04-25 21:28:12,274 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-2 - HikariPool-1 - Starting...
-2018-04-25 21:28:12,496 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-2 - HikariPool-1 - Start completed.
-2018-04-25 21:28:12,503 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
-2018-04-25 21:28:12,734 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
-2018-04-25 21:28:12,885 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-26 17:02:44,135 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2018-04-26 17:02:44,152 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-8 - HikariPool-1 - Starting...
+2018-04-26 17:02:44,400 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-8 - HikariPool-1 - Start completed.
+2018-04-26 17:02:44,409 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 17:02:44,627 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 17:02:44,783 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2018-04-25 21:28:12,890 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
-2018-04-25 21:51:16,110 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
-2018-04-25 21:51:16,114 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-1 - Shutdown initiated...
-2018-04-25 21:51:16,130 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-1 - Shutdown completed.
-2018-04-25 21:51:16,234 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-32 - Creating Pool for datasource 'default'
-2018-04-25 21:51:16,235 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-32 - HikariPool-2 - Starting...
-2018-04-25 21:51:16,240 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-32 - HikariPool-2 - Start completed.
-2018-04-25 21:51:16,241 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-32 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
-2018-04-25 21:51:16,374 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
-2018-04-25 21:51:16,402 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-32 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-26 17:02:44,789 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev)
+2018-04-26 17:19:00,231 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2018-04-26 17:19:00,233 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - HikariPool-1 - Shutdown initiated...
+2018-04-26 17:19:00,247 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - HikariPool-1 - Shutdown completed.
+2018-04-26 17:19:00,330 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-18 - Creating Pool for datasource 'default'
+2018-04-26 17:19:00,331 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-18 - HikariPool-2 - Starting...
+2018-04-26 17:19:00,339 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-18 - HikariPool-2 - Start completed.
+2018-04-26 17:19:00,340 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-18 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 17:19:00,477 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2018-04-26 17:19:00,499 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-18 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2018-04-25 21:51:16,403 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-32 - Application started (Dev)
-2018-04-25 22:25:56,660 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-92 - 
+2018-04-26 17:19:00,500 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-18 - Application started (Dev)
+2018-04-26 18:37:41,026 [INFO] from application in application-akka.actor.default-dispatcher-45 - Shutting down connection pool.
+2018-04-26 18:37:41,026 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-45 - HikariPool-2 - Shutdown initiated...
+2018-04-26 18:37:41,030 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-45 - HikariPool-2 - Shutdown completed.
+2018-04-26 18:37:41,158 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-63 - Creating Pool for datasource 'default'
+2018-04-26 18:37:41,160 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-63 - HikariPool-3 - Starting...
+2018-04-26 18:37:41,164 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-63 - HikariPool-3 - Start completed.
+2018-04-26 18:37:41,165 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-63 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 18:37:41,366 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 18:37:41,406 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-63 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @77le1bic5 - Internal server error, for (GET) [/admin] ->
+
+2018-04-26 18:37:41,408 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-63 - Application started (Dev)
+2018-04-26 18:43:07,845 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2018-04-26 18:43:07,846 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-3 - Shutdown initiated...
+2018-04-26 18:43:07,849 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-3 - Shutdown completed.
+2018-04-26 18:43:07,910 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-71 - Creating Pool for datasource 'default'
+2018-04-26 18:43:07,911 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-71 - HikariPool-4 - Starting...
+2018-04-26 18:43:07,916 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-71 - HikariPool-4 - Start completed.
+2018-04-26 18:43:07,917 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-71 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 18:43:08,035 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 18:43:08,054 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-71 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 18:43:08,055 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-71 - Application started (Dev)
+2018-04-26 18:43:34,467 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2018-04-26 18:43:34,467 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - HikariPool-4 - Shutdown initiated...
+2018-04-26 18:43:34,478 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - HikariPool-4 - Shutdown completed.
+2018-04-26 18:43:34,563 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-64 - Creating Pool for datasource 'default'
+2018-04-26 18:43:34,563 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-64 - HikariPool-5 - Starting...
+2018-04-26 18:43:34,566 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-64 - HikariPool-5 - Start completed.
+2018-04-26 18:43:34,567 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-64 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 18:43:34,653 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 18:43:34,673 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-64 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 18:43:34,675 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-64 - Application started (Dev)
+2018-04-26 18:44:24,222 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2018-04-26 18:44:24,222 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-9 - HikariPool-5 - Shutdown initiated...
+2018-04-26 18:44:24,228 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-9 - HikariPool-5 - Shutdown completed.
+2018-04-26 18:44:24,285 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-71 - Creating Pool for datasource 'default'
+2018-04-26 18:44:24,285 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-71 - HikariPool-6 - Starting...
+2018-04-26 18:44:24,288 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-71 - HikariPool-6 - Start completed.
+2018-04-26 18:44:24,289 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-71 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 18:44:24,385 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 18:44:24,405 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-71 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 18:44:24,406 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-71 - Application started (Dev)
+2018-04-26 19:05:23,363 [INFO] from application in application-akka.actor.default-dispatcher-31 - Shutting down connection pool.
+2018-04-26 19:05:23,363 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-31 - HikariPool-6 - Shutdown initiated...
+2018-04-26 19:05:23,366 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-31 - HikariPool-6 - Shutdown completed.
+2018-04-26 19:05:23,419 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-85 - Creating Pool for datasource 'default'
+2018-04-26 19:05:23,420 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-85 - HikariPool-7 - Starting...
+2018-04-26 19:05:23,423 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-85 - HikariPool-7 - Start completed.
+2018-04-26 19:05:23,424 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-85 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:05:23,502 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:05:23,516 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-85 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:05:23,517 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-85 - Application started (Dev)
+2018-04-26 19:25:44,449 [INFO] from application in application-akka.actor.default-dispatcher-88 - Shutting down connection pool.
+2018-04-26 19:25:44,449 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-88 - HikariPool-7 - Shutdown initiated...
+2018-04-26 19:25:44,452 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-88 - HikariPool-7 - Shutdown completed.
+2018-04-26 19:25:44,505 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-277 - Creating Pool for datasource 'default'
+2018-04-26 19:25:44,506 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-277 - HikariPool-8 - Starting...
+2018-04-26 19:25:44,509 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-277 - HikariPool-8 - Start completed.
+2018-04-26 19:25:44,509 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-277 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:25:44,583 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:25:44,594 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-277 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:25:44,595 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-277 - Application started (Dev)
+2018-04-26 19:35:48,320 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2018-04-26 19:35:48,320 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-8 - Shutdown initiated...
+2018-04-26 19:35:48,322 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-8 - Shutdown completed.
+2018-04-26 19:35:48,351 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-284 - Creating Pool for datasource 'default'
+2018-04-26 19:35:48,352 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-284 - HikariPool-9 - Starting...
+2018-04-26 19:35:48,354 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-284 - HikariPool-9 - Start completed.
+2018-04-26 19:35:48,354 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-284 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:35:48,420 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:35:48,430 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-284 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:35:48,431 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-284 - Application started (Dev)
+2018-04-26 19:38:28,609 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2018-04-26 19:38:28,609 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - HikariPool-9 - Shutdown initiated...
+2018-04-26 19:38:28,615 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - HikariPool-9 - Shutdown completed.
+2018-04-26 19:38:28,668 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-315 - Creating Pool for datasource 'default'
+2018-04-26 19:38:28,669 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-315 - HikariPool-10 - Starting...
+2018-04-26 19:38:28,672 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-315 - HikariPool-10 - Start completed.
+2018-04-26 19:38:28,672 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-315 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:38:28,759 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 19:38:28,774 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-315 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:38:28,775 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-315 - Application started (Dev)
+2018-04-26 19:40:09,057 [INFO] from application in application-akka.actor.default-dispatcher-14 - Shutting down connection pool.
+2018-04-26 19:40:09,058 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-14 - HikariPool-10 - Shutdown initiated...
+2018-04-26 19:40:09,062 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-14 - HikariPool-10 - Shutdown completed.
+2018-04-26 19:40:09,104 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-315 - Creating Pool for datasource 'default'
+2018-04-26 19:40:09,104 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-315 - HikariPool-11 - Starting...
+2018-04-26 19:40:09,107 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-315 - HikariPool-11 - Start completed.
+2018-04-26 19:40:09,108 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-315 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:40:09,191 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:40:09,206 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-315 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:40:09,207 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-315 - Application started (Dev)
+2018-04-26 19:42:20,409 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2018-04-26 19:42:20,409 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-11 - Shutdown initiated...
+2018-04-26 19:42:20,412 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-11 - Shutdown completed.
+2018-04-26 19:42:20,456 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-343 - Creating Pool for datasource 'default'
+2018-04-26 19:42:20,457 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-12 - Starting...
+2018-04-26 19:42:20,460 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-12 - Start completed.
+2018-04-26 19:42:20,460 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-343 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:42:20,526 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 19:42:20,535 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-343 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:42:20,535 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-343 - Application started (Dev)
+2018-04-26 19:43:23,274 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2018-04-26 19:43:23,274 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-12 - Shutdown initiated...
+2018-04-26 19:43:23,279 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariPool-12 - Shutdown completed.
+2018-04-26 19:43:23,329 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-287 - Creating Pool for datasource 'default'
+2018-04-26 19:43:23,330 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-287 - HikariPool-13 - Starting...
+2018-04-26 19:43:23,332 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-287 - HikariPool-13 - Start completed.
+2018-04-26 19:43:23,333 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-287 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:43:23,396 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:43:23,407 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-287 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:43:23,407 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-287 - Application started (Dev)
+2018-04-26 19:43:42,385 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2018-04-26 19:43:42,385 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-13 - Shutdown initiated...
+2018-04-26 19:43:42,387 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-13 - Shutdown completed.
+2018-04-26 19:43:42,425 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-288 - Creating Pool for datasource 'default'
+2018-04-26 19:43:42,425 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-288 - HikariPool-14 - Starting...
+2018-04-26 19:43:42,428 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-288 - HikariPool-14 - Start completed.
+2018-04-26 19:43:42,428 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-288 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:43:42,498 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-6 - Slf4jLogger started
+2018-04-26 19:43:42,508 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-288 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:43:42,508 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-288 - Application started (Dev)
+2018-04-26 19:48:05,587 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2018-04-26 19:48:05,587 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-9 - HikariPool-14 - Shutdown initiated...
+2018-04-26 19:48:05,590 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-9 - HikariPool-14 - Shutdown completed.
+2018-04-26 19:48:05,624 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-343 - Creating Pool for datasource 'default'
+2018-04-26 19:48:05,625 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-15 - Starting...
+2018-04-26 19:48:05,628 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-15 - Start completed.
+2018-04-26 19:48:05,628 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-343 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:48:05,696 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 19:48:05,704 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-343 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:48:05,704 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-343 - Application started (Dev)
+2018-04-26 19:50:05,294 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2018-04-26 19:50:05,295 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-15 - Shutdown initiated...
+2018-04-26 19:50:05,298 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-15 - Shutdown completed.
+2018-04-26 19:50:05,332 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-343 - Creating Pool for datasource 'default'
+2018-04-26 19:50:05,333 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-16 - Starting...
+2018-04-26 19:50:05,335 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-16 - Start completed.
+2018-04-26 19:50:05,336 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-343 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:50:05,396 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 19:50:05,405 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-343 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:50:05,405 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-343 - Application started (Dev)
+2018-04-26 19:50:40,753 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2018-04-26 19:50:40,753 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 - HikariPool-16 - Shutdown initiated...
+2018-04-26 19:50:40,757 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 - HikariPool-16 - Shutdown completed.
+2018-04-26 19:50:40,783 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-343 - Creating Pool for datasource 'default'
+2018-04-26 19:50:40,783 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-17 - Starting...
+2018-04-26 19:50:40,786 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-343 - HikariPool-17 - Start completed.
+2018-04-26 19:50:40,786 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-343 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:50:40,886 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2018-04-26 19:50:40,903 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-343 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:50:40,904 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-343 - Application started (Dev)
+2018-04-26 19:55:13,454 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
+2018-04-26 19:55:13,454 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-10 - HikariPool-17 - Shutdown initiated...
+2018-04-26 19:55:13,457 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-10 - HikariPool-17 - Shutdown completed.
+2018-04-26 19:55:13,491 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-352 - Creating Pool for datasource 'default'
+2018-04-26 19:55:13,492 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-352 - HikariPool-18 - Starting...
+2018-04-26 19:55:13,498 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-352 - HikariPool-18 - Start completed.
+2018-04-26 19:55:13,498 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-352 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:55:13,558 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-6 - Slf4jLogger started
+2018-04-26 19:55:13,567 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-352 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:55:13,567 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-352 - Application started (Dev)
+2018-04-26 19:55:41,646 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2018-04-26 19:55:41,646 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-18 - Shutdown initiated...
+2018-04-26 19:55:41,649 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-18 - Shutdown completed.
+2018-04-26 19:55:41,674 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-361 - Creating Pool for datasource 'default'
+2018-04-26 19:55:41,674 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-361 - HikariPool-19 - Starting...
+2018-04-26 19:55:41,677 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-361 - HikariPool-19 - Start completed.
+2018-04-26 19:55:41,677 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-361 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:55:41,744 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2018-04-26 19:55:41,751 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-361 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:55:41,752 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-361 - Application started (Dev)
+2018-04-26 19:58:04,143 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2018-04-26 19:58:04,144 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-19 - Shutdown initiated...
+2018-04-26 19:58:04,145 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-19 - Shutdown completed.
+2018-04-26 19:58:04,178 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-298 - Creating Pool for datasource 'default'
+2018-04-26 19:58:04,179 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-298 - HikariPool-20 - Starting...
+2018-04-26 19:58:04,182 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-298 - HikariPool-20 - Start completed.
+2018-04-26 19:58:04,182 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-298 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 19:58:04,249 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2018-04-26 19:58:04,260 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-298 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 19:58:04,261 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-298 - Application started (Dev)
+2018-04-26 20:01:28,187 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2018-04-26 20:01:28,187 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-20 - Shutdown initiated...
+2018-04-26 20:01:28,190 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - HikariPool-20 - Shutdown completed.
+2018-04-26 20:01:28,222 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-361 - Creating Pool for datasource 'default'
+2018-04-26 20:01:28,222 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-361 - HikariPool-21 - Starting...
+2018-04-26 20:01:28,224 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-361 - HikariPool-21 - Start completed.
+2018-04-26 20:01:28,225 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-361 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 20:01:28,282 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 20:01:28,290 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-361 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 20:01:28,290 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-361 - Application started (Dev)
+2018-04-26 20:05:42,541 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2018-04-26 20:05:42,541 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - HikariPool-21 - Shutdown initiated...
+2018-04-26 20:05:42,544 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - HikariPool-21 - Shutdown completed.
+2018-04-26 20:05:42,578 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-358 - Creating Pool for datasource 'default'
+2018-04-26 20:05:42,578 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-358 - HikariPool-22 - Starting...
+2018-04-26 20:05:42,581 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-358 - HikariPool-22 - Start completed.
+2018-04-26 20:05:42,582 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-358 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 20:05:42,641 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2018-04-26 20:05:42,649 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-358 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 20:05:42,649 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-358 - Application started (Dev)
+2018-04-26 20:22:57,450 [INFO] from application in application-akka.actor.default-dispatcher-33 - Shutting down connection pool.
+2018-04-26 20:22:57,450 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-33 - HikariPool-22 - Shutdown initiated...
+2018-04-26 20:22:57,452 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-33 - HikariPool-22 - Shutdown completed.
+2018-04-26 20:22:57,495 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-382 - Creating Pool for datasource 'default'
+2018-04-26 20:22:57,496 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-382 - HikariPool-23 - Starting...
+2018-04-26 20:22:57,499 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-382 - HikariPool-23 - Start completed.
+2018-04-26 20:22:57,499 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-382 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 20:22:57,572 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 20:22:57,585 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-382 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 20:22:57,586 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-382 - Application started (Dev)
+2018-04-26 20:43:50,859 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2018-04-26 20:43:50,860 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-23 - Shutdown initiated...
+2018-04-26 20:43:50,862 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-23 - Shutdown completed.
+2018-04-26 20:43:50,915 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-397 - Creating Pool for datasource 'default'
+2018-04-26 20:43:50,916 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-397 - HikariPool-24 - Starting...
+2018-04-26 20:43:50,918 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-397 - HikariPool-24 - Start completed.
+2018-04-26 20:43:50,919 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-397 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 20:43:50,982 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 20:43:50,992 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-397 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 20:43:50,993 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-397 - Application started (Dev)
+2018-04-26 20:46:07,571 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-412 - 
+
+! @77lklaje9 - Internal server error, for (GET) [/person/order] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[value returndate is not a member of models.History2018]
+play.sbt.PlayExceptions$CompilationException: Compilation error[type mismatch;
+ found   : scala.concurrent.Future[List[models.History2018]]
+ required: List[models.History2018]]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
 	at scala.Option.map(Option.scala:145)
@@ -71,15 +337,297 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[value returndate
 	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2018-04-25 22:27:03,210 [INFO] from application in application-akka.actor.default-dispatcher-22 - Shutting down connection pool.
-2018-04-25 22:27:03,210 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-22 - HikariPool-2 - Shutdown initiated...
-2018-04-25 22:27:03,224 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-22 - HikariPool-2 - Shutdown completed.
-2018-04-25 22:27:03,303 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-70 - Creating Pool for datasource 'default'
-2018-04-25 22:27:03,304 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-70 - HikariPool-3 - Starting...
-2018-04-25 22:27:03,313 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-70 - HikariPool-3 - Start completed.
-2018-04-25 22:27:03,314 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-70 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
-2018-04-25 22:27:03,404 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
-2018-04-25 22:27:03,445 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-70 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-26 20:55:18,841 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2018-04-26 20:55:18,842 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-24 - Shutdown initiated...
+2018-04-26 20:55:18,856 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-24 - Shutdown completed.
+2018-04-26 20:55:18,923 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-414 - Creating Pool for datasource 'default'
+2018-04-26 20:55:18,923 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-414 - HikariPool-25 - Starting...
+2018-04-26 20:55:18,928 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-414 - HikariPool-25 - Start completed.
+2018-04-26 20:55:18,928 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-414 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 20:55:19,056 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2018-04-26 20:55:19,080 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-414 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2018-04-25 22:27:03,446 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-70 - Application started (Dev)
+2018-04-26 20:55:19,083 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-414 - Application started (Dev)
+2018-04-26 21:01:16,594 [INFO] from application in application-akka.actor.default-dispatcher-16 - Shutting down connection pool.
+2018-04-26 21:01:16,594 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-16 - HikariPool-25 - Shutdown initiated...
+2018-04-26 21:01:16,597 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-16 - HikariPool-25 - Shutdown completed.
+2018-04-26 21:01:16,626 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-414 - Creating Pool for datasource 'default'
+2018-04-26 21:01:16,626 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-414 - HikariPool-26 - Starting...
+2018-04-26 21:01:16,629 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-414 - HikariPool-26 - Start completed.
+2018-04-26 21:01:16,629 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-414 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 21:01:16,689 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 21:01:16,698 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-414 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 21:01:16,698 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-414 - Application started (Dev)
+2018-04-26 21:05:22,456 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-414 - 
+
+! @77lknobpi - Internal server error, for (GET) [/person/disage] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method apply: (history: List[models.History2018], cart: List[models.Cart], check: List[models.DealBorrowList], pass: List[models.DealBorrowList], refuse: List[models.DealBorrowList])(implicit request: play.api.mvc.RequestHeader)play.twirl.api.HtmlFormat.Appendable in object history.
+Unspecified value parameters history, cart, check...]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:32)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:27)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:23)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:50)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:47)
+	at play.runsupport.Reloader.reload(Reloader.scala:411)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.Server.getHandlerFor(Server.scala:63)
+	at play.core.server.Server.getHandlerFor$(Server.scala:48)
+	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
+	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
+	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-04-26 21:05:24,273 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-414 - 
+
+! @77lknoehf - Internal server error, for (GET) [/person/disage] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method apply: (history: List[models.History2018], cart: List[models.Cart], check: List[models.DealBorrowList], pass: List[models.DealBorrowList], refuse: List[models.DealBorrowList])(implicit request: play.api.mvc.RequestHeader)play.twirl.api.HtmlFormat.Appendable in object history.
+Unspecified value parameters history, cart, check...]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:32)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:27)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:23)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:50)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:47)
+	at play.runsupport.Reloader.reload(Reloader.scala:411)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.Server.getHandlerFor(Server.scala:63)
+	at play.core.server.Server.getHandlerFor$(Server.scala:48)
+	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
+	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
+	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-04-26 21:06:33,067 [INFO] from application in application-akka.actor.default-dispatcher-19 - Shutting down connection pool.
+2018-04-26 21:06:33,067 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-19 - HikariPool-26 - Shutdown initiated...
+2018-04-26 21:06:33,070 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-19 - HikariPool-26 - Shutdown completed.
+2018-04-26 21:06:33,098 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-418 - Creating Pool for datasource 'default'
+2018-04-26 21:06:33,099 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-418 - HikariPool-27 - Starting...
+2018-04-26 21:06:33,102 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-418 - HikariPool-27 - Start completed.
+2018-04-26 21:06:33,103 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-418 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 21:06:33,175 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-04-26 21:06:33,183 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-418 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 21:06:33,184 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-418 - Application started (Dev)
+2018-04-26 21:06:58,508 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-420 - 
+
+! @77lko3o21 - Internal server error, for (GET) [/person] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[object history is not a member of package views.html.person]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:32)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:27)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:23)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:50)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:47)
+	at play.runsupport.Reloader.reload(Reloader.scala:411)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.Server.getHandlerFor(Server.scala:63)
+	at play.core.server.Server.getHandlerFor$(Server.scala:48)
+	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
+	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
+	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-04-26 21:07:09,315 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-407 - 
+
+! @77lko4e1i - Internal server error, for (GET) [/person] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value personBorrowHistory is not a member of controllers.Applications]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:30)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:32)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:27)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:23)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:50)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:50)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:73)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:47)
+	at play.runsupport.Reloader.reload(Reloader.scala:411)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.Server.getHandlerFor(Server.scala:63)
+	at play.core.server.Server.getHandlerFor$(Server.scala:48)
+	at play.core.server.AkkaHttpServer.getHandlerFor(AkkaHttpServer.scala:41)
+	at play.core.server.AkkaHttpServer.getHandler(AkkaHttpServer.scala:214)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:194)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:106)
+	at akka.stream.impl.fusing.MapAsync$$anon$24.onPush(Ops.scala:1191)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:512)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:475)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:371)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:584)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:468)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:559)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:741)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:756)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:666)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-04-26 21:07:18,844 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2018-04-26 21:07:18,844 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-27 - Shutdown initiated...
+2018-04-26 21:07:18,847 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-11 - HikariPool-27 - Shutdown completed.
+2018-04-26 21:07:18,887 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-406 - Creating Pool for datasource 'default'
+2018-04-26 21:07:18,887 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-406 - HikariPool-28 - Starting...
+2018-04-26 21:07:18,890 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-406 - HikariPool-28 - Start completed.
+2018-04-26 21:07:18,890 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-406 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 21:07:18,970 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 21:07:18,985 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-406 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 21:07:18,985 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-406 - Application started (Dev)
+2018-04-26 21:15:13,747 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
+2018-04-26 21:15:13,747 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-28 - Shutdown initiated...
+2018-04-26 21:15:13,750 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-28 - Shutdown completed.
+2018-04-26 21:15:13,782 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-424 - Creating Pool for datasource 'default'
+2018-04-26 21:15:13,782 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-424 - HikariPool-29 - Starting...
+2018-04-26 21:15:13,785 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-424 - HikariPool-29 - Start completed.
+2018-04-26 21:15:13,785 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-424 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 21:15:13,843 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-04-26 21:15:13,852 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-424 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 21:15:13,853 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-424 - Application started (Dev)
+2018-04-26 21:19:52,282 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
+2018-04-26 21:19:52,282 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-29 - Shutdown initiated...
+2018-04-26 21:19:52,284 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - HikariPool-29 - Shutdown completed.
+2018-04-26 21:19:52,313 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-433 - Creating Pool for datasource 'default'
+2018-04-26 21:19:52,314 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-433 - HikariPool-30 - Starting...
+2018-04-26 21:19:52,317 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-433 - HikariPool-30 - Start completed.
+2018-04-26 21:19:52,317 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-433 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 21:19:52,380 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2018-04-26 21:19:52,389 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-433 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 21:19:52,389 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-433 - Application started (Dev)
+2018-04-26 22:03:45,539 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2018-04-26 22:03:45,540 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-30 - Shutdown initiated...
+2018-04-26 22:03:45,542 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-8 - HikariPool-30 - Shutdown completed.
+2018-04-26 22:03:45,584 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-448 - Creating Pool for datasource 'default'
+2018-04-26 22:03:45,585 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-448 - HikariPool-31 - Starting...
+2018-04-26 22:03:45,588 [INFO] from com.zaxxer.hikari.HikariDataSource in play-dev-mode-akka.actor.default-dispatcher-448 - HikariPool-31 - Start completed.
+2018-04-26 22:03:45,588 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-448 - Database [default] connected at jdbc:mysql://localhost:3306/BLS?characterEncoding=UTF8&useSSL=false
+2018-04-26 22:03:45,707 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2018-04-26 22:03:45,717 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-448 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+
+2018-04-26 22:03:45,717 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-448 - Application started (Dev)

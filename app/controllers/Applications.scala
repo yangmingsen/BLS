@@ -166,33 +166,96 @@ class Applications @Inject() ( books: BookInfosRepository,
   }
 
   /**
-    * 个人首页
+    * 个人首页view
     * @return
     */
-  def personIndex() = Action { implicit  request: Request[AnyContent] =>
-    request.session.get("userAcct") match {
-      case Some(p) => Ok(views.html.person.index())
-      case None => Ok(views.html.login())
+  def personIndex() = checkClientLogin.async { implicit  request: Request[AnyContent] =>
+    Future.successful(Ok(views.html.person.index()))
+  }
+
+
+  /**
+    * 获得借阅历史view
+    * @return
+    */
+  def personBorrowHistory() = checkClientLogin.async { implicit  request: Request[AnyContent] =>
+
+    var user = ""
+    request.session.get("userAcct").map { ha =>
+      user = ha
+    }
+    for{
+      data <- admin.getHistoryFromDb(user)
+    } yield {
+      Ok(views.html.person.history(data))
     }
   }
 
   /**
-    * 个人订单管理
+    * 获得借阅列表view
     * @return
     */
-  def personOrder() = Action { implicit request: Request[AnyContent] =>
-    //历史记录,购物车,审核中,已通过
-      request.session.get("userAcct").map { user =>
-        val history = admin.getHistoryFromDb(user)
-        val cart = client.getCart(user)
-        val check = admin.getDealList(user,1)
-        val pass = admin.getDealList(user,2)
-        val refuse = admin.getDealList(user,22)
-        Ok(views.html.person.order(history,cart,check,pass,refuse))
+  def personBorrowList() = Action { implicit  request: Request[AnyContent] =>
+    request.session.get("userAcct").map { usr =>
+      Ok(views.html.person.borrowList(client.getCart(usr)))
     }.getOrElse {
-        Redirect(routes.Applications.login())
-      }
+      Ok(views.html.login())
+    }
+
   }
+
+  /**
+    * 获得审核列表view
+    * @return
+    */
+  def personChecking() = checkClientLogin.async { implicit  request: Request[AnyContent] =>
+        var user = ""
+        request.session.get("userAcct").map { ha =>
+           user = ha
+         }
+       for {
+         data <- admin.getDealList(user, 1)
+       } yield {
+         Ok(views.html.person.checking(data))
+       }
+
+  }
+
+  /**
+    * 获得审核通过view
+    * @return
+    */
+  def personPassed() = checkClientLogin.async { implicit  request: Request[AnyContent] =>
+
+    var user = ""
+    request.session.get("userAcct").map { ha =>
+      user = ha
+    }
+    for {
+      data <- admin.getDealList(user, 2)
+    } yield {
+      Ok(views.html.person.passed(data))
+    }
+  }
+
+  /**
+    * 获得审核未通过view
+    * @return
+    */
+  def personDisagree() = checkClientLogin.async { implicit  request: Request[AnyContent] =>
+    var user = ""
+    request.session.get("userAcct").map { ha =>
+      user = ha
+    }
+    for {
+      data <- admin.getDealList(user, 22)
+    } yield {
+      Ok(views.html.person.disagree(data))
+    }
+  }
+
+
+
 
   /**
     * 删除被拒绝的订单
@@ -219,17 +282,24 @@ class Applications @Inject() ( books: BookInfosRepository,
 
   }
 
-  /**
-    * 用户还书界面
-    * @return
-    */
-  def personReturn() = Action { implicit request: Request[AnyContent] =>
-      request.session.get("userAcct").map { user =>
-        Ok(views.html.person.returnbook(admin.getDealList(user,2)))
-      }.getOrElse {
-        Ok(views.html.login())
-      }
-  }
+//  /**
+//    * 用户还书界面
+//    * @return
+//    */
+//  def personReturn() = checkClientLogin.async { implicit request: Request[AnyContent] =>
+//
+//    var user = ""
+//    request.session.get("userAcct").map { ha =>
+//      user = ha
+//    }
+//
+//    for{
+//      data <- admin.getDealList(user,2)
+//    } yield {
+//      views.html.person.returnbook(data)
+//    }
+//
+//  }
 
   def personReturnBookReq(userid: String, bookid: Long) = checkClientLogin.async { implicit request: Request[AnyContent] =>
     val date  = utils.TimeHelper.getTimeNow()

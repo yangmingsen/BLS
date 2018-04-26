@@ -167,6 +167,7 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository, book: Boo
       ).as(stuSimple.singleOpt)
       tmp match {
         case Some( h ) => username = h.sname
+        case None => {}
       }
 
 
@@ -247,7 +248,7 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository, book: Boo
       SQL("UPDATE DealBorrowList SET states=3 , retdate={agredate} WHERE userid={userid} AND bookid={bookid}").on(
         'userid -> userid,
         'bookid -> bookid,
-        'agte -> date
+        'agredate -> date
       ).executeUpdate()
     }
   }(ec)

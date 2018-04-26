@@ -3,9 +3,6 @@ $(document).ready(function() {
 	var hh = document.documentElement.clientHeight;
 	var ls = document.documentElement.clientWidth;
 	if (ls < 640) {
-
-
-
 		$(".select dt").click(function() {
 			if ($(this).next("div").css("display") == 'none') {
 				$(".theme-popover-mask").height(hh);

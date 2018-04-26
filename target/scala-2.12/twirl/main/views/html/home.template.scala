@@ -37,39 +37,37 @@ Seq[Any](format.raw/*1.37*/("""
     <script src="/assets/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
     <script src="/assets/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
+
     <div class="banner">
             <!--轮播 -->
         <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
             <ul class="am-slides">
                 <li class="banner1">
-                    <a href="###"><img src="/assets/img1/python.jpg" /></a>
+                    <a href="introduction.html"><img src="/assets/img1/MyBatis750315.jpg" /></a>
                 </li>
                 <li class="banner2">
-                    <a href="###"><img src="/assets/img1/PythonSparkHadoop5.jpg" /></a>
+                    <a><img src="/assets/img1/python.jpg" /></a>
                 </li>
                 <li class="banner3">
-                    <a href="###"><img src="/assets/img1/springCloud.jpg" /></a>
+                    <a><img src="/assets/img1/PythonSparkHadoop5.jpg" /></a>
                 </li>
                 <li class="banner4">
-                    <a href="###"><img src="/assets/img1/MyBatis750315.jpg" /></a>
+                    <a><img src="/assets/img1/springCloud.jpg" /></a>
                 </li>
-
             </ul>
         </div>
         <div class="clear"></div>
     </div>
-
     <div class="shopNav">
         <div class="slideall">
             <div class="long-title"><span class="all-goods">全部分类</span></div>
-            <div class="nav-cont">
-                <ul>
-                    <li class="index">
-                        <a href="/">首页</a>
-                    </li>
-                </ul>
-
-            </div>
+                <!--<div class="nav-cont">-->
+                <!--<ul>-->
+                <!--<li class="index">-->
+                <!--<a href="#">首页</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
 
                 <!--侧边导航 -->
             <div id="nav" class="navfull">
@@ -279,8 +277,8 @@ Seq[Any](format.raw/*1.37*/("""
                                                             <dd><a rel="nofollow" title="w3cschool" target="_blank" href="https://www.w3cschool.cn/" rel="nofollow"><span>w3cschool</span></a></dd>
                                                             <dd><a rel="nofollow" title="慕课网" target="_blank" href="https://www.imooc.com/" rel="nofollow"><span class="red">慕课网</span></a></dd>
                                                         </dl>
-                                    """),
-format.raw("""                </div>
+                """),
+format.raw("""                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -420,24 +418,23 @@ format.raw("""                </div>
                 <!--轮播-->
 
             <script type="text/javascript">
-                    // (function() """),format.raw/*397.36*/("""{"""),format.raw/*397.37*/("""
-                    """),format.raw/*398.21*/("""// 	$('.am-slider').flexslider();
-                    // """),format.raw/*399.24*/("""}"""),format.raw/*399.25*/(""");
+                    // (function() """),format.raw/*395.36*/("""{"""),format.raw/*395.37*/("""
+                    """),format.raw/*396.21*/("""// 	$('.am-slider').flexslider();
+                    // """),format.raw/*397.24*/("""}"""),format.raw/*397.25*/(""");
                     //jQuery的hover方法:当鼠标指针悬停在被选元素上时运行的两个函数
-                    $(document).ready(function() """),format.raw/*401.50*/("""{"""),format.raw/*401.51*/("""
-                        """),format.raw/*402.25*/("""$("li").hover(function() """),format.raw/*402.50*/("""{"""),format.raw/*402.51*/("""
-                            """),format.raw/*403.29*/("""$(".category-content .category-list li.first .menu-in").css("display", "none");
+                    $(document).ready(function() """),format.raw/*399.50*/("""{"""),format.raw/*399.51*/("""
+                        """),format.raw/*400.25*/("""$("li").hover(function() """),format.raw/*400.50*/("""{"""),format.raw/*400.51*/("""
+                            """),format.raw/*401.29*/("""$(".category-content .category-list li.first .menu-in").css("display", "none");
                             $(".category-content .category-list li.first").removeClass("hover");
                             $(this).addClass("hover");
                             $(this).children("div.menu-in").css("display", "block")
-                        """),format.raw/*407.25*/("""}"""),format.raw/*407.26*/(""", function() """),format.raw/*407.39*/("""{"""),format.raw/*407.40*/("""
-                            """),format.raw/*408.29*/("""$(this).removeClass("hover")
+                        """),format.raw/*405.25*/("""}"""),format.raw/*405.26*/(""", function() """),format.raw/*405.39*/("""{"""),format.raw/*405.40*/("""
+                            """),format.raw/*406.29*/("""$(this).removeClass("hover")
                             $(this).children("div.menu-in").css("display", "none")
-                        """),format.raw/*410.25*/("""}"""),format.raw/*410.26*/(""");
+                        """),format.raw/*408.25*/("""}"""),format.raw/*408.26*/(""");
 
-                    """),format.raw/*412.21*/("""}"""),format.raw/*412.22*/(""")
+                    """),format.raw/*410.21*/("""}"""),format.raw/*410.22*/(""")
             </script>
-
 
             <div class="marqueen">
                 <span class="marqueen-title">热门书籍</span>
@@ -445,45 +442,32 @@ format.raw("""                </div>
 
                     <ul>
                         <li class="title-first">
-                            <a target="_self" href="/search?key=python">
+                            <a target="_blank" href="#">
                                     <!--<img src="/assets/images/TJ2.jpg"></img>-->
-                                <span>python</span>
+                                <span>python爬虫技术</span>
                             </a>
                         </li>
                         <li class="title-first">
-                            <a target="_self" href="/search?key=java疯狂讲义">
+                            <a target="_blank" href="#">
                                 <span>java疯狂讲义</span>
                                     <!--<img src="/assets/images/TJ.jpg"></img>-->
                             </a>
                         </li>
 
                         <div class="mod-vip">
-
-                            """),_display_(/*436.30*/request/*436.37*/.session.get("userName")/*436.61*/ match/*436.67*/ {/*437.33*/case Some(usr) =>/*437.50*/ {_display_(Seq[Any](format.raw/*437.52*/("""
-                                    """),format.raw/*438.37*/("""<div class="m-baseinfo">
-                                         <a style="cursor: pointer;">
-                                              <img src="/assets/add/img/getAvatar.do1.jpg">
-                                         </a>
-                                         <em>
-                                             Hi,<span class="s-name">你好.."""),_display_(/*443.75*/{usr}),format.raw/*443.80*/("""</span>
-                                        </em>
-                                    </div>
-                                """)))}/*447.33*/case  None =>/*447.46*/ {_display_(Seq[Any](format.raw/*447.48*/("""
-                                    """),format.raw/*448.37*/("""<div class="m-baseinfo">
-                                        <a style="cursor: pointer;">
-                                            <img src="/assets/add/img/getAvatar.do1.jpg">
-                                        </a>
-                                        <em>
-                                             Hi,<span class="s-name">同学..你好</span>
-                                        </em>
-                                    </div>
-                                 <div class="member-logout">
-                                     <a class="am-btn-warning btn" href="/login">登录</a>
-                                     <a class="am-btn-warning btn" href="####">注册</a>
-                                 </div>
-                                """)))}}),format.raw/*461.30*/("""
-
-                            """),format.raw/*463.29*/("""<div class="member-login">
+                            <div class="m-baseinfo">
+                                <a style="cursor: pointer;">
+                                    <img src="/assets/add/img/getAvatar.do1.jpg">
+                                </a>
+                                <em>
+                                    Hi,<span class="s-name">同学</span>
+                                </em>
+                            </div>
+                            <div class="member-logout">
+                                <a class="am-btn-warning btn" href="##">登录</a>
+                                <a class="am-btn-warning btn" href="##">注册</a>
+                            </div>
+                            <div class="member-login">
                                 <a href="#"><strong>0</strong>待收货</a>
                                 <a href="#"><strong>0</strong>待发货</a>
                                 <a href="#"><strong>0</strong>待付款</a>
@@ -492,25 +476,25 @@ format.raw("""                </div>
                             <div class="clear"></div>
                         </div>
                         <li>
-                            <a target="_self" href="/search?key=代码大全"><span>代码大全</span></a>
+                            <a target="_blank" href="#"><span>代码大全</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=算法导论"><span>算法导论</span></a>
+                            <a target="_blank" href="#"><span>算法导论</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=CSS禅意花园"><span>CSS禅意花园</span></a>
+                            <a target="_blank" href="#"><span>CSS禅意花园</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=JavaScript语言精粹"><span>JavaScript语言精粹</span></a>
+                            <a target="_blank" href="#"><span>JavaScript语言精粹</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=Android开发精要"><span>Android开发精要</span></a>
+                            <a target="_blank" href="#"><span>Android开发精要</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=c程序设计语言"><span>c程序设计语言</span></a>
+                            <a target="_blank" href="#"><span>JavaScript语言精粹</span></a>
                         </li>
                         <li>
-                            <a target="_self" href="/search?key=C++ primer plus"><span>C++ primer plus</span></a>
+                            <a target="_blank" href="#"><span>JavaScript语言精粹</span></a>
                         </li>
                     </ul>
                 </div>
@@ -850,7 +834,8 @@ format.raw("""                </div>
                         <div class="thumbnail outer-border">
                             <a href="#">
                                 <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
+     """),
+format.raw("""                           <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
                             </a>
                         </div>
                     </div>
@@ -881,8 +866,7 @@ format.raw("""                </div>
                     <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
                         <div class="thumbnail outer-border">
                             <a href="#">
-                                <img src="/assets/img1/javascrip"""),
-format.raw("""t语言精粹.jpg" />
+                                <img src="/assets/img1/javascript语言精粹.jpg" />
                                 <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
                             </a>
                         </div>
@@ -974,69 +958,75 @@ format.raw("""t语言精粹.jpg" />
                     //设置默认高度
 
                     var $img = $(".menu1 img");
-                    var check = function()"""),format.raw/*953.43*/("""{"""),format.raw/*953.44*/("""
-                        """),format.raw/*954.25*/("""if(checkImg())"""),format.raw/*954.39*/("""{"""),format.raw/*954.40*/("""
-                            """),format.raw/*955.29*/("""console.log(123);
-                            for(var j = 0; j < $img.length; j += 12) """),format.raw/*956.70*/("""{"""),format.raw/*956.71*/("""
-                                """),format.raw/*957.33*/("""var minnHeight = 2000;
+                    var check = function()"""),format.raw/*934.43*/("""{"""),format.raw/*934.44*/("""
+                        """),format.raw/*935.25*/("""if(checkImg())"""),format.raw/*935.39*/("""{"""),format.raw/*935.40*/("""
+                            """),format.raw/*936.29*/("""console.log(123);
+                            for(var j = 0; j < $img.length; j += 12) """),format.raw/*937.70*/("""{"""),format.raw/*937.71*/("""
+                                """),format.raw/*938.33*/("""var minnHeight = 2000;
 
-                                for(var i = j; i < j + 12; i++) """),format.raw/*959.65*/("""{"""),format.raw/*959.66*/("""
-                                    """),format.raw/*960.37*/("""var nWidth = $img[i].naturalWidth;
+                                for(var i = j; i < j + 12; i++) """),format.raw/*940.65*/("""{"""),format.raw/*940.66*/("""
+                                    """),format.raw/*941.37*/("""var nWidth = $img[i].naturalWidth;
                                     var nHeight = $img[i].naturalHeight;
                                     var nowHeight = $img[i].width / nWidth * nHeight;
                                     console.log(nWidth);
                                     console.log(nHeight);
-                                    if(minnHeight > nowHeight) """),format.raw/*965.64*/("""{"""),format.raw/*965.65*/("""
-                                        """),format.raw/*966.41*/("""minnHeight = nowHeight;
-                                    """),format.raw/*967.37*/("""}"""),format.raw/*967.38*/("""
-                                    """),format.raw/*968.37*/("""console.log(minnHeight);
-                                """),format.raw/*969.33*/("""}"""),format.raw/*969.34*/("""
+                                    if(minnHeight > nowHeight) """),format.raw/*946.64*/("""{"""),format.raw/*946.65*/("""
+                                        """),format.raw/*947.41*/("""minnHeight = nowHeight;
+                                    """),format.raw/*948.37*/("""}"""),format.raw/*948.38*/("""
+                                    """),format.raw/*949.37*/("""console.log(minnHeight);
+                                """),format.raw/*950.33*/("""}"""),format.raw/*950.34*/("""
 
-                                """),format.raw/*971.33*/("""for(var i = j; i < j + 12; i++) """),format.raw/*971.65*/("""{"""),format.raw/*971.66*/("""
-                                    """),format.raw/*972.37*/("""$img[i].height = minnHeight;
-                                """),format.raw/*973.33*/("""}"""),format.raw/*973.34*/("""
-                            """),format.raw/*974.29*/("""}"""),format.raw/*974.30*/("""
-                            """),format.raw/*975.29*/("""clearInterval(set);
-                        """),format.raw/*976.25*/("""}"""),format.raw/*976.26*/("""
-                    """),format.raw/*977.21*/("""}"""),format.raw/*977.22*/(""";
-                    function checkImg() """),format.raw/*978.41*/("""{"""),format.raw/*978.42*/("""
-                        """),format.raw/*979.25*/("""var flag = true;
+                                """),format.raw/*952.33*/("""for(var i = j; i < j + 12; i++) """),format.raw/*952.65*/("""{"""),format.raw/*952.66*/("""
+                                    """),format.raw/*953.37*/("""$img[i].height = minnHeight;
+                                """),format.raw/*954.33*/("""}"""),format.raw/*954.34*/("""
+                            """),format.raw/*955.29*/("""}"""),format.raw/*955.30*/("""
+                            """),format.raw/*956.29*/("""clearInterval(set);
+                        """),format.raw/*957.25*/("""}"""),format.raw/*957.26*/("""
+                    """),format.raw/*958.21*/("""}"""),format.raw/*958.22*/(""";
+                    function checkImg() """),format.raw/*959.41*/("""{"""),format.raw/*959.42*/("""
+                        """),format.raw/*960.25*/("""var flag = true;
                         console.log($img.length);
-                        for (var i = 0; i < $img.length; i++)"""),format.raw/*981.62*/("""{"""),format.raw/*981.63*/("""
-                            """),format.raw/*982.29*/("""console.log($img[i].height);
+                        for (var i = 0; i < $img.length; i++)"""),format.raw/*962.62*/("""{"""),format.raw/*962.63*/("""
+                            """),format.raw/*963.29*/("""console.log($img[i].height);
                             console.log($img[i].width);
-                            if($img[i].height <= 0 || $img[i].width <= 0)"""),format.raw/*984.74*/("""{"""),format.raw/*984.75*/("""
-                                """),format.raw/*985.33*/("""flag = false;
+                            if($img[i].height <= 0 || $img[i].width <= 0)"""),format.raw/*965.74*/("""{"""),format.raw/*965.75*/("""
+                                """),format.raw/*966.33*/("""flag = false;
                                 break;
-                            """),format.raw/*987.29*/("""}"""),format.raw/*987.30*/("""
-                            """),format.raw/*988.29*/("""if ($img[i].naturalWidth <= 0 || $img[i].naturalHeight <= 0)"""),format.raw/*988.89*/("""{"""),format.raw/*988.90*/("""
-                                """),format.raw/*989.33*/("""flag = false;
+                            """),format.raw/*968.29*/("""}"""),format.raw/*968.30*/("""
+                            """),format.raw/*969.29*/("""if ($img[i].naturalWidth <= 0 || $img[i].naturalHeight <= 0)"""),format.raw/*969.89*/("""{"""),format.raw/*969.90*/("""
+                                """),format.raw/*970.33*/("""flag = false;
                                 break;
-                            """),format.raw/*991.29*/("""}"""),format.raw/*991.30*/("""
-                        """),format.raw/*992.25*/("""}"""),format.raw/*992.26*/("""
-                        """),format.raw/*993.25*/("""console.log(flag);
+                            """),format.raw/*972.29*/("""}"""),format.raw/*972.30*/("""
+                        """),format.raw/*973.25*/("""}"""),format.raw/*973.26*/("""
+                        """),format.raw/*974.25*/("""console.log(flag);
                         return flag;
-                    """),format.raw/*995.21*/("""}"""),format.raw/*995.22*/("""
-                    """),format.raw/*996.21*/("""var set = setInterval(check,40);
-                    $(window).resize(function() """),format.raw/*997.49*/("""{"""),format.raw/*997.50*/("""
-                        """),format.raw/*998.25*/("""var $img = $(".menu1 img");
-                        for(var j = 0; j < $img.length; j += 12) """),format.raw/*999.66*/("""{"""),format.raw/*999.67*/("""
-                            """),format.raw/*1000.29*/("""var minnHeight = 200;
-                            for(var i = j; i < j + 12; i++) """),format.raw/*1001.61*/("""{"""),format.raw/*1001.62*/("""
-                                """),format.raw/*1002.33*/("""var nWidth = $img[i].naturalWidth
+                    """),format.raw/*976.21*/("""}"""),format.raw/*976.22*/("""
+                    """),format.raw/*977.21*/("""var set = setInterval(check,40);
+                    $(window).resize(function() """),format.raw/*978.49*/("""{"""),format.raw/*978.50*/("""
+                        """),format.raw/*979.25*/("""var $img = $(".menu1 img");
+                        for(var j = 0; j < $img.length; j += 12) """),format.raw/*980.66*/("""{"""),format.raw/*980.67*/("""
+                            """),format.raw/*981.29*/("""var minnHeight = 200;
+                            for(var i = j; i < j + 12; i++) """),format.raw/*982.61*/("""{"""),format.raw/*982.62*/("""
+                                """),format.raw/*983.33*/("""var nWidth = $img[i].naturalWidth
                                 var nHeight = $img[i].naturalHeight
                                 var nowHeight = $img[i].width / nWidth * nHeight;
-                                if(minnHeight > nowHeight) """),format.raw/*1005.60*/("""{"""),format.raw/*1005.61*/("""
-                                    """),format.raw/*1006.37*/("""minnHeight = nowHeight;
-                                """),format.raw/*1007.33*/("""}"""),format.raw/*1007.34*/("""
-                            """),format.raw/*1008.29*/("""}"""),format.raw/*1008.30*/("""
-                            """),format.raw/*1009.29*/("""for(var i = j; i < j + 12; i++) """),format.raw/*1009.61*/("""{"""),format.raw/*1009.62*/("""
-                                """),format.raw/*1010.33*/("""$img[i].height = minnHeight;
-                            """),format.raw/*1011.29*/("""}"""),format.raw/*1011.30*/("""
-                        """),format.raw/*1012.25*/("""}"""),format.raw/*1012.26*/("""
+                                if(minnHeight > nowHeight) """),format.raw/*986.60*/("""{"""),format.raw/*986.61*/("""
+                                    """),format.raw/*987.37*/("""minnHeight = nowHeight;
+                                """),format.raw/*988.33*/("""}"""),format.raw/*988.34*/("""
+                            """),format.raw/*989.29*/("""}"""),format.raw/*989.30*/("""
+                            """),format.raw/*990.29*/("""for(var i = j; i < j + 12; i++) """),format.raw/*990.61*/("""{"""),format.raw/*990.62*/("""
+                                """),format.raw/*991.33*/("""$img[i].height = minnHeight;
+                            """),format.raw/*992.29*/("""}"""),format.raw/*992.30*/("""
+                        """),format.raw/*993.25*/("""}"""),format.raw/*993.26*/("""
 
-                    """),format.raw/*1014.21*/("""}"""),format.raw/*1014.22*/(""");
+                    """),format.raw/*995.21*/("""}"""),format.raw/*995.22*/(""");
             </script>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-hd">
+        </div>
+        <div class="footer-bd">
         </div>
     </div>
 """)))}))
@@ -1055,11 +1045,11 @@ format.raw("""t语言精粹.jpg" />
 
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 24 09:00:35 CST 2018
+                  DATE: Thu Apr 26 13:41:02 CST 2018
                   SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/home.scala.html
-                  HASH: 7d3c81f64be8a37d43c74de9de673959c23a7a65
-                  MATRIX: 735->1|865->36|893->39|911->49|949->50|981->56|32319->31345|32349->31346|32399->31367|32485->31424|32515->31425|32655->31536|32685->31537|32739->31562|32793->31587|32823->31588|32881->31617|33250->31957|33280->31958|33322->31971|33352->31972|33410->32001|33575->32137|33605->32138|33658->32162|33688->32163|34617->33064|34634->33071|34668->33095|34684->33101|34696->33136|34723->33153|34764->33155|34830->33192|35211->33545|35238->33550|35388->33713|35411->33726|35452->33728|35518->33765|36305->34549|36364->34579|61042->59208|61072->59209|61126->59234|61169->59248|61199->59249|61257->59278|61373->59365|61403->59366|61465->59399|61582->59487|61612->59488|61678->59525|62079->59897|62109->59898|62179->59939|62268->59999|62298->60000|62364->60037|62450->60094|62480->60095|62543->60129|62604->60161|62634->60162|62700->60199|62790->60260|62820->60261|62878->60290|62908->60291|62966->60320|63039->60364|63069->60365|63119->60386|63149->60387|63220->60429|63250->60430|63304->60455|63461->60583|63491->60584|63549->60613|63736->60771|63766->60772|63828->60805|63938->60886|63968->60887|64026->60916|64115->60976|64145->60977|64207->61010|64317->61091|64347->61092|64401->61117|64431->61118|64485->61143|64590->61219|64620->61220|64670->61241|64780->61322|64810->61323|64864->61348|64986->61441|65016->61442|65075->61471|65187->61553|65218->61554|65281->61587|65554->61830|65585->61831|65652->61868|65738->61924|65769->61925|65828->61954|65859->61955|65918->61984|65980->62016|66011->62017|66074->62050|66161->62107|66192->62108|66247->62133|66278->62134|66330->62156|66361->62157
-                  LINES: 21->1|26->1|28->3|28->3|28->3|30->5|423->397|423->397|424->398|425->399|425->399|427->401|427->401|428->402|428->402|428->402|429->403|433->407|433->407|433->407|433->407|434->408|436->410|436->410|438->412|438->412|462->436|462->436|462->436|462->436|462->437|462->437|462->437|463->438|468->443|468->443|471->447|471->447|471->447|472->448|484->461|486->463|977->953|977->953|978->954|978->954|978->954|979->955|980->956|980->956|981->957|983->959|983->959|984->960|989->965|989->965|990->966|991->967|991->967|992->968|993->969|993->969|995->971|995->971|995->971|996->972|997->973|997->973|998->974|998->974|999->975|1000->976|1000->976|1001->977|1001->977|1002->978|1002->978|1003->979|1005->981|1005->981|1006->982|1008->984|1008->984|1009->985|1011->987|1011->987|1012->988|1012->988|1012->988|1013->989|1015->991|1015->991|1016->992|1016->992|1017->993|1019->995|1019->995|1020->996|1021->997|1021->997|1022->998|1023->999|1023->999|1024->1000|1025->1001|1025->1001|1026->1002|1029->1005|1029->1005|1030->1006|1031->1007|1031->1007|1032->1008|1032->1008|1033->1009|1033->1009|1033->1009|1034->1010|1035->1011|1035->1011|1036->1012|1036->1012|1038->1014|1038->1014
+                  HASH: 0a160878126e88817ccee050a04c9764aa18ff8b
+                  MATRIX: 735->1|865->36|893->39|911->49|949->50|981->56|32339->31365|32369->31366|32419->31387|32505->31444|32535->31445|32675->31556|32705->31557|32759->31582|32813->31607|32843->31608|32901->31637|33270->31977|33300->31978|33342->31991|33372->31992|33430->32021|33595->32157|33625->32158|33678->32182|33708->32183|59790->58216|59820->58217|59874->58242|59917->58256|59947->58257|60005->58286|60121->58373|60151->58374|60213->58407|60330->58495|60360->58496|60426->58533|60827->58905|60857->58906|60927->58947|61016->59007|61046->59008|61112->59045|61198->59102|61228->59103|61291->59137|61352->59169|61382->59170|61448->59207|61538->59268|61568->59269|61626->59298|61656->59299|61714->59328|61787->59372|61817->59373|61867->59394|61897->59395|61968->59437|61998->59438|62052->59463|62209->59591|62239->59592|62297->59621|62484->59779|62514->59780|62576->59813|62686->59894|62716->59895|62774->59924|62863->59984|62893->59985|62955->60018|63065->60099|63095->60100|63149->60125|63179->60126|63233->60151|63338->60227|63368->60228|63418->60249|63528->60330|63558->60331|63612->60356|63734->60449|63764->60450|63822->60479|63933->60561|63963->60562|64025->60595|64297->60838|64327->60839|64393->60876|64478->60932|64508->60933|64566->60962|64596->60963|64654->60992|64715->61024|64745->61025|64807->61058|64893->61115|64923->61116|64977->61141|65007->61142|65058->61164|65088->61165
+                  LINES: 21->1|26->1|28->3|28->3|28->3|30->5|421->395|421->395|422->396|423->397|423->397|425->399|425->399|426->400|426->400|426->400|427->401|431->405|431->405|431->405|431->405|432->406|434->408|434->408|436->410|436->410|961->934|961->934|962->935|962->935|962->935|963->936|964->937|964->937|965->938|967->940|967->940|968->941|973->946|973->946|974->947|975->948|975->948|976->949|977->950|977->950|979->952|979->952|979->952|980->953|981->954|981->954|982->955|982->955|983->956|984->957|984->957|985->958|985->958|986->959|986->959|987->960|989->962|989->962|990->963|992->965|992->965|993->966|995->968|995->968|996->969|996->969|996->969|997->970|999->972|999->972|1000->973|1000->973|1001->974|1003->976|1003->976|1004->977|1005->978|1005->978|1006->979|1007->980|1007->980|1008->981|1009->982|1009->982|1010->983|1013->986|1013->986|1014->987|1015->988|1015->988|1016->989|1016->989|1017->990|1017->990|1017->990|1018->991|1019->992|1019->992|1020->993|1020->993|1022->995|1022->995
                   -- GENERATED --
               */
           

@@ -850,6 +850,11 @@ dt+dd {
 		float: left;
 	}
 }
+@media only screen and (max-width: 639px){
+    .marqueen{
+        display: none;
+    }
+}
 
 @media only screen and (min-width: 640px) {
 	/*标题*/
@@ -941,7 +946,7 @@ dt+dd {
 		padding: 0px 0px;
 		height: 30px;
 		float: right;
-		width: 30%;
+		width: 33%;
 	}
 	.demo li.title-first {
 		float: left;
@@ -1353,22 +1358,22 @@ dt+dd {
 		left: 0px;
 		top: 180px;
 		z-index: 9;
-		border-top: 2px solid #d2364c;
+		border-top: 2px solid #2b5e5f;
 	}
 	.banner .am-slider .am-slides li {
 		height: 360px;
 	}
 	.banner .am-slider .am-slides li.banner4 {
-		background: #dbdddc;
+		background: #11a6ea;
 	}
 	.banner .am-slider .am-slides li.banner1 {
-		background: #ffc878;
+		background: #dbdddc;
 	}
 	.banner .am-slider .am-slides li.banner2 {
-		background: #ff962d;
+		background: #ffc878;
 	}
 	.banner .am-slider .am-slides li.banner3 {
-		background: #11a6ea;
+		background: #ff962d;
 	}
 	.banner .am-slider .am-slides img {
 		width: 800px;
@@ -1403,6 +1408,9 @@ dt+dd {
 		position: relative;
 		border-bottom: 2px solid #000;
 		margin-top: 10px;
+		color: #fff;
+		font-weight: 600;
+		background-color: #ff9000  ;
 	}
 	.activity .shopTitle {
 		margin-top: 10px;
@@ -1567,6 +1575,7 @@ dt+dd {
 		font: 12px/22px "宋体";
 	}
 	.category-content .category-info {
+		cursor: pointer;
 		position: relative;
 		height: 100%;
 		padding-left: 12px;
@@ -1671,7 +1680,8 @@ dt+dd {
 		overflow: hidden;
 	}
 	.menu-srot .sort-side {
-		overflow: hidden
+		overflow: hidden;
+		margin-bottom: 20px;
 	}
 	.sort-side .dl-sort {
 		float: left;
@@ -1710,7 +1720,7 @@ dt+dd {
 		padding-top: 10px;
 	}
 	.brand-side {
-		margin-top: 50px;
+		margin-top: 20px;
 		border-top: 1px solid #eae9e9;
 	}
 	.brand-side .dl-sort {
@@ -1767,10 +1777,12 @@ dt+dd {
 	/*改写的公告*/
 	.marqueen {
 		position: absolute;
-		top: 80px;
-		right: 0px;
+		top: 12%;
+		/*right: -116px;*/
+		right: -8%;
 		width: 170px;
-		height: 300px;
+		/*height: 300px;*/
+		height: 85%;
 		background: #FFF;
 		opacity: 1;
 		z-index: 11;
@@ -2687,10 +2699,11 @@ dt+dd {
 	.am-container {
 		padding-left: 0rem;
 		padding-right: 0rem;
-		max-width: 1200px;
+		max-width: 1290px;
+		/*background-color: #2b5e5f;*/
 	}
 	.am-g-fixed {
-		max-width: 1200px
+		max-width: 1300px
 	}
 	.flood li {
 		width: 16.66667%;
@@ -2724,10 +2737,13 @@ dt+dd {
 	}
 	/*公告布局*/
 	.marqueen {
-		width: 220px;
-		height: 404px;
+		/*width: 220px;*/
+		width: 20%;
+		height: 89%;
+
 		text-align: left;
-		top: 60px;
+		/*top: 47px;*/
+		top: 10%;
 		padding: 10px;
 	}
 	.demo {
@@ -2877,6 +2893,7 @@ dt+dd {
 		width: 180px;
 	}
 	.category-content .category-info {
+		cursor: pointer;
 		padding-left: 12px;
 		width: 182px;
 		overflow: hidden;
@@ -3028,6 +3045,7 @@ dt+dd {
 }
 
 .outer-border{
+	margin-left: 25px;
  	padding: 3px;
 	border: none;
 	text-align: center;

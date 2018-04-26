@@ -1,0 +1,129 @@
+@( data: scala.List[DealBorrowList])(implicit request: RequestHeader)
+
+@views.html.person.main("未同意") {
+    <link href="/assets/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+    <link href="/assets/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+    <link href="/assets/css/personal.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/orstyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/add/css/base.css">
+    <link rel="stylesheet" href="/assets/add/css/personbase.css">
+    <script src="/assets/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+    <script src="/assets/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+
+    <div class="col-main">
+        <div class="main-wrap">
+
+            <div class="user-order">
+
+                    <!--标题 -->
+                <div class="am-cf am-padding">
+                    <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">未同意</strong></div>
+                </div>
+                <hr/>
+
+                <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+                    <div class="am-tabs-bd">
+                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                            <div class="order-top">
+                                <div class="th th-item">
+                                    <td class="td-inner">书名</td>
+                                </div>
+                                <div class="th th-item-10">
+                                    <td class="td-inner">书编号</td>
+                                </div>
+                                <div class="th th-number">
+                                    <td class="td-inner">数量</td>
+                                </div>
+                                <div class="th th-operation">
+                                    <td class="td-inner">操作</td>
+                                </div>
+                                <div class="th th-item-10">
+                                    <td class="td-inner">添加时间</td>
+                                </div>
+                                <div class="th th-item-10">
+                                    <td class="td-inner">状态</td>
+                                </div>
+                                <div class="th th-item-10">
+                                    <td class="td-inner">其他</td>
+                                </div>
+                            </div>
+                            <div class="order-main">
+                                <div class="order-list">
+                                    <div class="order-list">
+                                    @data.foreach{ ha =>
+                                        <div class="order-status0">
+                                            <div class="order-content">
+                                                <div class="order-left">
+                                                    <ul class="item-list">
+                                                        <li class="td td-item">
+                                                            <div class="item-pic">
+                                                                <a href="#" class="J_MakePoint">
+                                                                    <img src="/assets/ProJectImg/@{ha.bookid}-1.jpg" class="itempic J_ItemImg">
+                                                                </a>
+                                                            </div>
+                                                            <div class="item-info">
+                                                                <div class="item-basic-info">
+                                                                    <a href="#" title="@{ha.booktitle}">@{ha.booktitle}</a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="td th-item-10">
+                                                            <div class="item-number">
+                                                            @{ha.bookid}
+                                                            </div>
+                                                        </li>
+                                                        <li class="td td-number">
+                                                            <div class="item-counter">
+                                                                <span></span>@{ha.amount}本
+                                                            </div>
+                                                        </li>
+                                                        <li class="td td-operation">
+                                                            <a class="item-operation item-operation-a">
+                                                                暂无操作
+                                                            </a>
+                                                        </li>
+                                                        <li class="td th-item-10">
+                                                            <div class="th-borrow-time" title="2016-4-20">
+                                                            @{ha.borrowdate}
+                                                            </div>
+                                                        </li>
+                                                        <li class="td th-item-10">
+                                                            <div class="th-give-time" title="2018-4-26">
+                                                                待确认
+                                                            </div>
+                                                        </li>
+                                                        <li class="td th-item-10">
+                                                            <div class="item-other">
+                                                                无
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="PageNum">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">下一页</a></li>
+                        <li><a href="#">尾页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!--底部-->
+
+    </div>
+}

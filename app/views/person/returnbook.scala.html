@@ -28,7 +28,7 @@
     </script>
 
     <div class="main-wrap">
-        <div class="user-order">
+        <div class="user-history">
 
                 <!--标题 -->
             <div class="am-cf am-padding">
@@ -46,7 +46,7 @@
 
                 <div class="am-tabs-bd">
                     <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-                        <div class="order-top">
+                        <div class="history-top">
                             <div class="th th-item">
                                 <td class="td-inner">商品</td>
                             </div>
@@ -64,18 +64,18 @@
                             </div>
                         </div>
 
-                        <div class="order-main">
+                        <div class="history-main">
 
                             @for( x <- li) {
 
-                                <div class="order-list" id="hideid@x.bookid">
-                                    <div class="order-title">
+                                <div class="history-list" id="hideid@x.bookid">
+                                    <div class="history-title">
                                         <div class="dd-num">图书编号：<a href="javascript:;">@x.bookid</a></div>
                                         <span>借阅时间：@x.borrowdate</span>
                                             <!--    <em>店铺：小桔灯</em>-->
                                     </div>
-                                    <div class="order-content">
-                                        <div class="order-left">
+                                    <div class="history-content">
+                                        <div class="history-left">
 
                                             <ul class="item-list">
                                                 <li class="td td-item">
@@ -136,7 +136,7 @@
 
                     </div>
                     <div class="am-tab-panel am-fade" id="tab2">
-                        <div class="order-top">
+                        <div class="history-top">
                             <div class="th th-item">
                                 <td class="td-inner">商品</td>
                             </div>
@@ -154,15 +154,15 @@
                             </div>
                         </div>
 
-                        <div class="order-main">
-                            <div class="order-list">
-                                <div class="order-title">
+                        <div class="history-main">
+                            <div class="history-list">
+                                <div class="history-title">
                                     <div class="dd-num">退款编号：<a href="javascript:;">1601430</a></div>
                                     <span>申请时间：2015-12-20</span>
                                         <!--    <em>店铺：小桔灯</em>-->
                                 </div>
-                                <div class="order-content">
-                                    <div class="order-left">
+                                <div class="history-content">
+                                    <div class="history-left">
                                         <ul class="item-list">
                                             <li class="td td-item">
                                                 <div class="item-pic">
