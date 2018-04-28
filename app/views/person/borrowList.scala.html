@@ -51,7 +51,7 @@
                             </div>
                             <div class="order-main">
                                 <div class="order-list">
-                                    @data.foreach{ ha =>
+                                @for( ha <- data) {
                                         <div class="order-status0">
                                         <div class="order-content">
                                             <div class="order-left">
@@ -59,7 +59,7 @@
                                                     <li class="td td-item">
                                                         <div class="item-pic">
                                                             <a href="#" class="J_MakePoint">
-                                                                <img src="/assets/ProJectImg/@{ha.bookid}-1.jpg" class="itempic J_ItemImg">
+                                                                <img src="/assets/ProjectImg/@{ha.bookid}-1.jpg" class="itempic J_ItemImg">
                                                             </a>
                                                         </div>
                                                         <div class="item-info">
@@ -85,7 +85,7 @@
                                                     </li>
                                                     <li class="td th-item-10">
                                                         <div class="th-borrow-time" title="2016-4-20">
-                                                            @{ha.addtime}
+                                                            @{ha.addtime.toString.substring(0,10)}
                                                         </div>
                                                     </li>
                                                     <li class="td th-item-10">
@@ -95,7 +95,8 @@
                                                     </li>
                                                     <li class="td th-item-10">
                                                         <div class="item-other">
-                                                            无
+                                                            <a href="##">申请借阅</a> |
+                                                            <a href="##">删除</a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -122,7 +123,20 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            // function goApply(userid,bookid) {
+            //     $.ajax({
+            //         type: "GET",
+            //         datatype: "json",
+            //         async: true,
+            //         url: ""
+            //
+            //     });
+            // }
+        </script>
             <!--底部-->
 
     </div>
+
 }

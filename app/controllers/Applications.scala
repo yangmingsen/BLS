@@ -192,7 +192,7 @@ class Applications @Inject() ( books: BookInfosRepository,
   }
 
   /**
-    * 获得借阅列表view
+    * 获得待借阅列表view
     * @return
     */
   def personBorrowList() = Action { implicit  request: Request[AnyContent] =>
@@ -304,7 +304,7 @@ class Applications @Inject() ( books: BookInfosRepository,
   def personReturnBookReq(userid: String, bookid: Long) = checkClientLogin.async { implicit request: Request[AnyContent] =>
     val date  = utils.TimeHelper.getTimeNow()
     client.returnBookReq(userid,bookid,date).map{ _ =>
-      Ok("申请成功!")
+      Ok(Json.obj("states" -> "1"))
     }
   }
 

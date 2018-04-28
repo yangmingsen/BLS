@@ -19,7 +19,7 @@ import javax.inject.Singleton
 case class BookInfos(id: Long,
                      title: String,
                      author: Option[String],
-                     bookconcern: String,
+                     bookconcern: Option[String],
                      amount: Int,
                      isbn: Option[String],
                      addtime: Option[Date])//定义样本类
@@ -34,13 +34,13 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
   private val db = dbapi.database("default")
 
   private val booksimple = {
-    get[Long]("bookinfos1.id") ~
-      get[String]("bookinfos1.title") ~
-      get[Option[String]]("bookinfos1.author") ~
-      get[String]("bookinfos1.bookconcern") ~
-      get[Int]("bookinfos1.amount") ~
-      get[Option[String]]("bookinfos1.ISBN")~
-      get[Option[Date]]("bookinfos1.addtime") map {
+    get[Long]("bookinfos.id") ~
+      get[String]("bookinfos.title") ~
+      get[Option[String]]("bookinfos.author") ~
+      get[Option[String]]("bookinfos.bookconcern") ~
+      get[Int]("bookinfos.amount") ~
+      get[Option[String]]("bookinfos.ISBN")~
+      get[Option[Date]]("bookinfos.addtime") map {
       case id ~ title ~ author ~ bookconcern ~ amount ~ isbn ~ addtime =>
         BookInfos(id, title, author,bookconcern, amount,isbn, addtime)
     }
@@ -59,20 +59,20 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
       }
       SQL(
         s"""
-          SELECT * FROM bookinfos1 WHERE title LIKE ${"'%" + k + "%'"}
+          SELECT * FROM bookinfos WHERE title LIKE ${"'%" + k + "%'"}
         """).as(booksimple.*)
     }
   }(ec)
 
   def findById(id: Long) = Future {
     db.withConnection{ implicit connection =>
-      SQL("select * from bookinfos1 where id = {id}").on('id -> id).as(booksimple.singleOpt)
+      SQL("select * from bookinfos where id = {id}").on('id -> id).as(booksimple.singleOpt)
     }
   }(ec)
 
   def findBookBorrowOK(id: Long) = {
     db.withConnection { implicit conn =>
-      SQL("SELECT * FROM bookinfos1 WHERE id={bookid} AND amount>0").on(
+      SQL("SELECT * FROM bookinfos WHERE id={bookid} AND amount>0").on(
         'bookid -> id
       ).as(booksimple.singleOpt)
     }
@@ -80,7 +80,7 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
 
   def bookNumReduce(id: Long) = Future {
     db.withConnection { implicit conn =>
-        SQL("UPDATE bookinfos1 set amount=amount-1 WHERE id={bookid}").on(
+        SQL("UPDATE bookinfos set amount=amount-1 WHERE id={bookid}").on(
           'bookid -> id
         ).executeUpdate()
     }
