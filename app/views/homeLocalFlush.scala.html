@@ -1,0 +1,43 @@
+@( data: scala.List[BookInfos], who: Int, page: Int)(implicit request: RequestHeader)
+
+<div class="menu1" id="Contents@who">
+        <!--前端开发-->
+    <div class="am-container ">
+        <div class="shopTitle ">
+            @{
+                if( who == 1) {
+                   <h4>大一推荐书籍</h4>
+                } else if( who == 2) {
+                      <h4>大二推荐书籍</h4>
+                } else if( who == 3) {
+                      <h4>大三推荐书籍</h4>
+                }
+
+            }
+
+                <!--<h3>入门基础</h3>-->
+
+            <span class="more ">
+
+                    @if(data.length<12) {
+                      <a href="###" onclick="goTo('/New?who=@{who}&page=1',@{who})" >换一换<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
+                    } else {
+                      <a href="###" onclick="goTo('/New?who=@{who}&page=@{page}',@{who})" >换一换<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
+                    }
+
+            </span>
+        </div>
+    </div>
+    <div class="am-g am-g-fixed">
+        @for(o <- data.take(12)) {
+            <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
+                <div class="thumbnail outer-border">
+                    <a href="/introdution/@o.id">
+                        <img src="/assets/ProjectImg/@o.id-1.jpg" />
+                        <h3 class="am-thumbnail-caption"><span title="@{o.title}">@{o.title}</span></h3>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

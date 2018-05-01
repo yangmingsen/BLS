@@ -1,4 +1,4 @@
-@()(implicit request: RequestHeader)
+@(one: scala.List[BookInfos], two: scala.List[BookInfos], three: scala.List[BookInfos])(implicit request: RequestHeader)
 
 @main("主页"){
 
@@ -9,6 +9,7 @@
 
     <link href="/assets/css/hmstyle.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/skin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/add/css/home.css">
     <script src="/assets/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
     <script src="/assets/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
@@ -433,20 +434,20 @@
                                 <a style="cursor: pointer;">
                                     <img src="/assets/add/img/getAvatar.do1.jpg">
                                 </a>
-                                <em>
-                                    Hi,<span class="s-name">同学</span>
-                                </em>
-                            </div>
-                            <div class="member-logout">
-                                <a class="am-btn-warning btn" href="##">登录</a>
-                                <a class="am-btn-warning btn" href="##">注册</a>
-                            </div>
-                            <div class="member-login">
-                                <a href="#"><strong>0</strong>待收货</a>
-                                <a href="#"><strong>0</strong>待发货</a>
-                                <a href="#"><strong>0</strong>待付款</a>
-                                <a href="#"><strong>0</strong>待评价</a>
-                            </div>
+                                @request.session.get("userName") match {
+                                    case Some(ha) => {
+                                     <em>
+                                         Hi,<span class="s-name">@{ha}</span>
+                                     </em>
+                                    }
+                                    case None => {
+                                        <div class="member-logout">
+                                            <a class="am-btn-warning btn" href="/login">登录</a>
+                                            <a class="am-btn-warning btn" href="##">注册</a>
+                                        </div>
+                                    }
+                                }
+
                             <div class="clear"></div>
                         </div>
                         <li>
@@ -479,119 +480,25 @@
     <div class="shopMainbg">
         <div class="shopMain" id="shopmain">
             <div class="clear "></div>
-            <div class="menu1">
-                    <!--前端开发-->
-                <div class="am-container ">
-                    <div class="shopTitle ">
-                        <h4>推荐书籍</h4>
-                            <!--<h3>入门基础</h3>-->
 
-                        <span class="more ">
-                            <a href="# ">更多书籍<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
-                        </span>
-                    </div>
-                </div>
-                <div class="am-g am-g-fixed">
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/c专家编程.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript高级程序设计（第三版）.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/c++primer中文版（第四版）.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
+            <script type="text/javascript" >
+                    function goTo(goUrl,who) {
+                        $.ajax({
+                            type: "GET",
+                            datatype: "html",
+                            url: goUrl,
+                            async: true,
+                            success: function (data) {
+                                $("#Contents"+who).html(data);
+                            },
+                            error: function () {
+                                alert("请求错误!!");
+                            }
+                        });
+                    }
+            </script>
 
-                </div>
-            </div>
-            <div class="menu1">
+            <div class="menu1" id="Contents1">
                     <!--前端开发-->
                 <div class="am-container ">
                     <div class="shopTitle ">
@@ -599,111 +506,24 @@
                             <!--<h3>入门基础</h3>-->
 
                         <span class="more ">
-                            <a href="# ">更多书籍<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
+                            <a href="###" onclick="goTo('/New?who=1&page=1',1)" >换一换<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
                         </span>
                     </div>
                 </div>
                 <div class="am-g am-g-fixed">
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
+                    @for(o <- one) {
+                        <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
+                            <div class="thumbnail outer-border">
+                                <a href="/introdution/@o.id">
+                                    <img src="/assets/ProjectImg/@o.id-1.jpg" />
+                                    <h3 class="am-thumbnail-caption"><span title="@{o.title}">@{o.title}</span></h3>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-
+                    }
                 </div>
             </div>
-            <div class="menu1">
+            <div class="menu1" id="Contents2">
                     <!--前端开发-->
                 <div class="am-container ">
                     <div class="shopTitle ">
@@ -711,111 +531,26 @@
                             <!--<h3>入门基础</h3>-->
 
                         <span class="more ">
-                            <a href="# ">更多书籍<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
+                            <a href="###"  onclick="goTo('/New?who=2&page=1',2)">换一换<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
                         </span>
                     </div>
                 </div>
                 <div class="am-g am-g-fixed">
+
+                @for(t <- two) {
                     <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
                         <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
+                            <a href="/introdution/@t.id">
+                                <img src="/assets/ProjectImg/@t.id-1.jpg" />
+                                <h3 class="am-thumbnail-caption"><span>@{t.title}</span></h3>
                             </a>
                         </div>
                     </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
+                }
 
                 </div>
             </div>
-            <div class="menu1">
+            <div class="menu1" id="Contents3">
                     <!--前端开发-->
                 <div class="am-container ">
                     <div class="shopTitle ">
@@ -823,107 +558,21 @@
                             <!--<h3>入门基础</h3>-->
 
                         <span class="more ">
-                            <a href="# ">更多书籍<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
+                            <a href="###"  onclick="goTo('/New?who=3&page=1',3)">换一换<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a>
                         </span>
                     </div>
                 </div>
                 <div class="am-g am-g-fixed">
+                @for(t <- three) {
                     <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
                         <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
+                            <a href="/introdution/@t.id">
+                                <img src="/assets/ProjectImg/@t.id-1.jpg" />
+                                <h3 class="am-thumbnail-caption"><span>@{t.title}</span></h3>
                             </a>
                         </div>
                     </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4 am-u-md-3 am-u-lg-2">
-                        <div class="thumbnail outer-border">
-                            <a href="#">
-                                <img src="/assets/img1/javascript语言精粹.jpg" />
-                                <h3 class="am-thumbnail-caption"><span>图片标题#1</span></h3>
-                            </a>
-                        </div>
-                    </div>
+                }
 
                 </div>
             </div>

@@ -22,7 +22,8 @@ case class BookInfos(id: Long,
                      bookconcern: Option[String],
                      amount: Int,
                      isbn: Option[String],
-                     addtime: Option[Date])//定义样本类
+                     addtime: Option[Date],
+                     fit: Int)//定义样本类
 /**
   *
   * @param dbapi 默认数据库
@@ -40,9 +41,10 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
       get[Option[String]]("bookinfos.bookconcern") ~
       get[Int]("bookinfos.amount") ~
       get[Option[String]]("bookinfos.ISBN")~
-      get[Option[Date]]("bookinfos.addtime") map {
-      case id ~ title ~ author ~ bookconcern ~ amount ~ isbn ~ addtime =>
-        BookInfos(id, title, author,bookconcern, amount,isbn, addtime)
+      get[Option[Date]]("bookinfos.addtime") ~
+      get[Int]("bookinfos.fit") map {
+      case id ~ title ~ author ~ bookconcern ~ amount ~ isbn ~ addtime ~ fit =>
+        BookInfos(id, title, author,bookconcern, amount,isbn, addtime,fit)
     }
   }
 
@@ -61,6 +63,7 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
         s"""
           SELECT * FROM bookinfos WHERE title LIKE ${"'%" + k + "%'"}
         """).as(booksimple.*)
+
     }
   }(ec)
 
@@ -83,6 +86,14 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
         SQL("UPDATE bookinfos set amount=amount-1 WHERE id={bookid}").on(
           'bookid -> id
         ).executeUpdate()
+    }
+  }(ec)
+
+  def getFit(fit: Int) = Future{
+    db.withConnection{ implicit conn =>
+      SQL("SELECT * FROM bookinfos WHERE fit={fit}").on(
+        'fit -> fit
+      ).as(booksimple.*)
     }
   }(ec)
 

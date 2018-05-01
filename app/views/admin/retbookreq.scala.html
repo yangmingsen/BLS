@@ -69,7 +69,9 @@
                             <td>@a._1.username</td>
                             <td>@a._1.userid</td>
                             <td>@a._1.amount</td>
-                            <td>@a._1.borrowdate</td>
+                            @a._1.retdate match {
+                                case Some(ha) => {<td>@ha.toString.substring(0,19)</td>}
+                            }
                             <td>待审核</td>
                             <td><a id="agre@a._1.userid@a._1.bookid" href="###" onclick="goAgree('@a._1.userid',@a._1.bookid)">同意</a> | <a href="###">拒绝</a></td>
                         </tr>

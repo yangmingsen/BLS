@@ -174,15 +174,7 @@ Seq[Any](format.raw/*1.52*/("""
 
                         <!--销量-->
                     <ul class="tm-ind-panel">
-                        <li class="tm-ind-item tm-ind-sellCount canClick">
-                            <div class="tm-indcon"><span class="tm-label">月借阅量</span><span class="tm-count">1015</span></div>
-                        </li>
-                        <li class="tm-ind-item tm-ind-sumCount canClick">
-                            <div class="tm-indcon"><span class="tm-label">累计借阅量</span><span class="tm-count">6015</span></div>
-                        </li>
-                        <li class="tm-ind-item tm-ind-reviewCount canClick tm-line3">
-                            <div class="tm-indcon"><span class="tm-label">累计评价</span><span class="tm-count">640</span></div>
-                        </li>
+
                     </ul>
                     <div class="clear"></div>
 
@@ -206,7 +198,7 @@ Seq[Any](format.raw/*1.52*/("""
                                             <span class="cart-title number">数量: </span>
                                             <dd>
                                                 <span style="width:30px; font-size: 20px;"> 1 </span>
-                                                <span id="Stock" class="tb-hidden">  该书剩余<span class="stock">"""),_display_(/*184.111*/book/*184.115*/.amount),format.raw/*184.122*/("""</span>本</span>
+                                                <span id="Stock" class="tb-hidden">  该书剩余<span class="stock">"""),_display_(/*176.111*/book/*176.115*/.amount),format.raw/*176.122*/("""</span>本</span>
                                             </dd>
 
                                         </div>
@@ -219,12 +211,9 @@ Seq[Any](format.raw/*1.52*/("""
                                     </div>
                                     <div class="theme-signin-right">
                                         <div class="img-info">
-                                            <img src="/assets/ProjectImg/"""),_display_(/*197.75*/book/*197.79*/.id),format.raw/*197.82*/("""-1.jpg" />
+                                            <img src="/assets/ProjectImg/"""),_display_(/*189.75*/book/*189.79*/.id),format.raw/*189.82*/("""-1.jpg" />
                                         </div>
-                                        <div class="text-info">
-                                            <span class="J_Price price-now">¥39.00</span>
-                                            <span id="Stock" class="tb-hidden">库存<span class="stock">1000</span>本</span>
-                                        </div>
+
                                     </div>
 
                                 </form>
@@ -240,7 +229,7 @@ Seq[Any](format.raw/*1.52*/("""
 
                     <li>
                         <div class="clearfix tb-btn tb-btn-basket theme-login" style="margin-left: 200px;">
-                            <a id="LikBasket" title="加入购物车" href="/Cart/add?id="""),_display_(/*218.81*/book/*218.85*/.id),format.raw/*218.88*/("""&title="""),_display_(/*218.96*/book/*218.100*/.title),format.raw/*218.106*/(""""><i></i>加入借阅列表</a>
+                            <a id="LikBasket" title="加入购物车" href="/Cart/add?id="""),_display_(/*207.81*/book/*207.85*/.id),format.raw/*207.88*/("""&title="""),_display_(/*207.96*/book/*207.100*/.title),format.raw/*207.106*/(""""><i></i>加入借阅列表</a>
                         </div>
                     </li>
 
@@ -271,10 +260,10 @@ Seq[Any](format.raw/*1.52*/("""
                             </div>
                             <div class="p-name">
                                 <a href="#">
-                                    web界面设计
+                                    c程序设计语言
                                 </a>
                             </div>
-                            <div class="p-price"><strong>￥35.90</strong></div>
+                            <div class="p-price"><strong></strong></div>
                         </li>
                         <li>
                             <div class="p-img">
@@ -282,10 +271,10 @@ Seq[Any](format.raw/*1.52*/("""
                             </div>
                             <div class="p-name">
                                 <a href="#">
-                                    web表单设计
+                                    c程序设计语言
                                 </a>
                             </div>
-                            <div class="p-price"><strong>￥35.90</strong></div>
+                            <div class="p-price"><strong></strong></div>
                         </li>
                         <li>
                             <div class="p-img">
@@ -293,32 +282,10 @@ Seq[Any](format.raw/*1.52*/("""
                             </div>
                             <div class="p-name">
                                 <a href="#">
-                                    web导航设计
+                                    c程序设计语言
                                 </a>
                             </div>
-                            <div class="p-price"><strong>￥35.90</strong></div>
-                        </li>
-                        <li>
-                            <div class="p-img">
-                                <a href="#"> <img class="" src="/assets/img1/c程序设计语言.jpg"> </a>
-                            </div>
-                            <div class="p-name">
-                                <a href="#">
-                                    web设计禁忌
-                                </a>
-                            </div>
-                            <div class="p-price"><strong>￥35.90</strong></div>
-                        </li>
-                        <li>
-                            <div class="p-img">
-                                <a href="#"> <img class="" src="/assets/img1/c程序设计语言.jpg"> </a>
-                            </div>
-                            <div class="p-name">
-                                <a href="#">
-                                    web前端黑客技术揭秘
-                                </a>
-                            </div>
-                            <div class="p-price"><strong>￥35.90</strong></div>
+                            <div class="p-price"><strong></strong></div>
                         </li>
 
                     </ul>
@@ -330,22 +297,10 @@ Seq[Any](format.raw/*1.52*/("""
                         <li class="am-active">
                             <a href="#">
 
-                                <span class="index-needs-dt-txt">宝贝详情</span></a>
+                                <span class="index-needs-dt-txt">书籍详情</span></a>
 
                         </li>
 
-                        <li>
-                            <a href="#">
-
-                                <span class="index-needs-dt-txt">全部评价</span></a>
-
-                        </li>
-
-                        <li>
-                            <a href="#">
-
-                                <span class="index-needs-dt-txt">猜你喜欢</span></a>
-                        </li>
                     </ul>
 
                     <div class="am-tabs-bd">
@@ -407,193 +362,21 @@ Seq[Any](format.raw/*1.52*/("""
                                 <div class="clear"></div>
                                 <p class="get-more">......(更多)</p>
                                 <script>
-                                        $(".get-more").click(function()"""),format.raw/*385.72*/("""{"""),format.raw/*385.73*/("""
-                                            """),format.raw/*386.45*/("""$(".catalog").toggleClass("list-height");
-                                            if($(".get-more").html() == "......(更多)")"""),format.raw/*387.86*/("""{"""),format.raw/*387.87*/("""
-                                                """),format.raw/*388.49*/("""$(".get-more").html("......(掩藏)");
-                                            """),format.raw/*389.45*/("""}"""),format.raw/*389.46*/("""
-                                            """),format.raw/*390.45*/("""else"""),format.raw/*390.49*/("""{"""),format.raw/*390.50*/("""
-                                                """),format.raw/*391.49*/("""$(".get-more").html("......(更多)");
-                                            """),format.raw/*392.45*/("""}"""),format.raw/*392.46*/("""
-                                        """),format.raw/*393.41*/("""}"""),format.raw/*393.42*/(""")
+                                        $(".get-more").click(function()"""),format.raw/*340.72*/("""{"""),format.raw/*340.73*/("""
+                                            """),format.raw/*341.45*/("""$(".catalog").toggleClass("list-height");
+                                            if($(".get-more").html() == "......(更多)")"""),format.raw/*342.86*/("""{"""),format.raw/*342.87*/("""
+                                                """),format.raw/*343.49*/("""$(".get-more").html("......(掩藏)");
+                                            """),format.raw/*344.45*/("""}"""),format.raw/*344.46*/("""
+                                            """),format.raw/*345.45*/("""else"""),format.raw/*345.49*/("""{"""),format.raw/*345.50*/("""
+                                                """),format.raw/*346.49*/("""$(".get-more").html("......(更多)");
+                                            """),format.raw/*347.45*/("""}"""),format.raw/*347.46*/("""
+                                        """),format.raw/*348.41*/("""}"""),format.raw/*348.42*/(""")
                                 </script>
                             </div>
                             <div class="clear"></div>
 
                         </div>
 
-                        <div class="am-tab-panel am-fade">
-
-                            """),format.raw/*896.37*/("""
-
-                        """),format.raw/*898.25*/("""</div>
-
-                        <div class="am-tab-panel am-fade">
-                            <div class="like">
-                                <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="i-pic limit">
-                                            <img src="/assets/img1/c程序设计语言.jpg" />
-                                            <p>【良品铺子_开口松子】零食坚果特产炒货
-                                                <span>东北红松子奶油味</span></p>
-                                            <p class="price fl">
-                                                <b>¥</b>
-                                                <strong>298.00</strong>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="clear"></div>
-
-                                <!--分页 -->
-                            <ul class="am-pagination am-pagination-right">
-                                <li class="am-disabled">
-                                    <a href="#">&laquo;</a>
-                                </li>
-                                <li class="am-active">
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">&raquo;</a>
-                                </li>
-                            </ul>
-                            <div class="clear"></div>
-
-                        </div>
 
                     </div>
 
@@ -626,11 +409,11 @@ Seq[Any](format.raw/*1.52*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Apr 26 13:43:03 CST 2018
+                  DATE: Mon Apr 30 09:41:58 CST 2018
                   SOURCE: /home/yms/Documents/Play2.x/BLS/app/views/introdution.scala.html
-                  HASH: 93584d431ac2d39a1dac3c8fd772cb3bd1ab336d
-                  MATRIX: 752->1|897->51|927->56|947->68|985->69|1017->75|2474->1504|2503->1505|2532->1506|2605->1551|2634->1552|2683->1573|2739->1601|2768->1602|2821->1627|2917->1695|2946->1696|3003->1725|3089->1783|3118->1784|3167->1805|3196->1806|3243->1825|3272->1826|4120->2646|4149->2647|4210->2680|4334->2776|4363->2777|4428->2814|4763->3121|4792->3122|4851->3153|4880->3154|5052->3299|5065->3303|5089->3306|5154->3344|5168->3348|5193->3351|5270->3400|5284->3404|5309->3407|5693->3763|5707->3767|5735->3773|5785->3794|6102->4083|6521->4480|6576->4506|6774->4676|6788->4680|6822->4692|7638->5480|7970->5790|8025->5816|10354->8116|10369->8120|10399->8127|11154->8854|11168->8858|11193->8861|12126->9766|12140->9770|12165->9773|12201->9781|12216->9785|12245->9791|19522->17039|19552->17040|19626->17085|19782->17212|19812->17213|19890->17262|19998->17341|20028->17342|20102->17387|20135->17391|20165->17392|20243->17441|20351->17520|20381->17521|20451->17562|20481->17563|20764->47512|20819->47538
-                  LINES: 21->1|26->1|30->5|30->5|30->5|32->7|68->43|68->43|68->43|69->44|69->44|70->45|70->45|70->45|71->46|72->47|72->47|73->48|74->49|74->49|75->50|75->50|76->51|76->51|103->78|103->78|104->79|105->80|105->80|106->81|109->84|109->84|110->85|110->85|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|126->101|126->101|126->101|127->102|135->110|142->117|144->119|147->122|147->122|147->122|163->138|168->143|170->145|209->184|209->184|209->184|222->197|222->197|222->197|243->218|243->218|243->218|243->218|243->218|243->218|410->385|410->385|411->386|412->387|412->387|413->388|414->389|414->389|415->390|415->390|415->390|416->391|417->392|417->392|418->393|418->393|427->896|429->898
+                  HASH: a0a02b460942114f905a6161897ea7c856eb8d50
+                  MATRIX: 752->1|897->51|927->56|947->68|985->69|1017->75|2474->1504|2503->1505|2532->1506|2605->1551|2634->1552|2683->1573|2739->1601|2768->1602|2821->1627|2917->1695|2946->1696|3003->1725|3089->1783|3118->1784|3167->1805|3196->1806|3243->1825|3272->1826|4120->2646|4149->2647|4210->2680|4334->2776|4363->2777|4428->2814|4763->3121|4792->3122|4851->3153|4880->3154|5052->3299|5065->3303|5089->3306|5154->3344|5168->3348|5193->3351|5270->3400|5284->3404|5309->3407|5693->3763|5707->3767|5735->3773|5785->3794|6102->4083|6521->4480|6576->4506|6774->4676|6788->4680|6822->4692|7638->5480|7970->5790|8025->5816|9652->7414|9667->7418|9697->7425|10452->8152|10466->8156|10491->8159|11103->8743|11117->8747|11142->8750|11178->8758|11193->8762|11222->8768|17057->14574|17087->14575|17161->14620|17317->14747|17347->14748|17425->14797|17533->14876|17563->14877|17637->14922|17670->14926|17700->14927|17778->14976|17886->15055|17916->15056|17986->15097|18016->15098
+                  LINES: 21->1|26->1|30->5|30->5|30->5|32->7|68->43|68->43|68->43|69->44|69->44|70->45|70->45|70->45|71->46|72->47|72->47|73->48|74->49|74->49|75->50|75->50|76->51|76->51|103->78|103->78|104->79|105->80|105->80|106->81|109->84|109->84|110->85|110->85|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|114->89|126->101|126->101|126->101|127->102|135->110|142->117|144->119|147->122|147->122|147->122|163->138|168->143|170->145|201->176|201->176|201->176|214->189|214->189|214->189|232->207|232->207|232->207|232->207|232->207|232->207|365->340|365->340|366->341|367->342|367->342|368->343|369->344|369->344|370->345|370->345|370->345|371->346|372->347|372->347|373->348|373->348
                   -- GENERATED --
               */
           

@@ -43,13 +43,36 @@ class Applications @Inject() ( books: BookInfosRepository,
 
 
 
-  def index() = Action { implicit request =>
-    Ok(views.html.home())
+  def index() = Action.async { implicit request: Request[AnyContent] =>
+    for{
+      one <- books.getFit(1)
+      two <- books.getFit(2)
+      three <- books.getFit(3)
+    } yield {
+      Ok(views.html.home(one.take(12),two.take(12),three.take(12)))
+    }
+
   }
 
-  def search(key: String) = Action.async{ implicit request =>
-    books.findByName(key).map { page =>
-      Ok(views.html.search(page))
+  def indexN(who: Int, page: Int) = Action.async { implicit request: Request[AnyContent] =>
+      for{
+        data <- books.getFit(who)
+      } yield {
+        Ok(views.html.homeLocalFlush(data.takeRight(data.length-(page*12)),who,page+1))
+      }
+  }
+
+  def search(key: String, page: Int) = Action.async{ implicit request =>
+    books.findByName(key).map { pa =>
+        var total = pa.length/12
+      Ok(views.html.search(pa.takeRight((pa.length)-((page-1)*12)),page,total,key))
+    }
+  }
+
+  def searchNew(key: String, page: Int) = Action.async{ implicit request =>
+    books.findByName(key).map { pa =>
+      var total = pa.length/12
+      Ok(views.html.searchNew(pa.takeRight((pa.length)-((page-1)*12)),page,total,key))
     }
   }
 
@@ -215,8 +238,9 @@ class Applications @Inject() ( books: BookInfosRepository,
          }
        for {
          data <- admin.getDealList(user, 1)
+         data2 <- admin.getDealList(user,3)
        } yield {
-         Ok(views.html.person.checking(data))
+         Ok(views.html.person.checking(data,data2))
        }
 
   }
@@ -282,24 +306,6 @@ class Applications @Inject() ( books: BookInfosRepository,
 
   }
 
-//  /**
-//    * 用户还书界面
-//    * @return
-//    */
-//  def personReturn() = checkClientLogin.async { implicit request: Request[AnyContent] =>
-//
-//    var user = ""
-//    request.session.get("userAcct").map { ha =>
-//      user = ha
-//    }
-//
-//    for{
-//      data <- admin.getDealList(user,2)
-//    } yield {
-//      views.html.person.returnbook(data)
-//    }
-//
-//  }
 
   def personReturnBookReq(userid: String, bookid: Long) = checkClientLogin.async { implicit request: Request[AnyContent] =>
     val date  = utils.TimeHelper.getTimeNow()
@@ -307,6 +313,8 @@ class Applications @Inject() ( books: BookInfosRepository,
       Ok(Json.obj("states" -> "1"))
     }
   }
+
+
 
 
 }

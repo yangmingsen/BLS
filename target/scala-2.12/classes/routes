@@ -4,7 +4,11 @@
 #Application
 GET     /                                 controllers.Applications.index
 
-GET     /search                           controllers.Applications.search(key: String ?= "")
+GET     /New                              controllers.Applications.indexN(who: Int ?= 0, page: Int ?= 1)
+
+GET     /search                           controllers.Applications.search(key: String ?= "", page: Int ?= 1)
+
+GET     /searchN                          controllers.Applications.searchNew(key: String ?= "", page: Int ?= 1)
 
 GET     /login                            controllers.Applications.login
 
@@ -43,8 +47,6 @@ GET     /person/chec                      controllers.Applications.personCheckin
 GET     /person/psed                      controllers.Applications.personPassed
 
 GET     /person/disage                    controllers.Applications.personDisagree
-
-#GET     /person/retbk                     controllers.Applications.personReturn
 
 GET     /person/delRef                    controllers.Applications.delRefuseReq(userid: String ?= "", bookid: Long ?= -1)
 

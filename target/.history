@@ -3,3 +3,6 @@ run
 exit
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo /tmp/sbt-structure.xml; session clear-all
 all {file:/home/yms/Documents/Play2.x/BLS/}root/products {file:/home/yms/Documents/Play2.x/BLS/}root/test:products
+val se = "hsdf"
+scala
+console

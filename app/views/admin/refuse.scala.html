@@ -49,7 +49,12 @@
                             <td>@a._1.username</td>
                             <td>@a._1.userid</td>
                             <td>@a._1.amount</td>
-                            <td>@a._1.borrowdate.toString.substring(0,19)</td>
+
+                                @a._1.retdate match {
+                                    case Some(ha) => {<td>@ha</td>}
+                                }
+
+
                             <td>审核通过</td>
                             <td><a href="##">XX</a> | <a href="###">XX</a></td>
                         </tr>

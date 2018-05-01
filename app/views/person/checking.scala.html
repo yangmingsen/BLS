@@ -1,4 +1,4 @@
-@(data: scala.List[DealBorrowList])(implicit request: RequestHeader)
+@(data: scala.List[DealBorrowList], data2: scala.List[DealBorrowList])(implicit request: RequestHeader)
 
 @views.html.person.main("借阅列表") {
 
@@ -51,6 +51,7 @@
                             <div class="order-main">
                                 <div class="order-list">
                                     <div class="order-list">
+
                                     @for(ha <- data) {
                                         <div class="order-status0">
                                             <div class="order-content">
@@ -84,13 +85,13 @@
                                                             </a>
                                                         </li>
                                                         <li class="td th-item-10">
-                                                            <div class="th-borrow-time" title="2016-4-20">
+                                                            <div class="th-borrow-time" title="@{ha.borrowdate.toString.substring(0,10)}">
                                                             @{ha.borrowdate.toString.substring(0,10)}
                                                             </div>
                                                         </li>
                                                         <li class="td th-item-10">
-                                                            <div class="th-give-time" title="2018-4-26">
-                                                                待确认
+                                                            <div class="th-give-time" title="借书审核中" style="color: red;">
+                                                                借书审核中
                                                             </div>
                                                         </li>
                                                         <li class="td th-item-10">
@@ -103,6 +104,60 @@
                                             </div>
                                         </div>
                                     }
+
+                                    @for(ha <- data2) {
+                                            <div class="order-status0">
+                                                <div class="order-content">
+                                                    <div class="order-left">
+                                                        <ul class="item-list">
+                                                            <li class="td td-item">
+                                                                <div class="item-pic">
+                                                                    <a href="#" class="J_MakePoint">
+                                                                        <img src="/assets/ProjectImg/@{ha.bookid}-1.jpg" class="itempic J_ItemImg">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="item-info">
+                                                                    <div class="item-basic-info">
+                                                                        <a href="#" title="@{ha.booktitle}">@{ha.booktitle}</a>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="td th-item-10">
+                                                                <div class="item-number">
+                                                                @{ha.bookid}
+                                                                </div>
+                                                            </li>
+                                                            <li class="td td-number">
+                                                                <div class="item-counter">
+                                                                    <span></span>@{ha.amount}本
+                                                                </div>
+                                                            </li>
+                                                            <li class="td td-operation">
+                                                                <a class="item-operation item-operation-a">
+                                                                暂无操作
+                                                                </a>
+                                                            </li>
+                                                            <li class="td th-item-10">
+                                                                <div class="th-borrow-time" title="@{ha.borrowdate.toString.substring(0,10)}">
+                                                                @{ha.borrowdate.toString.substring(0,10)}
+                                                                </div>
+                                                            </li>
+                                                            <li class="td th-item-10">
+                                                                <div class="th-give-time" title="还书审核中" style="color: green;">
+                                                                还书审核中
+                                                                </div>
+                                                            </li>
+                                                            <li class="td th-item-10">
+                                                                <div class="item-other">
+                                                                无
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+
                                     </div>
                                 </div>
                             </div>

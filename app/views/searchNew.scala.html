@@ -1,0 +1,99 @@
+@(curpage: List[BookInfos], page: Int, total: Int, key: String)(implicit request: RequestHeader)
+
+<div id="mianConetnt">
+    <div class="search-content">
+        <div class="sort">
+            <li class="first">
+                <a title="综合">综合排序</a>
+            </li>
+            <li>
+                <a title="借阅量排序">借阅量排序</a>
+            </li>
+            <li>
+                <a title="评价排序">评价排序</a>
+            </li>
+        </div>
+        <div class="clear"></div>
+
+        <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
+            @for(book <- curpage.take(12)){
+                <li>
+                    <div class="i-pic limit menu1">
+                        <a href="/introdution/@book.id"><img src="/assets/ProjectImg/@book.id-1.jpg" /></a>
+                        <p class="title fl">@book.title</p>
+                        <p class="number fl">
+                            剩余<span>@book.amount</span>
+                        </p>
+                    </div>
+                </li>
+            }
+        </ul>
+
+    </div>
+
+    <div class="search-side">
+
+        <div class="side-title">
+            经典书籍
+        </div>
+        <li>
+            <div class="i-pic check menu1">
+                <a href="/introdution/114">
+                    <img src="/assets/ProjectImg/114-1.jpg" />
+                    <p class="check-title">代码之道</p>
+                    <p class="price fl">
+                        @*<b>¥</b>*@
+                        @*<strong>29.90</strong>*@
+                    </p>
+                    <p class="number fl">
+                        借阅量<span>1110</span>
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="i-pic check menu1">
+                <a href="/introdution/144">
+                    <img src="/assets/ProjectImg/144-1.jpg" />
+                    <p class="check-title">算法竞赛入门经典</p>
+                    <p class="price fl">
+                        @*<b>¥</b>*@
+                        @*<strong>8.90</strong>*@
+                    </p>
+                    <p class="number fl">
+                        借阅量<span>1110</span>
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="i-pic check menu1">
+                <a href="/introdution/272">
+                    <img src="/assets/ProjectImg/272-1.jpg" />
+                    <p class="check-title">大型分布式网站架构</p>
+                    <p class="price fl">
+                        @*<b>¥</b>*@
+                        @*<strong>29.90</strong>*@
+                    </p>
+                    <p class="number fl">
+                        借阅量<span>1110</span>
+                    </p>
+                </a>
+            </div>
+        </li>
+
+    </div>
+    <div class="clear"></div>
+        <!--分页 -->
+    <ul class="am-pagination am-pagination-right">
+        <li >
+            <a name="/searchN?key=@{key}&page=@{if(page<=1) {page} else {page-1}}" onclick="goTo(this)">&laquo;</a>
+        </li>
+        <li class="am-active">
+            <a href="####">@{page}/@{if(total==0) {1} else {total} }</a>
+        </li>
+        <li>
+            <a name="/searchN?key=@{key}&page=@{if(page>=total) {page} else {page+1}}" onclick="goTo(this)">&raquo;</a>
+        </li>
+    </ul>
+</div>

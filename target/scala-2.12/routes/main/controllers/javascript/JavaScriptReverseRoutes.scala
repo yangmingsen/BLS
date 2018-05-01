@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/yms/Documents/Play2.x/BLS/conf/routes
-// @DATE:Thu Apr 26 22:03:37 CST 2018
+// @DATE:Tue May 01 10:16:44 CST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:58
+  // @LINE:60
   class ReverseAdmin(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:82
+    // @LINE:84
     def getClientRetBookReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.getClientRetBookReq",
       """
@@ -29,7 +29,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:60
+    // @LINE:62
     def refusePass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.refusePass",
       """
@@ -39,7 +39,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:62
+    // @LINE:64
     def agreClientReturnBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.agreClientReturnBook",
       """
@@ -49,7 +49,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:70
+    // @LINE:72
     def main: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.main",
       """
@@ -59,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:68
+    // @LINE:70
     def left: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.left",
       """
@@ -69,7 +69,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:74
+    // @LINE:76
     def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.doLogin",
       """
@@ -79,7 +79,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:84
+    // @LINE:86
     def getClientHistory: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.getClientHistory",
       """
@@ -89,7 +89,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:66
+    // @LINE:68
     def head: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.head",
       """
@@ -99,7 +99,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:58
+    // @LINE:60
     def checkPass: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.checkPass",
       """
@@ -109,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:76
+    // @LINE:78
     def agreeList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.agreeList",
       """
@@ -119,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:78
+    // @LINE:80
     def adminLogOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.adminLogOut",
       """
@@ -129,7 +129,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:64
+    // @LINE:66
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.index",
       """
@@ -139,7 +139,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:80
+    // @LINE:82
     def getRefuseByAdminList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.getRefuseByAdminList",
       """
@@ -149,7 +149,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:72
+    // @LINE:74
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Admin.login",
       """
@@ -161,7 +161,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:88
+  // @LINE:90
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -169,7 +169,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:88
+    // @LINE:90
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -189,7 +189,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:35
+    // @LINE:39
     def personIndex: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personIndex",
       """
@@ -199,7 +199,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:41
     def personBorrowHistory: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personBorrowHistory",
       """
@@ -209,7 +209,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:23
     def addCart: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.addCart",
       """
@@ -219,7 +219,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:9
+    def search: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.search",
+      """
+        function(key0,page1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search" + _qS([(key0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("key", key0)), (page1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("page", page1))])})
+        }
+      """
+    )
+  
+    // @LINE:55
     def personReturnBookReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personReturnBookReq",
       """
@@ -229,7 +239,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:21
     def introdution: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.introdution",
       """
@@ -239,17 +249,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
-    def search: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Applications.search",
-      """
-        function(key0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search" + _qS([(key0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("key", key0))])})
-        }
-      """
-    )
-  
-    // @LINE:27
+    // @LINE:31
     def subSuccessful: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.subSuccessful",
       """
@@ -259,7 +259,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:33
     def delCart: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.delCart",
       """
@@ -269,7 +269,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:39
+    // @LINE:43
     def personBorrowList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personBorrowList",
       """
@@ -279,7 +279,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:11
+    def searchNew: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.searchNew",
+      """
+        function(key0,page1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "searchN" + _qS([(key0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("key", key0)), (page1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("page", page1))])})
+        }
+      """
+    )
+  
+    // @LINE:25
     def showCart: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.showCart",
       """
@@ -289,7 +299,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:45
     def personChecking: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personChecking",
       """
@@ -299,7 +309,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:15
     def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.doLogin",
       """
@@ -309,7 +319,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:53
     def continueReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.continueReq",
       """
@@ -319,7 +329,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:49
+    // @LINE:51
     def delRefuseReq: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.delRefuseReq",
       """
@@ -329,7 +339,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:29
     def addToAdminDealList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.addToAdminDealList",
       """
@@ -339,7 +349,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:47
     def personPassed: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personPassed",
       """
@@ -349,7 +359,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:27
     def logOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.logOut",
       """
@@ -359,12 +369,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
+    // @LINE:49
     def personDisagree: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.personDisagree",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "person/disage"})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def indexN: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Applications.indexN",
+      """
+        function(who0,page1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "New" + _qS([(who0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("who", who0)), (page1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("page", page1))])})
         }
       """
     )
@@ -379,7 +399,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:13
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Applications.login",
       """

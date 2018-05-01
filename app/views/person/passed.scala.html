@@ -145,7 +145,7 @@
                         url: "/person/retBoReq?userid="+userid+"&bookid="+bookid,
                         success: function (data) {
                             if( data.states == "1" ) {
-                                alert("归还成功!!");
+                                alert("还书申请成功!!");
                                 setTimeout(function () {
                                     document.getElementById("hide"+userid+bookid).style.display="none";
                                 },500);
