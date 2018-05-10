@@ -59,12 +59,9 @@ class BookInfosRepository @Inject()(dbapi: DBApi)(implicit ec: DatabaseExecution
       if( k.length == 0 ) {
         k = "C++"
       }
-      SQL(
-        s"""
-          SELECT * FROM bookinfos WHERE title LIKE ${"'%" + k + "%'"}
-        """).as(booksimple.*)
-
+      SQL(s"""SELECT * FROM bookinfos WHERE title LIKE ${"'%" + k + "%'"}""").as(booksimple.*)
     }
+
   }(ec)
 
   def findById(id: Long) = Future {

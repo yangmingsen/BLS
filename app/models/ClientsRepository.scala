@@ -244,7 +244,6 @@ class ClientsRepository @Inject()(dbapi: DBApi,admin: AdminRepository, book: Boo
     * @return
     */
   def returnBookReq(userid: String, bookid: Long, date: String ) = Future {
-    println(" user = "+userid+ " booid = "+bookid+ " data = "+date)
     db.withConnection { implicit conn =>
       SQL("UPDATE DealBorrowList SET states=3, retdate={agredate} WHERE userid={userid} AND bookid={bookid}").on(
         'agredate -> date,

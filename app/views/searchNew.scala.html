@@ -87,13 +87,13 @@
         <!--分页 -->
     <ul class="am-pagination am-pagination-right">
         <li >
-            <a name="/searchN?key=@{key}&page=@{if(page<=1) {page} else {page-1}}" onclick="goTo(this)">&laquo;</a>
+            <a href="###" name="/searchN?key=@{key}&page=@{if(page<=1) {page} else {page-1}}" onclick="goTo(this)">&laquo;</a>
         </li>
         <li class="am-active">
             <a href="####">@{page}/@{if(total==0) {1} else {total} }</a>
         </li>
         <li>
-            <a name="/searchN?key=@{key}&page=@{if(page>=total) {page} else {page+1}}" onclick="goTo(this)">&raquo;</a>
+            <a href="###" name="/searchN?key=@{key}&page=@{if(page>=total) {page} else {page+1}}" onclick="goTo(this)">&raquo;</a>
         </li>
     </ul>
 </div>
